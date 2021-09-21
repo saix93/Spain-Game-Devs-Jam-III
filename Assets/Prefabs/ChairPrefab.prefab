@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1750168532919838699}
   - component: {fileID: 3707667181330887526}
-  m_Layer: 0
+  - component: {fileID: 5442995953199424828}
+  m_Layer: 11
   m_Name: ChairPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c2d815af522e248ba8eb9b7f9b5894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Visual: {fileID: 0}
+  LinkedChairs: []
+--- !u!58 &5442995953199424828
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750168532919838700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!1 &1750168533386278400
 GameObject:
   m_ObjectHideFlags: 0
@@ -54,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1750168533386278415}
   - component: {fileID: 1750168533386278414}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +113,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d7c4c4fab2a15f14b84a71622bdaeb66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

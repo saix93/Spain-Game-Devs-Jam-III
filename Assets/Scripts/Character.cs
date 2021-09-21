@@ -8,12 +8,14 @@ public class Character : MonoBehaviour
     public SpriteRenderer Visual;
 
     [Header("Data")]
+    public bool IsMainCharacter;
     public string CharacterName;
     public List<SO_Trait> Traits;
     public List<Character> Friends;
 
-    public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
+    public void Init(bool isMainCharacter, string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
     {
+        IsMainCharacter = isMainCharacter;
         CharacterName = newName;
         Visual.sprite = newSprite;
         Traits = newTraits;

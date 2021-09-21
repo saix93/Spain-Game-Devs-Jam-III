@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6344378885536619247}
   - component: {fileID: 6344378885536619246}
-  m_Layer: 0
+  - component: {fileID: 1110949138}
+  m_Layer: 10
   m_Name: CharacterPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +49,22 @@ MonoBehaviour:
   CharacterName: 
   Traits: []
   Friends: []
+--- !u!70 &1110949138
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344378885536619241}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: 0}
+  m_Size: {x: 1.2, y: 2.2}
+  m_Direction: 0
 --- !u!1 &6344378886606291887
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6344378886606291885}
   - component: {fileID: 6344378886606291884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6344378887304712553}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6344378887304712552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6344378886606291885}

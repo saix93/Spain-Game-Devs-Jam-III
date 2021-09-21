@@ -18,23 +18,23 @@ public class GameManager : MonoBehaviour
     public SO_TraitList AllTraits;
     public float SpawnRadius = 6f;
     public int TraitsPerCharacter = 3;
-
-    private Character character1;
-    private Character character2;
+    public LayerMask CharacterLayerMask;
+    public LayerMask ChairLayerMask;
 
     private List<string> availableNames;
     private List<Sprite> availableSprites;
     private List<SO_Trait> availableTraits;
-
+    private Character character1;
+    private Character character2;
     private UnionStates currentState;
 
-    private void Initialize()
-    {
-        availableNames = Utils.GetAllAvailableNames();
-        availableSprites = new List<Sprite>(CharacterSprites);
-        availableTraits = new List<SO_Trait>(AllTraits.List);
+    private Camera mc;
+    private Character grabbedCharacter;
+    private bool isGrabbingCharacter;
 
-        currentState = UnionStates.Starting;
+    private void Awake()
+    {
+        mc = Camera.main;
     }
 
     private void Start()
@@ -47,6 +47,43 @@ public class GameManager : MonoBehaviour
         if (currentState == UnionStates.Starting)
         {
             // TODO: Se puede mover a los invitados de posición
+            if (Input.GetMouseButtonDown(0)) // Left click
+            {
+                var mPos = mc.ScreenToWorldPoint(Input.mousePosition);
+                mPos.z = 0;
+                
+                var hit = Physics2D.Raycast(mPos, Vector2.zero, Mathf.Infinity, CharacterLayerMask);
+
+                if (hit.collider != null)
+                {
+                    grabbedCharacter = hit.collider.GetComponent<Character>();
+                    isGrabbingCharacter = true;
+                }
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (!isGrabbingCharacter) return;
+                isGrabbingCharacter = false;
+                
+                var mPos = mc.ScreenToWorldPoint(Input.mousePosition);
+                mPos.z = 0;
+                
+                var hit = Physics2D.Raycast(mPos, Vector2.zero, Mathf.Infinity, ChairLayerMask);
+
+                if (hit.collider != null)
+                {
+                    grabbedCharacter.transform.position = hit.transform.position;
+                }
+            }
+
+            if (isGrabbingCharacter)
+            {
+                var mPos = mc.ScreenToWorldPoint(Input.mousePosition);
+                mPos.z = 0;
+                
+                grabbedCharacter.transform.position = mPos;
+            }
             
             // Cuando todos los invitados esten en posición: currentState = UnionStates.Feast
         }
@@ -56,8 +93,8 @@ public class GameManager : MonoBehaviour
     {
         Initialize();
         
-        character1 = ch1 == null ? GenerateCharacter(CharactersContainer) : ch1;
-        character2 = ch2 == null ? GenerateCharacter(CharactersContainer) : ch2;
+        character1 = ch1 == null ? GenerateCharacter(true, CharactersContainer) : ch1;
+        character2 = ch2 == null ? GenerateCharacter(true, CharactersContainer) : ch2;
 
         if (character1.Friends.Count == 0)
         {
@@ -72,30 +109,42 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartFeast());
     }
 
+    private void Initialize()
+    {
+        availableNames = Utils.GetAllAvailableNames();
+        availableSprites = new List<Sprite>(CharacterSprites);
+        availableTraits = new List<SO_Trait>(AllTraits.List);
+
+        currentState = UnionStates.Starting;
+    }
+
     private IEnumerator StartFeast()
     {
         yield return new WaitUntil(() => currentState == UnionStates.Feast);
         
         // TODO: Se desarrolla el banquete
+        
+        yield return new WaitUntil(() => true);
+        
+        // TODO: Se termina el banquete, hay que determinar cual es la siguiente pareja
+        // currentStatus = UnionStates.Ending
     }
 
-    private Character GenerateCharacter(Transform parent)
+    private Character GenerateCharacter(bool isMainCharacter, Transform parent)
     {
         var position = SpawnSpace.position + (Vector3)Random.insideUnitCircle * SpawnRadius;
-        
         var ch = Instantiate(CharacterPrefab, position, Quaternion.identity, parent);
-
+        
         var newName = availableNames[Random.Range(0, availableNames.Count)];
         availableNames.Remove(newName);
-
+        
         var newSprite = availableSprites[Random.Range(0, availableSprites.Count)];
         availableSprites.Remove(newSprite);
 
         var newTraits = GetRandomTraits(availableTraits, TraitsPerCharacter);
-
         var newFriendsList = new List<Character>();
         
-        ch.Init(newName, newSprite, newTraits, newFriendsList);
+        ch.Init(isMainCharacter, newName, newSprite, newTraits, newFriendsList);
 
         return ch;
     }
@@ -119,7 +168,7 @@ public class GameManager : MonoBehaviour
         
         for (var i = 0; i < itemNumber; i++)
         {
-            var ch = GenerateCharacter(parent);
+            var ch = GenerateCharacter(false, parent);
             list.Add(ch);
         }
 
