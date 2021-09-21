@@ -5,16 +5,17 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [Header("References")]
-    public SpriteRenderer CharacterVisual;
+    public SpriteRenderer Visual;
 
     [Header("Data")]
     public string CharacterName;
+    public List<SO_Trait> Traits;
     public List<Character> Friends;
 
     public void Init(string newName, Sprite newSprite, List<Character> newFriendsList)
     {
         CharacterName = newName;
-        CharacterVisual.sprite = newSprite;
+        Visual.sprite = newSprite;
         Friends = newFriendsList;
 
         gameObject.name = "Character - " + CharacterName;
