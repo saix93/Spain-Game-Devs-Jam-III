@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
     public Transform CharactersContainer;
     public Transform FriendsOfFirstCharacterContainer;
     public Transform FriendsOfSecondCharacterContainer;
+    public Transform SpawnSpace;
 
     [Header("Data")]
     public List<Sprite> CharacterSprites;
+    public float SpawnRadius = 6f;
 
     private Character character1;
     private Character character2;
@@ -21,15 +23,27 @@ public class GameManager : MonoBehaviour
     private List<string> availableCharacterNames;
     private List<Sprite> availableCharacterSprites;
 
+    private UnionStates currentState;
+
     private void Initialize()
     {
         availableCharacterNames = Utils.GetAllAvailableNames();
         availableCharacterSprites = new List<Sprite>(CharacterSprites);
+
+        currentState = UnionStates.Starting;
     }
 
     private void Start()
     {
         StartUnion(null, null);
+    }
+
+    private void Update()
+    {
+        if (currentState == UnionStates.Starting)
+        {
+            // TODO: Se puede mover a los invitados de posición
+        }
     }
 
     private void StartUnion(Character ch1, Character ch2)
@@ -48,11 +62,22 @@ public class GameManager : MonoBehaviour
         {
             character2.Friends = GenerateCharacterFriends(character2, 2, FriendsOfSecondCharacterContainer);
         }
+
+        StartCoroutine(StartFeast());
+    }
+
+    private IEnumerator StartFeast()
+    {
+        yield return new WaitUntil(() => currentState == UnionStates.Feast);
+        
+        // TODO: Se desarrolla el banquete
     }
 
     private Character GenerateCharacter(Transform parent)
     {
-        var ch = Instantiate(CharacterPrefab, parent);
+        var position = SpawnSpace.position + (Vector3)Random.insideUnitCircle * SpawnRadius;
+        
+        var ch = Instantiate(CharacterPrefab, position, Quaternion.identity, parent);
 
         var newName = availableCharacterNames[Random.Range(0, availableCharacterNames.Count)];
         availableCharacterNames.Remove(newName);
@@ -81,4 +106,17 @@ public class GameManager : MonoBehaviour
 
         return list;
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(SpawnSpace.position, SpawnRadius);
+    }
+}
+
+public enum UnionStates
+{
+    Starting,
+    Feast,
+    Ending
 }
