@@ -1,7 +1,295 @@
 fileFormatVersion: 2
 guid: ce2e82ff2910ac240b4e368634900d1e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5496659006093539142
+    second: elf1_0
+  - first:
+      213: -1340599507865053349
+    second: elf1_1
+  - first:
+      213: 4485412732917012190
+    second: elf1_2
+  - first:
+      213: 7597361405255887537
+    second: elf1_3
+  - first:
+      213: 8442665118726995211
+    second: elf1_4
+  - first:
+      213: 7651824329280830367
+    second: elf1_5
+  - first:
+      213: -5699438945862082109
+    second: elf1_6
+  - first:
+      213: 6269968996901010148
+    second: elf1_7
+  - first:
+      213: 1643069689005703871
+    second: elf1_8
+  - first:
+      213: 1123565925315008444
+    second: elf1_9
+  - first:
+      213: 6676540723960179836
+    second: elf1_10
+  - first:
+      213: -8314870649471198670
+    second: elf1_11
+  - first:
+      213: -5211369648119710791
+    second: elf1_12
+  - first:
+      213: -1324801162931376190
+    second: elf1_13
+  - first:
+      213: 4092312178428921345
+    second: elf1_14
+  - first:
+      213: 8749135713836757112
+    second: elf1_15
+  - first:
+      213: -317110901353610662
+    second: elf1_16
+  - first:
+      213: 7321409713960757653
+    second: elf1_17
+  - first:
+      213: -8761226065998037516
+    second: elf1_18
+  - first:
+      213: 8610195830512137269
+    second: elf1_19
+  - first:
+      213: 2682276187657759811
+    second: elf1_20
+  - first:
+      213: 3058767244328726609
+    second: elf1_21
+  - first:
+      213: -9192229506527307329
+    second: elf1_22
+  - first:
+      213: -6642067940959870276
+    second: elf1_23
+  - first:
+      213: -7383684235807906489
+    second: elf1_24
+  - first:
+      213: -8735832040641467318
+    second: elf1_25
+  - first:
+      213: 3875153965489135556
+    second: elf1_26
+  - first:
+      213: 1527960719277237301
+    second: elf1_27
+  - first:
+      213: -8629698429601893444
+    second: elf1_28
+  - first:
+      213: -4867571974823329952
+    second: elf1_29
+  - first:
+      213: 8706230327741726727
+    second: elf1_30
+  - first:
+      213: -2755279741165666518
+    second: elf1_31
+  - first:
+      213: -5343596006771772118
+    second: elf1_32
+  - first:
+      213: -8726112565648885259
+    second: elf1_33
+  - first:
+      213: -2153172031997549031
+    second: elf1_34
+  - first:
+      213: 4377396571628426770
+    second: elf1_35
+  - first:
+      213: 7252856763755368113
+    second: elf1_36
+  - first:
+      213: -7623943994864949828
+    second: elf1_37
+  - first:
+      213: -7755310744245447424
+    second: elf1_38
+  - first:
+      213: 5580336642867062183
+    second: elf1_39
+  - first:
+      213: -8239916886132816822
+    second: elf1_40
+  - first:
+      213: 1364731421136251443
+    second: elf1_41
+  - first:
+      213: 2093837123193812694
+    second: elf1_42
+  - first:
+      213: -5051515660536024644
+    second: elf1_43
+  - first:
+      213: -7759598126078851357
+    second: elf1_44
+  - first:
+      213: 1148427918444542299
+    second: elf1_45
+  - first:
+      213: 232418622212256191
+    second: elf1_46
+  - first:
+      213: 4679583576187972570
+    second: elf1_47
+  - first:
+      213: -4682578741876104466
+    second: elf1_48
+  - first:
+      213: -3505609934065860643
+    second: elf1_49
+  - first:
+      213: -3094758060503515450
+    second: elf1_50
+  - first:
+      213: 6437488564336265883
+    second: elf1_51
+  - first:
+      213: 4819376867219415440
+    second: elf1_52
+  - first:
+      213: 7708120987519061353
+    second: elf1_53
+  - first:
+      213: 6626817247598943905
+    second: elf1_54
+  - first:
+      213: -3663572530682919581
+    second: elf1_55
+  - first:
+      213: -5845548386538226056
+    second: elf1_56
+  - first:
+      213: -2888755412901080166
+    second: elf1_57
+  - first:
+      213: -3263026306864052709
+    second: elf1_58
+  - first:
+      213: -3798457613342449319
+    second: elf1_59
+  - first:
+      213: 3534911960796785569
+    second: elf1_60
+  - first:
+      213: -6415884091655168856
+    second: elf1_61
+  - first:
+      213: 2321569677736010990
+    second: elf1_62
+  - first:
+      213: 747307886584435701
+    second: elf1_63
+  - first:
+      213: -6889881593324872878
+    second: elf1_64
+  - first:
+      213: 9074559293781912102
+    second: elf1_65
+  - first:
+      213: -5175551528600718873
+    second: elf1_66
+  - first:
+      213: -5406865356835556336
+    second: elf1_67
+  - first:
+      213: -7011130182066572443
+    second: elf1_68
+  - first:
+      213: -4084326607381352556
+    second: elf1_69
+  - first:
+      213: 8645365720136423979
+    second: elf1_70
+  - first:
+      213: -3866590839484446507
+    second: elf1_71
+  - first:
+      213: -8370157009488759968
+    second: elf1_72
+  - first:
+      213: -8883567063373606269
+    second: elf1_73
+  - first:
+      213: -4230108042728282469
+    second: elf1_74
+  - first:
+      213: -5068923221642056457
+    second: elf1_75
+  - first:
+      213: 2926960618925712449
+    second: elf1_76
+  - first:
+      213: -338756944501631429
+    second: elf1_77
+  - first:
+      213: -4389797732910909951
+    second: elf1_78
+  - first:
+      213: 1073523840476603019
+    second: elf1_79
+  - first:
+      213: 562187639317177892
+    second: elf1_80
+  - first:
+      213: 292212227066615723
+    second: elf1_81
+  - first:
+      213: 7033009729995262362
+    second: elf1_82
+  - first:
+      213: 6928760604308157482
+    second: elf1_83
+  - first:
+      213: 5645861537066279523
+    second: elf1_84
+  - first:
+      213: 3950193343405242368
+    second: elf1_85
+  - first:
+      213: 8026263193140947670
+    second: elf1_86
+  - first:
+      213: 251778958801530336
+    second: elf1_87
+  - first:
+      213: 8028088500255730489
+    second: elf1_88
+  - first:
+      213: -5406161056492808922
+    second: elf1_89
+  - first:
+      213: 8022880757131708193
+    second: elf1_90
+  - first:
+      213: 690779618901870348
+    second: elf1_91
+  - first:
+      213: 2218638731154619485
+    second: elf1_92
+  - first:
+      213: 6795252283619769106
+    second: elf1_93
+  - first:
+      213: 6082673268164206504
+    second: elf1_94
+  - first:
+      213: -4011088249389967492
+    second: elf1_95
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +320,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +329,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +363,2049 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: elf1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64738a55e3e084c40800000000000000
+      internalID: 5496659006093539142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57d3a3b9db356de0800000000000000
+      internalID: -1340599507865053349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed65888ad136f3e30800000000000000
+      internalID: 4485412732917012190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba2a8e02ff3f6960800000000000000
+      internalID: 7597361405255887537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0dbd4fb13f5a2570800000000000000
+      internalID: 8442665118726995211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9bb976bfadb03a60800000000000000
+      internalID: 7651824329280830367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c12dd4c97687e0b0800000000000000
+      internalID: -5699438945862082109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_7
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea3ffc3597630750800000000000000
+      internalID: 6269968996901010148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb285624d2b5dc610800000000000000
+      internalID: 1643069689005703871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_9
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb752249145b79f00800000000000000
+      internalID: 1123565925315008444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_10
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c63142a66d7ac50800000000000000
+      internalID: 6676540723960179836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_11
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a92f8c235ab9c80800000000000000
+      internalID: -8314870649471198670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb72928aee7da7b0800000000000000
+      internalID: -5211369648119710791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf63758c5c5d9de0800000000000000
+      internalID: -1324801162931376190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106c2498e30dac830800000000000000
+      internalID: 4092312178428921345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8707ceaa39c2b6970800000000000000
+      internalID: 8749135713836757112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a520a6ab055699bf0800000000000000
+      internalID: -317110901353610662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_17
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599a9b7285fda9560800000000000000
+      internalID: 7321409713960757653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_18
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd3b4bdf4fd96680800000000000000
+      internalID: -8761226065998037516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_19
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534b9343d7f8d7770800000000000000
+      internalID: 8610195830512137269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_20
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c64da3bfb593520800000000000000
+      internalID: 2682276187657759811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_21
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15070d84a9ce27a20800000000000000
+      internalID: 3058767244328726609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_22
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9539167f3ae6080800000000000000
+      internalID: -9192229506527307329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_23
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2a31d1662a2d3a0800000000000000
+      internalID: -6642067940959870276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745a407de42e78990800000000000000
+      internalID: -7383684235807906489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_25
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ce6102b0714c680800000000000000
+      internalID: -8735832040641467318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_26
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf1dea000057c530800000000000000
+      internalID: 3875153965489135556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_27
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534254fbd28643510800000000000000
+      internalID: 1527960719277237301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_28
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb335d810072d3880800000000000000
+      internalID: -8629698429601893444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_29
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f32021419e27cb0800000000000000
+      internalID: -4867571974823329952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_30
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70047c10b5eb2d870800000000000000
+      internalID: 8706230327741726727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_31
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f7dfa6ca743c9d0800000000000000
+      internalID: -2755279741165666518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_32
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a253c215ebbb7d5b0800000000000000
+      internalID: -5343596006771772118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_33
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9fc6ebade96e680800000000000000
+      internalID: -8726112565648885259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_34
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916ea74e1756e12e0800000000000000
+      internalID: -2153172031997549031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_35
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216dcec4df2afbc30800000000000000
+      internalID: 4377396571628426770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be8d62acc257a460800000000000000
+      internalID: 7252856763755368113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_37
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb52a9e745f423690800000000000000
+      internalID: -7623943994864949828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_38
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005da7ea7f99f5490800000000000000
+      internalID: -7755310744245447424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_39
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5ef2d5c96517d40800000000000000
+      internalID: 5580336642867062183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_40
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a448f4fbf3fe5ad80800000000000000
+      internalID: -8239916886132816822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_41
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ae3a23fff70f210800000000000000
+      internalID: 1364731421136251443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_42
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d63e7915cdce0d10800000000000000
+      internalID: 2093837123193812694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_43
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb17d64554965e9b0800000000000000
+      internalID: -5051515660536024644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_44
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6884fcd9e505490800000000000000
+      internalID: -7759598126078851357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_45
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5937017b1900ff00800000000000000
+      internalID: 1148427918444542299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_46
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1b5286187b93300800000000000000
+      internalID: 232418622212256191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_47
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adbaf63187831f040800000000000000
+      internalID: 4679583576187972570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2eda19173240fb0800000000000000
+      internalID: -4682578741876104466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_49
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf7ce6a652995fc0800000000000000
+      internalID: -3505609934065860643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_50
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce39e1d0f53d05d0800000000000000
+      internalID: -3094758060503515450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_51
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a07e2fdbd865950800000000000000
+      internalID: 6437488564336265883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_52
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09129510abdd1e240800000000000000
+      internalID: 4819376867219415440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_53
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d8ec2e23fb8fa60800000000000000
+      internalID: 7708120987519061353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_54
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae11922d2f27fb50800000000000000
+      internalID: 6626817247598943905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_55
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36504cb9130682dc0800000000000000
+      internalID: -3663572530682919581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_56
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ef707a6b070eea0800000000000000
+      internalID: -5845548386538226056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_57
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a935b0bd14419e7d0800000000000000
+      internalID: -2888755412901080166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_58
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b160d96bcd667b2d0800000000000000
+      internalID: -3263026306864052709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_59
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951685efcea294bc0800000000000000
+      internalID: -3798457613342449319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab629713b78e0130800000000000000
+      internalID: 3534911960796785569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_61
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac50d4596336f6a0800000000000000
+      internalID: -6415884091655168856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_62
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4e5ca525fd73020800000000000000
+      internalID: 2321569677736010990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_63
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f396bd3098fe5a00800000000000000
+      internalID: 747307886584435701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b5e5de1393260a0800000000000000
+      internalID: -6889881593324872878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_65
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a271f399f4fed70800000000000000
+      internalID: 9074559293781912102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_66
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e136055e4fbc28b0800000000000000
+      internalID: -5175551528600718873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_67
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0147371da94f6f4b0800000000000000
+      internalID: -5406865356835556336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_68
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563f6e7fe3673be90800000000000000
+      internalID: -7011130182066572443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_69
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fab5c179e8157c0800000000000000
+      internalID: -4084326607381352556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_70
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a121e31528af770800000000000000
+      internalID: 8645365720136423979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_71
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d800c81e1c175ac0800000000000000
+      internalID: -3866590839484446507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0633d2ffb8a37db80800000000000000
+      internalID: -8370157009488759968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_73
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3829141b2da37b480800000000000000
+      internalID: -8883567063373606269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_74
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9668afa523ab45c0800000000000000
+      internalID: -4230108042728282469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_75
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fceb4caf2197a9b0800000000000000
+      internalID: -5068923221642056457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_76
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144ef9adc27ae9820800000000000000
+      internalID: 2926960618925712449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_77
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3698c19a5e7c4bf0800000000000000
+      internalID: -338756944501631429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_78
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106b706583e4413c0800000000000000
+      internalID: -4389797732910909951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_79
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b826581ce3ce5ee00800000000000000
+      internalID: 1073523840476603019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_80
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426ad9aedaa4dc700800000000000000
+      internalID: 562187639317177892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_81
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7d459e8752e0400800000000000000
+      internalID: 292212227066615723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_82
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99cb3246154a9160800000000000000
+      internalID: 7033009729995262362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_83
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2432893f07e72060800000000000000
+      internalID: 6928760604308157482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36260e7a7212a5e40800000000000000
+      internalID: 5645861537066279523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_85
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00838c3bae7e1d630800000000000000
+      internalID: 3950193343405242368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_86
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da65f469d3036f60800000000000000
+      internalID: 8026263193140947670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_87
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed684901af7e7300800000000000000
+      internalID: 251778958801530336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_88
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b2423d4ff796f60800000000000000
+      internalID: 8028088500255730489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_89
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6251235892579f4b0800000000000000
+      internalID: -5406161056492808922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_90
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1270724aa8ff65f60800000000000000
+      internalID: 8022880757131708193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_91
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07c9ba4764269900800000000000000
+      internalID: 690779618901870348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_92
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cf46fcb203ace10800000000000000
+      internalID: 2218638731154619485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_93
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b715cf2f59d4e50800000000000000
+      internalID: 6795252283619769106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_94
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af11b92c1ff96450800000000000000
+      internalID: 6082673268164206504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elf1_95
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c771e542d70c558c0800000000000000
+      internalID: -4011088249389967492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

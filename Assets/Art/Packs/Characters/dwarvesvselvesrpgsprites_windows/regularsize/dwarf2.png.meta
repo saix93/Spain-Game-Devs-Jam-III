@@ -1,7 +1,295 @@
 fileFormatVersion: 2
 guid: cda8c6fa8f68fc84ab4858e92d1ebaa3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1728102908604955641
+    second: dwarf2_0
+  - first:
+      213: 696953742618293408
+    second: dwarf2_1
+  - first:
+      213: -7113804140299337053
+    second: dwarf2_2
+  - first:
+      213: -2978144263043413628
+    second: dwarf2_3
+  - first:
+      213: -5539999704485287321
+    second: dwarf2_4
+  - first:
+      213: -2670241817608623266
+    second: dwarf2_5
+  - first:
+      213: -127620185240791353
+    second: dwarf2_6
+  - first:
+      213: -2876537394256592756
+    second: dwarf2_7
+  - first:
+      213: 4140174467391929477
+    second: dwarf2_8
+  - first:
+      213: 3515192732935926526
+    second: dwarf2_9
+  - first:
+      213: 8317132323025038610
+    second: dwarf2_10
+  - first:
+      213: -1262368680730745574
+    second: dwarf2_11
+  - first:
+      213: 443496145531909009
+    second: dwarf2_12
+  - first:
+      213: 8791087707139200856
+    second: dwarf2_13
+  - first:
+      213: 7589534816400859048
+    second: dwarf2_14
+  - first:
+      213: 2516050441086805965
+    second: dwarf2_15
+  - first:
+      213: 2563952609570218073
+    second: dwarf2_16
+  - first:
+      213: -5840435729000760217
+    second: dwarf2_17
+  - first:
+      213: -2354378935744970198
+    second: dwarf2_18
+  - first:
+      213: 6951847297529506979
+    second: dwarf2_19
+  - first:
+      213: -2693529045474510155
+    second: dwarf2_20
+  - first:
+      213: -4944821849497657158
+    second: dwarf2_21
+  - first:
+      213: -1194318922283435588
+    second: dwarf2_22
+  - first:
+      213: -2121633181569908020
+    second: dwarf2_23
+  - first:
+      213: -3411940427488298486
+    second: dwarf2_24
+  - first:
+      213: -81842883243648685
+    second: dwarf2_25
+  - first:
+      213: 6603890264307943086
+    second: dwarf2_26
+  - first:
+      213: -8421926863163972911
+    second: dwarf2_27
+  - first:
+      213: -8297751224188031376
+    second: dwarf2_28
+  - first:
+      213: 4291040130120625916
+    second: dwarf2_29
+  - first:
+      213: -7617534307481406387
+    second: dwarf2_30
+  - first:
+      213: -7395645683680558904
+    second: dwarf2_31
+  - first:
+      213: 847521810534394304
+    second: dwarf2_32
+  - first:
+      213: 408634482981133894
+    second: dwarf2_33
+  - first:
+      213: -3346690585404991354
+    second: dwarf2_34
+  - first:
+      213: 5258473625937033624
+    second: dwarf2_35
+  - first:
+      213: 1511715448867706442
+    second: dwarf2_36
+  - first:
+      213: -9162981456563025326
+    second: dwarf2_37
+  - first:
+      213: 2824254161150180802
+    second: dwarf2_38
+  - first:
+      213: 2576085926584475942
+    second: dwarf2_39
+  - first:
+      213: -3824563861401598566
+    second: dwarf2_40
+  - first:
+      213: -7179727387948420996
+    second: dwarf2_41
+  - first:
+      213: -5767038085702757540
+    second: dwarf2_42
+  - first:
+      213: 1775894204371118675
+    second: dwarf2_43
+  - first:
+      213: -4180344819461263110
+    second: dwarf2_44
+  - first:
+      213: -1251689941821272397
+    second: dwarf2_45
+  - first:
+      213: 8238722156846629888
+    second: dwarf2_46
+  - first:
+      213: 8381098394666307749
+    second: dwarf2_47
+  - first:
+      213: -2310655781166074864
+    second: dwarf2_48
+  - first:
+      213: -2535256222129686049
+    second: dwarf2_49
+  - first:
+      213: -7270847518357298169
+    second: dwarf2_50
+  - first:
+      213: 6034205426309842842
+    second: dwarf2_51
+  - first:
+      213: 1629620843954852849
+    second: dwarf2_52
+  - first:
+      213: 922732095900339991
+    second: dwarf2_53
+  - first:
+      213: 64999762902220751
+    second: dwarf2_54
+  - first:
+      213: -4057079445932578217
+    second: dwarf2_55
+  - first:
+      213: 8155979927129038034
+    second: dwarf2_56
+  - first:
+      213: -7872262793798829710
+    second: dwarf2_57
+  - first:
+      213: 379293038530008899
+    second: dwarf2_58
+  - first:
+      213: -7696841584073283970
+    second: dwarf2_59
+  - first:
+      213: -5252111638813321644
+    second: dwarf2_60
+  - first:
+      213: 6657245304835036593
+    second: dwarf2_61
+  - first:
+      213: 3036374947834794307
+    second: dwarf2_62
+  - first:
+      213: -7903097506597793429
+    second: dwarf2_63
+  - first:
+      213: 518754314465324918
+    second: dwarf2_64
+  - first:
+      213: 486574483411309708
+    second: dwarf2_65
+  - first:
+      213: 122113481113534171
+    second: dwarf2_66
+  - first:
+      213: 3367288057479345688
+    second: dwarf2_67
+  - first:
+      213: -6018309874204084615
+    second: dwarf2_68
+  - first:
+      213: 1775931166795892817
+    second: dwarf2_69
+  - first:
+      213: -3279815688587783577
+    second: dwarf2_70
+  - first:
+      213: -4038586286406247092
+    second: dwarf2_71
+  - first:
+      213: -5083185107196669679
+    second: dwarf2_72
+  - first:
+      213: 4902651241997109164
+    second: dwarf2_73
+  - first:
+      213: 2150362446358421751
+    second: dwarf2_74
+  - first:
+      213: -6137906179577924870
+    second: dwarf2_75
+  - first:
+      213: -8773968197297884225
+    second: dwarf2_76
+  - first:
+      213: 4636893234285854139
+    second: dwarf2_77
+  - first:
+      213: -8173320281138101985
+    second: dwarf2_78
+  - first:
+      213: 9218295394076422732
+    second: dwarf2_79
+  - first:
+      213: 8007482948280394066
+    second: dwarf2_80
+  - first:
+      213: 5805699757257614367
+    second: dwarf2_81
+  - first:
+      213: -8444642851061404375
+    second: dwarf2_82
+  - first:
+      213: -5951071217201544675
+    second: dwarf2_83
+  - first:
+      213: -3228740214089314223
+    second: dwarf2_84
+  - first:
+      213: 5697007367792191945
+    second: dwarf2_85
+  - first:
+      213: -1447941338209900806
+    second: dwarf2_86
+  - first:
+      213: -8403243627887110018
+    second: dwarf2_87
+  - first:
+      213: -8732570826229093138
+    second: dwarf2_88
+  - first:
+      213: 2551826352090845475
+    second: dwarf2_89
+  - first:
+      213: -3289869875810266529
+    second: dwarf2_90
+  - first:
+      213: 4154973593685189308
+    second: dwarf2_91
+  - first:
+      213: 5620683088410059536
+    second: dwarf2_92
+  - first:
+      213: 7594017644844665792
+    second: dwarf2_93
+  - first:
+      213: -2876959316406433036
+    second: dwarf2_94
+  - first:
+      213: 4061445549881450877
+    second: dwarf2_95
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +320,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +329,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +363,2049 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: dwarf2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704484d7f8b8408e0800000000000000
+      internalID: -1728102908604955641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a474ad7cb31ca900800000000000000
+      internalID: 696953742618293408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a241cf23d0b64d90800000000000000
+      internalID: -7113804140299337053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4890e6752918ba6d0800000000000000
+      internalID: -2978144263043413628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76aa266fe97fd13b0800000000000000
+      internalID: -5539999704485287321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b6b05e63561fad0800000000000000
+      internalID: -2670241817608623266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c69d802e1a9a3ef0800000000000000
+      internalID: -127620185240791353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_7
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8045300b7c7418d0800000000000000
+      internalID: -2876537394256592756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cb9051ebad47930800000000000000
+      internalID: 4140174467391929477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_9
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef23ea39a2978c030800000000000000
+      internalID: 3515192732935926526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_10
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21da3df18c36c6370800000000000000
+      internalID: 8317132323025038610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_11
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1527798f5a2b7ee0800000000000000
+      internalID: -1262368680730745574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1933fa5056d972600800000000000000
+      internalID: 443496145531909009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857d55541b7300a70800000000000000
+      internalID: 8791087707139200856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af580654b1735960800000000000000
+      internalID: 7589534816400859048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7a1f9ab8ecae220800000000000000
+      internalID: 2516050441086805965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9506e52605df49320800000000000000
+      internalID: 2563952609570218073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_17
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cf86ff5aa92fea0800000000000000
+      internalID: -5840435729000760217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_18
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a22424cf4d0935fd0800000000000000
+      internalID: -2354378935744970198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_19
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac610ed84ce97060800000000000000
+      internalID: 6951847297529506979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_20
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba7b44aa99ae9ad0800000000000000
+      internalID: -2693529045474510155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_21
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab02a170ab6706bb0800000000000000
+      internalID: -4944821849497657158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_22
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9b4c8944dec6fe0800000000000000
+      internalID: -1194318922283435588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_23
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc208dcbcd17e82e0800000000000000
+      internalID: -2121633181569908020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0af3c8224a56a0d0800000000000000
+      internalID: -3411940427488298486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_25
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3595ed0d45c3ddef0800000000000000
+      internalID: -81842883243648685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_26
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea64cbbd43bb5ab50800000000000000
+      internalID: 6603890264307943086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_27
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2aac4a32e4f1b80800000000000000
+      internalID: -8421926863163972911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_28
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ea5b7993778dc80800000000000000
+      internalID: -8297751224188031376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_29
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe29c07346dc8b30800000000000000
+      internalID: 4291040130120625916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_30
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44383228e4194690800000000000000
+      internalID: -7617534307481406387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_31
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0c19b3f636d5990800000000000000
+      internalID: -7395645683680558904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_32
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c96c48a89003cb00800000000000000
+      internalID: 847521810534394304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_33
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ed011b5e2cba500800000000000000
+      internalID: 408634482981133894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_34
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6889ac3e4aa2e81d0800000000000000
+      internalID: -3346690585404991354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_35
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899bcb6f6e9d9f840800000000000000
+      internalID: 5258473625937033624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46da3bf031baf410800000000000000
+      internalID: 1511715448867706442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_37
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ac11ea9ec86d080800000000000000
+      internalID: -9162981456563025326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_38
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd76ce2234c13720800000000000000
+      internalID: 2824254161150180802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_39
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62163f4608810c320800000000000000
+      internalID: 2576085926584475942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_40
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a958c547e6b6ceac0800000000000000
+      internalID: -3824563861401598566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_41
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70f0310bfb7c5c90800000000000000
+      internalID: -7179727387948420996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_42
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53d9878a6d57ffa0800000000000000
+      internalID: -5767038085702757540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_43
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a273aae5e35a810800000000000000
+      internalID: 1775894204371118675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_44
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0fd5df88e6cf5c0800000000000000
+      internalID: -4180344819461263110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_45
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be40d031aa11aee0800000000000000
+      internalID: -1251689941821272397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_46
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004cbf9a622d55270800000000000000
+      internalID: 8238722156846629888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_47
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a09ea1c594af4470800000000000000
+      internalID: 8381098394666307749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014b4653fc6eeefd0800000000000000
+      internalID: -2310655781166074864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_49
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd97c59f5e5f0dcd0800000000000000
+      internalID: -2535256222129686049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_50
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704684464b2c81b90800000000000000
+      internalID: -7270847518357298169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_51
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97cee85dddcdb350800000000000000
+      internalID: 6034205426309842842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_52
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3508206839d9610800000000000000
+      internalID: 1629620843954852849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_53
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fcdfec3f33ecc00800000000000000
+      internalID: 922732095900339991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_54
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf7542a0fce6e000800000000000000
+      internalID: 64999762902220751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_55
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a66af3dbb52b7c0800000000000000
+      internalID: -4057079445932578217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_56
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc1ebf088cdf2170800000000000000
+      internalID: 8155979927129038034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_57
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279b815b2ba10c290800000000000000
+      internalID: -7872262793798829710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_58
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3471c5b4205834500800000000000000
+      internalID: 379293038530008899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_59
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e766bd0eb535f2590800000000000000
+      internalID: -7696841584073283970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45656d79a40cc17b0800000000000000
+      internalID: -5252111638813321644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_61
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b554594559436c50800000000000000
+      internalID: 6657245304835036593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_62
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341969a7dee532a20800000000000000
+      internalID: 3036374947834794307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_63
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6196fda0be825290800000000000000
+      internalID: -7903097506597793429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f286fec4cf23700800000000000000
+      internalID: 518754314465324918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_65
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8410882ae8a0c600800000000000000
+      internalID: 486574483411309708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_66
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdefe086095d1b100800000000000000
+      internalID: 122113481113534171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_67
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816b87ac5a20bbe20800000000000000
+      internalID: 3367288057479345688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_68
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976f6d74e0baa7ca0800000000000000
+      internalID: -6018309874204084615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_69
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1580a66acff55a810800000000000000
+      internalID: 1775931166795892817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_70
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762d8f82201cb72d0800000000000000
+      internalID: -3279815688587783577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_71
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dddfb7b2f04f7c0800000000000000
+      internalID: -4038586286406247092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1119cfda316e479b0800000000000000
+      internalID: -5083185107196669679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_73
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca78dd84457b90440800000000000000
+      internalID: 4902651241997109164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_74
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0a889704f97dd10800000000000000
+      internalID: 2150362446358421751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_75
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2359589d6c1daa0800000000000000
+      internalID: -6137906179577924870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_76
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb33c79396a9c3680800000000000000
+      internalID: -8773968197297884225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_77
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd350b44dd895040800000000000000
+      internalID: 4636893234285854139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_78
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1184472288829e80800000000000000
+      internalID: -8173320281138101985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_79
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c427b8ef1d6fdef70800000000000000
+      internalID: 9218295394076422732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_80
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2512045e05b402f60800000000000000
+      internalID: 8007482948280394066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_81
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1469e75b2df19050800000000000000
+      internalID: 5805699757257614367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_82
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d617f811a9eca80800000000000000
+      internalID: -8444642851061404375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_83
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1286a1124c896da0800000000000000
+      internalID: -5951071217201544675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1501033c1e53133d0800000000000000
+      internalID: -3228740214089314223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_85
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c969085406df0f40800000000000000
+      internalID: 5697007367792191945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_86
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af625604601e7ebe0800000000000000
+      internalID: -1447941338209900806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_87
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7859b6517ea16b80800000000000000
+      internalID: -8403243627887110018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_88
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eececa6c91dafc680800000000000000
+      internalID: -8732570826229093138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_89
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3211bdc0c88e96320800000000000000
+      internalID: 2551826352090845475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_90
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52121747c80852d0800000000000000
+      internalID: -3289869875810266529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_91
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2ebbe287e69a930800000000000000
+      internalID: 4154973593685189308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_92
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0132abf3d7da00e40800000000000000
+      internalID: 5620683088410059536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_93
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbc30b20de536960800000000000000
+      internalID: 7594017644844665792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_94
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa08589ebcf218d0800000000000000
+      internalID: -2876959316406433036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf2_95
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71664b85372d5830800000000000000
+      internalID: 4061445549881450877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,295 @@
 fileFormatVersion: 2
 guid: 889c0f9bbca6bdc499a4c59bf926b064
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2944326280626407802
+    second: dwarf1_emote_0
+  - first:
+      213: -8322250782888419835
+    second: dwarf1_emote_1
+  - first:
+      213: 7628256675645065674
+    second: dwarf1_emote_2
+  - first:
+      213: -9038841732075414146
+    second: dwarf1_emote_3
+  - first:
+      213: 95712240124366671
+    second: dwarf1_emote_4
+  - first:
+      213: 7041502093967644419
+    second: dwarf1_emote_5
+  - first:
+      213: -1754426275052240204
+    second: dwarf1_emote_6
+  - first:
+      213: 2599466623266680821
+    second: dwarf1_emote_7
+  - first:
+      213: 6382796079475513787
+    second: dwarf1_emote_8
+  - first:
+      213: -437731027642742840
+    second: dwarf1_emote_9
+  - first:
+      213: 6124480549914995047
+    second: dwarf1_emote_10
+  - first:
+      213: -8785497056727591712
+    second: dwarf1_emote_11
+  - first:
+      213: -6948952031165536231
+    second: dwarf1_emote_12
+  - first:
+      213: -7446217792668234026
+    second: dwarf1_emote_13
+  - first:
+      213: -2611269972138468838
+    second: dwarf1_emote_14
+  - first:
+      213: 1812587368845960315
+    second: dwarf1_emote_15
+  - first:
+      213: 1395513260612328022
+    second: dwarf1_emote_16
+  - first:
+      213: 9080352453056775947
+    second: dwarf1_emote_17
+  - first:
+      213: -3075327600074678151
+    second: dwarf1_emote_18
+  - first:
+      213: -7744074837809842838
+    second: dwarf1_emote_19
+  - first:
+      213: -975016081421207306
+    second: dwarf1_emote_20
+  - first:
+      213: -3737329810680975227
+    second: dwarf1_emote_21
+  - first:
+      213: -3555508688637915628
+    second: dwarf1_emote_22
+  - first:
+      213: 6470019061438817365
+    second: dwarf1_emote_23
+  - first:
+      213: 5612743230247356736
+    second: dwarf1_emote_24
+  - first:
+      213: -6660581482556073389
+    second: dwarf1_emote_25
+  - first:
+      213: -8224017567946850950
+    second: dwarf1_emote_26
+  - first:
+      213: -8876370111284538609
+    second: dwarf1_emote_27
+  - first:
+      213: 2239562969319446794
+    second: dwarf1_emote_28
+  - first:
+      213: 4031078444824699645
+    second: dwarf1_emote_29
+  - first:
+      213: 6670240436581227971
+    second: dwarf1_emote_30
+  - first:
+      213: -4296128477441895821
+    second: dwarf1_emote_31
+  - first:
+      213: -7569790241352437690
+    second: dwarf1_emote_32
+  - first:
+      213: 6197403530911216974
+    second: dwarf1_emote_33
+  - first:
+      213: 7571741056735436111
+    second: dwarf1_emote_34
+  - first:
+      213: -5740565748049939880
+    second: dwarf1_emote_35
+  - first:
+      213: -8483617700860595484
+    second: dwarf1_emote_36
+  - first:
+      213: 6089052234070670175
+    second: dwarf1_emote_37
+  - first:
+      213: 1976265949464842092
+    second: dwarf1_emote_38
+  - first:
+      213: -2627958532268323614
+    second: dwarf1_emote_39
+  - first:
+      213: -7677872731347749342
+    second: dwarf1_emote_40
+  - first:
+      213: -901616488180630456
+    second: dwarf1_emote_41
+  - first:
+      213: 2334428732506477948
+    second: dwarf1_emote_42
+  - first:
+      213: 3024335859336264800
+    second: dwarf1_emote_43
+  - first:
+      213: -4555830642723622915
+    second: dwarf1_emote_44
+  - first:
+      213: 174967680567155643
+    second: dwarf1_emote_45
+  - first:
+      213: -2728092420813210138
+    second: dwarf1_emote_46
+  - first:
+      213: -5901758702032730996
+    second: dwarf1_emote_47
+  - first:
+      213: 7403119881921602324
+    second: dwarf1_emote_48
+  - first:
+      213: -2670226516315209780
+    second: dwarf1_emote_49
+  - first:
+      213: -145870965485951177
+    second: dwarf1_emote_50
+  - first:
+      213: -5126129236433814912
+    second: dwarf1_emote_51
+  - first:
+      213: -3070587656716190014
+    second: dwarf1_emote_52
+  - first:
+      213: 410709870607178881
+    second: dwarf1_emote_53
+  - first:
+      213: -5617581451514862856
+    second: dwarf1_emote_54
+  - first:
+      213: 1268785134259474530
+    second: dwarf1_emote_55
+  - first:
+      213: 3656444173370745174
+    second: dwarf1_emote_56
+  - first:
+      213: -9015205126373366439
+    second: dwarf1_emote_57
+  - first:
+      213: -1556847608602624142
+    second: dwarf1_emote_58
+  - first:
+      213: 2865565317303796841
+    second: dwarf1_emote_59
+  - first:
+      213: -3076367924794203415
+    second: dwarf1_emote_60
+  - first:
+      213: 7379443355104630303
+    second: dwarf1_emote_61
+  - first:
+      213: -3816052466329924145
+    second: dwarf1_emote_62
+  - first:
+      213: -3798125506879953302
+    second: dwarf1_emote_63
+  - first:
+      213: -3003599810021209471
+    second: dwarf1_emote_64
+  - first:
+      213: 1000186251692952518
+    second: dwarf1_emote_65
+  - first:
+      213: 1238829214272628504
+    second: dwarf1_emote_66
+  - first:
+      213: 7527064692271752877
+    second: dwarf1_emote_67
+  - first:
+      213: 6646092990892116642
+    second: dwarf1_emote_68
+  - first:
+      213: 7497548855087221011
+    second: dwarf1_emote_69
+  - first:
+      213: -4743180765236499000
+    second: dwarf1_emote_70
+  - first:
+      213: -4662449190776729975
+    second: dwarf1_emote_71
+  - first:
+      213: 5692699715903531543
+    second: dwarf1_emote_72
+  - first:
+      213: 5431964761508217985
+    second: dwarf1_emote_73
+  - first:
+      213: -7642394571368565629
+    second: dwarf1_emote_74
+  - first:
+      213: 4207421920343000796
+    second: dwarf1_emote_75
+  - first:
+      213: 645696107220685785
+    second: dwarf1_emote_76
+  - first:
+      213: 5187432380560890214
+    second: dwarf1_emote_77
+  - first:
+      213: 202579775820007216
+    second: dwarf1_emote_78
+  - first:
+      213: 4384677808432628000
+    second: dwarf1_emote_79
+  - first:
+      213: 3425999714595506220
+    second: dwarf1_emote_80
+  - first:
+      213: -3847619000429055621
+    second: dwarf1_emote_81
+  - first:
+      213: 2148082389286673908
+    second: dwarf1_emote_82
+  - first:
+      213: -9166931718965262976
+    second: dwarf1_emote_83
+  - first:
+      213: 6254730899701120492
+    second: dwarf1_emote_84
+  - first:
+      213: -5673780479124446345
+    second: dwarf1_emote_85
+  - first:
+      213: -3731681035198340308
+    second: dwarf1_emote_86
+  - first:
+      213: -7531535596342343913
+    second: dwarf1_emote_87
+  - first:
+      213: -6461976477014340740
+    second: dwarf1_emote_88
+  - first:
+      213: 5501958143127339359
+    second: dwarf1_emote_89
+  - first:
+      213: 5398124450118244775
+    second: dwarf1_emote_90
+  - first:
+      213: -1754873972542412152
+    second: dwarf1_emote_91
+  - first:
+      213: -765798674992569908
+    second: dwarf1_emote_92
+  - first:
+      213: -519114814195649835
+    second: dwarf1_emote_93
+  - first:
+      213: 7357976709052362678
+    second: dwarf1_emote_94
+  - first:
+      213: 7110297435321167684
+    second: dwarf1_emote_95
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +320,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +329,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +363,2049 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: dwarf1_emote_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6867a64f8d6a327d0800000000000000
+      internalID: -2944326280626407802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e1832910d618c80800000000000000
+      internalID: -8322250782888419835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9835fb7030dd960800000000000000
+      internalID: 7628256675645065674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d1ba2a5559f8280800000000000000
+      internalID: -9038841732075414146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f054976c9045100800000000000000
+      internalID: 95712240124366671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3075c14d8d078b160800000000000000
+      internalID: 7041502093967644419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_6
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b246e2299607a7e0800000000000000
+      internalID: -1754426275052240204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_7
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff6b4d0f19231420800000000000000
+      internalID: 2599466623266680821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9d4ee773f349850800000000000000
+      internalID: 6382796079475513787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_9
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7003613fddce9f0800000000000000
+      internalID: -437731027642742840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_10
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769e87b7c968ef450800000000000000
+      internalID: 6124480549914995047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_11
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 252
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4138679f4a31680800000000000000
+      internalID: -8785497056727591712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918262dd1fc509f90800000000000000
+      internalID: -6948952031165536231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de01db8e58b9a890800000000000000
+      internalID: -7446217792668234026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ada02abc7e2cbd0800000000000000
+      internalID: -2611269972138468838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b746c64cb9a972910800000000000000
+      internalID: 1812587368845960315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a1522baebdd5310800000000000000
+      internalID: 1395513260612328022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_17
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07cbcf3274e30e70800000000000000
+      internalID: 9080352453056775947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_18
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970289d67dd3255d0800000000000000
+      internalID: -3075327600074678151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_19
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65bd4207f4878490800000000000000
+      internalID: -7744074837809842838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_20
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f878903a0c0872f0800000000000000
+      internalID: -975016081421207306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_21
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580f1e1a656522cc0800000000000000
+      internalID: -3737329810680975227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_22
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e0ce18fab48aec0800000000000000
+      internalID: -3555508688637915628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_23
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 216
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55421178e002ac950800000000000000
+      internalID: 6470019061438817365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0494f56fa3874ed40800000000000000
+      internalID: 5612743230247356736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_25
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a53be4e6cd093a0800000000000000
+      internalID: -6660581482556073389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_26
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7db4fb389b6edd80800000000000000
+      internalID: -8224017567946850950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_27
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f039dfda96cc0d480800000000000000
+      internalID: -8876370111284538609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_28
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a099766a7a6841f10800000000000000
+      internalID: 2239562969319446794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_29
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2a28dec7441f730800000000000000
+      internalID: 4031078444824699645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_30
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cddedc2654719c50800000000000000
+      internalID: 6670240436581227971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_31
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372d2a069e51164c0800000000000000
+      internalID: -4296128477441895821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_32
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64038f7c1e3b2f690800000000000000
+      internalID: -7569790241352437690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_33
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45f6b51da9910650800000000000000
+      internalID: 6197403530911216974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_34
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dd4f1df5a341960800000000000000
+      internalID: 7571741056735436111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_35
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 180
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85275b1fdd96550b0800000000000000
+      internalID: -5740565748049939880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2fcf136a2244a80800000000000000
+      internalID: -8483617700860595484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_37
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bb496eeb8a08450800000000000000
+      internalID: 6089052234070670175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_38
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f4d8b096b1d6b10800000000000000
+      internalID: 1976265949464842092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_39
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec80bf63ad978bd0800000000000000
+      internalID: -2627958532268323614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_40
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226fb511e67b27590800000000000000
+      internalID: -7677872731347749342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_41
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cbb5ab490dc73f0800000000000000
+      internalID: -901616488180630456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_42
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75938a509e856020800000000000000
+      internalID: 2334428732506477948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_43
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cb631c07998f920800000000000000
+      internalID: 3024335859336264800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_44
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff6e931b2076c0c0800000000000000
+      internalID: -4555830642723622915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_45
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb116fad2c9d6200800000000000000
+      internalID: 174967680567155643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_46
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed3ef6b56ed32ad0800000000000000
+      internalID: -2728092420813210138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_47
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 144
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84c447babdb81ea0800000000000000
+      internalID: -5901758702032730996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413a1972f4a2db660800000000000000
+      internalID: 7403119881921602324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_49
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccff331812371fad0800000000000000
+      internalID: -2670226516315209780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_50
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737aa273123c9fdf0800000000000000
+      internalID: -145870965485951177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_51
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a3e9d6e945cd8b0800000000000000
+      internalID: -5126129236433814912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_52
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce7bbd7bc41365d0800000000000000
+      internalID: -3070587656716190014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_53
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c9947837223b500800000000000000
+      internalID: 410709870607178881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_54
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f222adde675a02b0800000000000000
+      internalID: -5617581451514862856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_55
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26015d77b51ab9110800000000000000
+      internalID: 1268785134259474530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_56
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6516fce5a9c4eb230800000000000000
+      internalID: 3656444173370745174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_57
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9552c31c3be83e280800000000000000
+      internalID: -9015205126373366439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_58
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ff2d73957f46ae0800000000000000
+      internalID: -1556847608602624142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_59
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 108
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9648292497884c720800000000000000
+      internalID: 2865565317303796841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e26c34fbab8e45d0800000000000000
+      internalID: -3076367924794203415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_61
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16d02d22ac096660800000000000000
+      internalID: 7379443355104630303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_62
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdc62c0088aa0bc0800000000000000
+      internalID: -3816052466329924145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_63
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66e11e89f85a4bc0800000000000000
+      internalID: -3798125506879953302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a4144f2e11156d0800000000000000
+      internalID: -3003599810021209471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_65
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb4361c81061ed00800000000000000
+      internalID: 1000186251692952518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_66
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817a8165b94313110800000000000000
+      internalID: 1238829214272628504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_67
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da62e302571857860800000000000000
+      internalID: 7527064692271752877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_68
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa865adc5aab3c50800000000000000
+      internalID: 6646092990892116642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_69
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3194c91c5f4ac0860800000000000000
+      internalID: 7497548855087221011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_70
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdec967936dc2eb0800000000000000
+      internalID: -4743180765236499000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_71
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 72
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e0278e927ab4fb0800000000000000
+      internalID: -4662449190776729975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71aa56bfa38800f40800000000000000
+      internalID: 5692699715903531543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_73
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184032abb27326b40800000000000000
+      internalID: 5431964761508217985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_74
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384f334e0a2c0f590800000000000000
+      internalID: -7642394571368565629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_75
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd68c36d1f3c36a30800000000000000
+      internalID: 4207421920343000796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_76
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3ddbf3039f5f800800000000000000
+      internalID: 645696107220685785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_77
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669d0b314467df740800000000000000
+      internalID: 5187432380560890214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_78
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0370e689b35bfc200800000000000000
+      internalID: 202579775820007216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_79
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0214a2a5c3189dc30800000000000000
+      internalID: 4384677808432628000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_80
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c280e05b6989b8f20800000000000000
+      internalID: 3425999714595506220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_81
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71f16897e28a9ac0800000000000000
+      internalID: -3847619000429055621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_82
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd54b15d858fcd10800000000000000
+      internalID: 2148082389286673908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_83
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 36
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08580da8b2488c080800000000000000
+      internalID: -9166931718965262976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced38524d944dc650800000000000000
+      internalID: 6254730899701120492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_85
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773ed3817bea241b0800000000000000
+      internalID: -5673780479124446345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_86
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23e0f9aed7663cc0800000000000000
+      internalID: -3731681035198340308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_87
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7170ec6674c9a7790800000000000000
+      internalID: -7531535596342343913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_88
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b41a491a27256a0800000000000000
+      internalID: -6461976477014340740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_89
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f514c22d7c1ea5c40800000000000000
+      internalID: 5501958143127339359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_90
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a916ae369df9ea40800000000000000
+      internalID: 5398124450118244775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_91
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ae7017b6f65a7e0800000000000000
+      internalID: -1754873972542412152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_92
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc16a9799265f55f0800000000000000
+      internalID: -765798674992569908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_93
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2b93ea3dbbbc8f0800000000000000
+      internalID: -519114814195649835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_94
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfe9a825d8cc1660800000000000000
+      internalID: 7357976709052362678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dwarf1_emote_95
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f60bf68d9dca260800000000000000
+      internalID: 7110297435321167684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
