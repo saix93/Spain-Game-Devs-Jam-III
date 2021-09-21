@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Transform FriendsOfFirstCharacterContainer;
     public Transform FriendsOfSecondCharacterContainer;
     public Transform SpawnSpace;
+    public Transform Character1Chair;
+    public Transform Character2Chair;
 
     [Header("Data")]
     public List<Sprite> CharacterSprites;
@@ -44,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (currentState == UnionStates.Starting)
+        if (currentState == UnionStates.PreparingFeast)
         {
             // TODO: Se puede mover a los invitados de posición
             if (Input.GetMouseButtonDown(0)) // Left click
@@ -57,7 +59,8 @@ public class GameManager : MonoBehaviour
                 if (hit.collider != null)
                 {
                     grabbedCharacter = hit.collider.GetComponent<Character>();
-                    isGrabbingCharacter = true;
+                    
+                    if (!grabbedCharacter.IsMainCharacter) isGrabbingCharacter = true;
                 }
             }
 
@@ -73,7 +76,9 @@ public class GameManager : MonoBehaviour
 
                 if (hit.collider != null)
                 {
-                    grabbedCharacter.transform.position = hit.transform.position;
+                    var chair = hit.collider.GetComponent<Chair>();
+                    
+                    grabbedCharacter.transform.position = chair.transform.position + (Vector3)chair.CharacterSitPositionOffset;
                 }
             }
 
@@ -86,6 +91,7 @@ public class GameManager : MonoBehaviour
             }
             
             // Cuando todos los invitados esten en posición: currentState = UnionStates.Feast
+            // ¿Esperar X tiempo?
         }
     }
 
@@ -120,6 +126,11 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartFeast()
     {
+        currentState = UnionStates.PreparingFeast;
+
+        character1.transform.position = Character1Chair.position;
+        character2.transform.position = Character2Chair.position;
+        
         yield return new WaitUntil(() => currentState == UnionStates.Feast);
         
         // TODO: Se desarrolla el banquete
@@ -187,6 +198,7 @@ public class GameManager : MonoBehaviour
 public enum UnionStates
 {
     Starting,
+    PreparingFeast,
     Feast,
     Ending
 }

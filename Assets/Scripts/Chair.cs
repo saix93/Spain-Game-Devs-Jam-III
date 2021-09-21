@@ -10,6 +10,7 @@ public class Chair : MonoBehaviour
 
     [Header("Data")]
     public List<Chair> LinkedChairs;
+    public Vector2 CharacterSitPositionOffset;
     
     private void OnDrawGizmos()
     {
