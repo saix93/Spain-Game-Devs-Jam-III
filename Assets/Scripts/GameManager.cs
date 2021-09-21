@@ -15,20 +15,24 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     public List<Sprite> CharacterSprites;
+    public SO_TraitList AllTraits;
     public float SpawnRadius = 6f;
+    public int TraitsPerCharacter = 3;
 
     private Character character1;
     private Character character2;
 
-    private List<string> availableCharacterNames;
-    private List<Sprite> availableCharacterSprites;
+    private List<string> availableNames;
+    private List<Sprite> availableSprites;
+    private List<SO_Trait> availableTraits;
 
     private UnionStates currentState;
 
     private void Initialize()
     {
-        availableCharacterNames = Utils.GetAllAvailableNames();
-        availableCharacterSprites = new List<Sprite>(CharacterSprites);
+        availableNames = Utils.GetAllAvailableNames();
+        availableSprites = new List<Sprite>(CharacterSprites);
+        availableTraits = new List<SO_Trait>(AllTraits.List);
 
         currentState = UnionStates.Starting;
     }
@@ -43,6 +47,8 @@ public class GameManager : MonoBehaviour
         if (currentState == UnionStates.Starting)
         {
             // TODO: Se puede mover a los invitados de posición
+            
+            // Cuando todos los invitados esten en posición: currentState = UnionStates.Feast
         }
     }
 
@@ -79,17 +85,32 @@ public class GameManager : MonoBehaviour
         
         var ch = Instantiate(CharacterPrefab, position, Quaternion.identity, parent);
 
-        var newName = availableCharacterNames[Random.Range(0, availableCharacterNames.Count)];
-        availableCharacterNames.Remove(newName);
+        var newName = availableNames[Random.Range(0, availableNames.Count)];
+        availableNames.Remove(newName);
 
-        var newSprite = availableCharacterSprites[Random.Range(0, availableCharacterSprites.Count)];
-        availableCharacterSprites.Remove(newSprite);
-        
+        var newSprite = availableSprites[Random.Range(0, availableSprites.Count)];
+        availableSprites.Remove(newSprite);
+
+        var newTraits = GetRandomTraits(availableTraits, TraitsPerCharacter);
+
         var newFriendsList = new List<Character>();
         
-        ch.Init(newName, newSprite, newFriendsList);
+        ch.Init(newName, newSprite, newTraits, newFriendsList);
 
         return ch;
+    }
+
+    private List<SO_Trait> GetRandomTraits(List<SO_Trait> traitList, int num)
+    {
+        var list = new List<SO_Trait>();
+
+        var indices = Utils.GetDifferentRandomNumbers(0, traitList.Count, num);
+        foreach (var index in indices)
+        {
+            list.Add(traitList[index]);
+        }
+
+        return list;
     }
 
     private List<Character> GenerateCharacterFriends(Character originalCharacter, int itemNumber, Transform parent)

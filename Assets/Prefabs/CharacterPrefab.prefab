@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642acb0c5ad92614485555c49c61c18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Visual: {fileID: 0}
+  Visual: {fileID: 6344378886606291884}
   CharacterName: 
+  Traits: []
   Friends: []
 --- !u!1 &6344378886606291887
 GameObject:

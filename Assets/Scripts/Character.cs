@@ -12,10 +12,11 @@ public class Character : MonoBehaviour
     public List<SO_Trait> Traits;
     public List<Character> Friends;
 
-    public void Init(string newName, Sprite newSprite, List<Character> newFriendsList)
+    public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
     {
         CharacterName = newName;
         Visual.sprite = newSprite;
+        Traits = newTraits;
         Friends = newFriendsList;
 
         gameObject.name = "Character - " + CharacterName;

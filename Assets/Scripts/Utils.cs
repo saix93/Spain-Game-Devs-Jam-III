@@ -38,4 +38,40 @@ public static class Utils
 
         return names;
     }
+
+    public static List<int> GetDifferentRandomNumbers(int from, int to, int iterations)
+    {
+        var arr = new List<int>();
+
+        for (var i = 0; i < iterations; i++)
+        {
+            arr.Add(GetRandomValueExcept(arr, from, to));
+        }
+        
+        return arr;
+    }
+    
+    public static T GetRandomValueExcept<T>(List<T> list, int min, int max)
+    {
+        T value;
+
+        do
+        {
+            value = GetRandomValue<T>(min, max);
+        } while (list.Contains(value));
+
+        return value;
+    }
+    
+    public static T GetRandomValue<T>(int min, int max)
+    {
+        object value = null;
+        
+        if (typeof(T) == typeof(int))
+        {
+            value = Random.Range(min, max);
+        }
+
+        return (T) value;
+    }
 }
