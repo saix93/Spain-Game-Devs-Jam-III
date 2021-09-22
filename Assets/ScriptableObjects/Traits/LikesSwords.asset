@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a31988e1ee6c64884d62c622dce632, type: 3}
   m_Name: LikesSwords
   m_EditorClassIdentifier: 
+  ID: 753189149
   Name: Likes swords
   Value: 1

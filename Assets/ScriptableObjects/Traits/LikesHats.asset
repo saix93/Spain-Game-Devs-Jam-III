@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a31988e1ee6c64884d62c622dce632, type: 3}
   m_Name: LikesHats
   m_EditorClassIdentifier: 
+  ID: 837798939
   Name: Likes hats
   Value: 1
