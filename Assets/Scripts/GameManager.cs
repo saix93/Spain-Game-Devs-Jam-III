@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -26,13 +27,15 @@ public class GameManager : MonoBehaviour
     private List<string> availableNames;
     private List<Sprite> availableSprites;
     private List<SO_Trait> availableTraits;
+    
     private Character character1;
     private Character character2;
     private UnionStates currentState;
-
     private Camera mc;
     private Character grabbedCharacter;
     private bool isGrabbingCharacter;
+
+    private List<Group> chairGroups;
 
     private void Awake()
     {
@@ -41,7 +44,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartUnion(null, null);
+        var gp = new Group();
+        StartUnion(gp);
     }
 
     private void Update()
@@ -77,7 +81,8 @@ public class GameManager : MonoBehaviour
                 if (hit.collider != null)
                 {
                     var chair = hit.collider.GetComponent<Chair>();
-                    
+
+                    chair.SittingCharacter = grabbedCharacter;
                     grabbedCharacter.transform.position = chair.transform.position + (Vector3)chair.CharacterSitPositionOffset;
                 }
             }
@@ -90,17 +95,30 @@ public class GameManager : MonoBehaviour
                 grabbedCharacter.transform.position = mPos;
             }
             
-            // Cuando todos los invitados esten en posición: currentState = UnionStates.Feast
+            // Cuando todos los invitados esten en posición: currentState = UnionStates.Feasting
             // ¿Esperar X tiempo?
         }
     }
 
-    private void StartUnion(Character ch1, Character ch2)
+    private void StartUnion(Group group)
     {
         Initialize();
-        
-        character1 = ch1 == null ? GenerateCharacter(true, CharactersContainer) : ch1;
-        character2 = ch2 == null ? GenerateCharacter(true, CharactersContainer) : ch2;
+
+        if (group.Characters.Count < 1)
+        {
+            character1 = GenerateCharacter(true, CharactersContainer);
+            character2 = GenerateCharacter(true, CharactersContainer);
+        }
+        else if (group.Characters.Count < 2)
+        {
+            character1 = group.Characters[0];
+            character2 = GenerateCharacter(true, CharactersContainer);
+        }
+        else
+        {
+            character1 = group.Characters[0];
+            character2 = group.Characters[0];
+        }
 
         if (character1.Friends.Count == 0)
         {
@@ -131,16 +149,58 @@ public class GameManager : MonoBehaviour
         character1.transform.position = Character1Chair.position;
         character2.transform.position = Character2Chair.position;
         
-        yield return new WaitUntil(() => currentState == UnionStates.Feast);
-        
-        // TODO: Se desarrolla el banquete
-        
-        yield return new WaitUntil(() => true);
-        
-        // TODO: Se termina el banquete, hay que determinar cual es la siguiente pareja
-        // currentStatus = UnionStates.Ending
-    }
+        yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
 
+        var allChairs = FindObjectsOfType<Chair>();
+        chairGroups = CreateChairGroups(allChairs);
+        
+        // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
+        
+        yield return new WaitUntil(() => true); // TODO: Se espera a se termine el festin
+
+        chairGroups = chairGroups.OrderBy(x => x.Value).ToList();
+
+        var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
+        var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+
+        currentState = UnionStates.Ending;
+
+        yield return new WaitUntil(() => true); // TODO: Se espera a que haya que continuara la siguiente boda
+        
+        StartUnion(chosenGroup);
+    }
+    
+    private List<Group> CreateChairGroups(Chair[] allChairs)
+    {
+        var groups = new List<Group>();
+
+        foreach (var ch in allChairs)
+        {
+            var characters = new List<Character> {ch.SittingCharacter};
+
+            var exists = false;
+
+            foreach (var gp in groups)
+            {
+                if (gp.Characters.Contains(ch.SittingCharacter))
+                {
+                    exists = true;
+                    break;
+                }
+            }
+            
+            if (ch.SittingCharacter == null || exists) continue;
+            
+            foreach (var lCh in ch.LinkedChairs)
+            {
+                characters.Add(lCh.SittingCharacter);
+            }
+            
+            groups.Add(new Group(characters));
+        }
+
+        return groups;
+    }
     private Character GenerateCharacter(bool isMainCharacter, Transform parent)
     {
         var position = SpawnSpace.position + (Vector3)Random.insideUnitCircle * SpawnRadius;
@@ -159,7 +219,6 @@ public class GameManager : MonoBehaviour
 
         return ch;
     }
-
     private List<SO_Trait> GetRandomTraits(List<SO_Trait> traitList, int num)
     {
         var list = new List<SO_Trait>();
@@ -172,7 +231,6 @@ public class GameManager : MonoBehaviour
 
         return list;
     }
-
     private List<Character> GenerateCharacterFriends(Character originalCharacter, int itemNumber, Transform parent)
     {
         var list = new List<Character>();
@@ -187,6 +245,14 @@ public class GameManager : MonoBehaviour
 
         return list;
     }
+    
+    // BOTONES
+    public void ButtonStartFeast()
+    {
+        currentState = UnionStates.Feasting;
+        
+        // TODO: Hacer que los personajes que no están sentados en ninguna silla se sienten en una random
+    }
 
     private void OnDrawGizmos()
     {
@@ -199,6 +265,6 @@ public enum UnionStates
 {
     Starting,
     PreparingFeast,
-    Feast,
+    Feasting,
     Ending
 }

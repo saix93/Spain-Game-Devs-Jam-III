@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class Chair : MonoBehaviour
 {
-    [Header("References")]
-    public SpriteRenderer Visual;
-
     [Header("Data")]
+    public int ID;
     public List<Chair> LinkedChairs;
     public Vector2 CharacterSitPositionOffset;
-    
+    public Character SittingCharacter;
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
