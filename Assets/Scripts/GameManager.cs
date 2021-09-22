@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitUntil(() => true); // TODO: Se espera a se termine el festin
 
-        chairGroups = chairGroups.OrderBy(x => x.Value).ToList();
+        chairGroups = chairGroups.OrderByDescending(x => x.Value).ToList();
 
         var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
