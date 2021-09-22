@@ -13,9 +13,9 @@ public class Character : MonoBehaviour
     public List<SO_Trait> Traits;
     public List<Character> Friends;
 
-    public void Init(bool isMainCharacter, string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
+    public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
     {
-        IsMainCharacter = isMainCharacter;
+        IsMainCharacter = false;
         CharacterName = newName;
         Visual.sprite = newSprite;
         Traits = newTraits;

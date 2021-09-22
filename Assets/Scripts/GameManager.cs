@@ -10,11 +10,8 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public Character CharacterPrefab;
     public Transform CharactersContainer;
-    public Transform FriendsOfFirstCharacterContainer;
-    public Transform FriendsOfSecondCharacterContainer;
     public Transform SpawnSpace;
-    public Transform Character1Chair;
-    public Transform Character2Chair;
+    public Transform MainCharacterChairs;
 
     [Header("Data")]
     public List<Sprite> CharacterSprites;
@@ -24,16 +21,18 @@ public class GameManager : MonoBehaviour
     public LayerMask CharacterLayerMask;
     public LayerMask ChairLayerMask;
 
+    [Header("Realtime data")]
+    public List<Character> AllCharactersInScene;
+
     private List<string> availableNames;
     private List<Sprite> availableSprites;
     private List<SO_Trait> availableTraits;
     
-    private Character character1;
-    private Character character2;
     private UnionStates currentState;
     private Camera mc;
     private Character grabbedCharacter;
     private bool isGrabbingCharacter;
+    private Group currentGroup;
 
     private List<Group> chairGroups;
 
@@ -103,51 +102,53 @@ public class GameManager : MonoBehaviour
     private void StartUnion(Group group)
     {
         Initialize();
+        currentGroup = group;
 
         if (group.Characters.Count < 1)
         {
-            character1 = GenerateCharacter(true, CharactersContainer);
-            character2 = GenerateCharacter(true, CharactersContainer);
+            currentGroup.Characters.Add(GenerateCharacter(CharactersContainer));
+            currentGroup.Characters.Add(GenerateCharacter(CharactersContainer));
         }
         else if (group.Characters.Count < 2)
         {
-            character1 = group.Characters[0];
-            character2 = GenerateCharacter(true, CharactersContainer);
-        }
-        else
-        {
-            character1 = group.Characters[0];
-            character2 = group.Characters[0];
+            currentGroup.Characters.Add(GenerateCharacter(CharactersContainer));
         }
 
-        if (character1.Friends.Count == 0)
+        foreach (var cha in currentGroup.Characters)
         {
-            character1.Friends = GenerateCharacterFriends(character1, 2, FriendsOfFirstCharacterContainer);
+            if (cha.Friends.Count == 0)
+            {
+                cha.Friends = GenerateCharacterFriends(cha, 2, CharactersContainer);
+            }
         }
 
-        if (character2.Friends.Count == 0)
+        // Coloca a todos los personajes en una posición aleatoria
+        foreach (var cha in AllCharactersInScene)
         {
-            character2.Friends = GenerateCharacterFriends(character2, 2, FriendsOfSecondCharacterContainer);
+            cha.IsMainCharacter = false;
+            cha.transform.position = GetRandomSpawnPosition();
+        }
+        
+        // Setea los personajes principales para evitar que se puedan mover
+        foreach (var cha in group.Characters)
+        {
+            cha.IsMainCharacter = true;
         }
 
         StartCoroutine(StartFeast());
-    }
-
-    private void Initialize()
-    {
-        availableNames = Utils.GetAllAvailableNames();
-        availableSprites = new List<Sprite>(CharacterSprites);
-        availableTraits = new List<SO_Trait>(AllTraits.List);
-
-        currentState = UnionStates.Starting;
     }
 
     private IEnumerator StartFeast()
     {
         currentState = UnionStates.PreparingFeast;
 
-        character1.transform.position = Character1Chair.position;
-        character2.transform.position = Character2Chair.position;
+        // Coloca los personajes principales en sus sillas
+        for (var i = 0; i < currentGroup.Characters.Count; i++)
+        {
+            var cha = currentGroup.Characters[i];
+
+            cha.transform.position = MainCharacterChairs.GetChild(i).position;
+        }
         
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
 
@@ -169,7 +170,15 @@ public class GameManager : MonoBehaviour
         
         StartUnion(chosenGroup);
     }
-    
+
+    private void Initialize()
+    {
+        availableNames = Utils.GetAllAvailableNames();
+        availableSprites = new List<Sprite>(CharacterSprites);
+        availableTraits = new List<SO_Trait>(AllTraits.List);
+
+        currentState = UnionStates.Starting;
+    }
     private List<Group> CreateChairGroups(Chair[] allChairs)
     {
         var groups = new List<Group>();
@@ -201,10 +210,10 @@ public class GameManager : MonoBehaviour
 
         return groups;
     }
-    private Character GenerateCharacter(bool isMainCharacter, Transform parent)
+    private Character GenerateCharacter(Transform parent)
     {
-        var position = SpawnSpace.position + (Vector3)Random.insideUnitCircle * SpawnRadius;
-        var ch = Instantiate(CharacterPrefab, position, Quaternion.identity, parent);
+        var ch = Instantiate(CharacterPrefab, parent);
+        AllCharactersInScene.Add(ch);
         
         var newName = availableNames[Random.Range(0, availableNames.Count)];
         availableNames.Remove(newName);
@@ -215,7 +224,7 @@ public class GameManager : MonoBehaviour
         var newTraits = GetRandomTraits(availableTraits, TraitsPerCharacter);
         var newFriendsList = new List<Character>();
         
-        ch.Init(isMainCharacter, newName, newSprite, newTraits, newFriendsList);
+        ch.Init(newName, newSprite, newTraits, newFriendsList);
 
         return ch;
     }
@@ -237,13 +246,17 @@ public class GameManager : MonoBehaviour
         
         for (var i = 0; i < itemNumber; i++)
         {
-            var ch = GenerateCharacter(false, parent);
+            var ch = GenerateCharacter(parent);
             list.Add(ch);
         }
 
         parent.gameObject.name = "Friends of " + originalCharacter.CharacterName;
 
         return list;
+    }
+    private Vector3 GetRandomSpawnPosition()
+    {
+        return SpawnSpace.position + (Vector3)Random.insideUnitCircle * SpawnRadius;
     }
     
     // BOTONES
