@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     public string CharacterName;
     public List<SO_Trait> Traits;
     public List<Character> Friends;
+    public Chair AssignedChair;
 
     public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
     {

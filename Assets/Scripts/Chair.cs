@@ -9,7 +9,12 @@ public class Chair : MonoBehaviour
     public int ID;
     public List<Chair> LinkedChairs;
     public Vector2 CharacterSitPositionOffset;
-    public Character SittingCharacter;
+    public Character AssignedCharacter;
+
+    public Vector3 GetCharacterPosition()
+    {
+        return transform.position + (Vector3)CharacterSitPositionOffset;
+    }
 
     private void OnDrawGizmos()
     {

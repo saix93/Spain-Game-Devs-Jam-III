@@ -18,11 +18,13 @@ public class GameManager : MonoBehaviour
     public SO_TraitList AllTraits;
     public float SpawnRadius = 6f;
     public int TraitsPerCharacter = 3;
+    public int FriendsPerCharacter = 3;
     public LayerMask CharacterLayerMask;
     public LayerMask ChairLayerMask;
 
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
+    public List<Chair> AllChairsInScene;
 
     private List<string> availableNames;
     private List<Sprite> availableSprites;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         mc = Camera.main;
+        AllChairsInScene = FindObjectsOfType<Chair>().ToList();
     }
 
     private void Start()
@@ -81,8 +84,9 @@ public class GameManager : MonoBehaviour
                 {
                     var chair = hit.collider.GetComponent<Chair>();
 
-                    chair.SittingCharacter = grabbedCharacter;
-                    grabbedCharacter.transform.position = chair.transform.position + (Vector3)chair.CharacterSitPositionOffset;
+                    chair.AssignedCharacter = grabbedCharacter;
+                    grabbedCharacter.AssignedChair = chair;
+                    grabbedCharacter.transform.position = chair.GetCharacterPosition();
                 }
             }
 
@@ -118,7 +122,7 @@ public class GameManager : MonoBehaviour
         {
             if (cha.Friends.Count == 0)
             {
-                cha.Friends = GenerateCharacterFriends(cha, 2, CharactersContainer);
+                cha.Friends = GenerateCharacterFriends(cha, FriendsPerCharacter, CharactersContainer);
             }
         }
 
@@ -152,8 +156,7 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
 
-        var allChairs = FindObjectsOfType<Chair>();
-        chairGroups = CreateChairGroups(allChairs);
+        chairGroups = CreateChairGroups(AllChairsInScene);
         
         // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
         
@@ -164,9 +167,7 @@ public class GameManager : MonoBehaviour
         var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
 
-        currentState = UnionStates.Ending;
-
-        yield return new WaitUntil(() => true); // TODO: Se espera a que haya que continuara la siguiente boda
+        yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a que haya que continuara la siguiente boda
         
         StartUnion(chosenGroup);
     }
@@ -178,31 +179,42 @@ public class GameManager : MonoBehaviour
         availableTraits = new List<SO_Trait>(AllTraits.List);
 
         currentState = UnionStates.Starting;
+
+        foreach (var chair in AllChairsInScene)
+        {
+            chair.AssignedCharacter = null;
+        }
+
+        foreach (var character in AllCharactersInScene)
+        {
+            character.AssignedChair = null;
+        }
     }
-    private List<Group> CreateChairGroups(Chair[] allChairs)
+    private List<Group> CreateChairGroups(List<Chair> allChairs)
     {
         var groups = new List<Group>();
 
         foreach (var ch in allChairs)
         {
-            var characters = new List<Character> {ch.SittingCharacter};
+            var characters = new List<Character> {ch.AssignedCharacter};
 
             var exists = false;
 
             foreach (var gp in groups)
             {
-                if (gp.Characters.Contains(ch.SittingCharacter))
+                if (gp.Characters.Contains(ch.AssignedCharacter))
                 {
                     exists = true;
                     break;
                 }
             }
             
-            if (ch.SittingCharacter == null || exists) continue;
+            if (ch.AssignedCharacter == null || exists) continue;
             
             foreach (var lCh in ch.LinkedChairs)
             {
-                characters.Add(lCh.SittingCharacter);
+                if (lCh.AssignedCharacter == null) continue;
+                characters.Add(lCh.AssignedCharacter);
             }
             
             groups.Add(new Group(characters));
@@ -258,13 +270,49 @@ public class GameManager : MonoBehaviour
     {
         return SpawnSpace.position + (Vector3)Random.insideUnitCircle * SpawnRadius;
     }
+    private void PlaceRemainingGuestsInRandomChairs()
+    {
+        var guestsWithoutChairs = AllCharactersInScene.FindAll(x => x.AssignedChair == null && !x.IsMainCharacter);
+        
+        foreach (var guest in guestsWithoutChairs)
+        {
+            var emptyChairs = AllChairsInScene.FindAll(x => x.AssignedCharacter == null);
+
+            if (emptyChairs.Count == 0) break;
+            
+            var chair = emptyChairs[Random.Range(0, emptyChairs.Count)];
+
+            chair.AssignedCharacter = guest;
+            guest.AssignedChair = chair;
+
+            guest.transform.position = chair.GetCharacterPosition();
+        }
+
+        // TODO: Ver qué hacer con los invitados que no tienen silla cuando comienza el festin, por el momento se destruyen
+        guestsWithoutChairs = AllCharactersInScene.FindAll(x => x.AssignedChair == null && !x.IsMainCharacter);
+        foreach (var guest in guestsWithoutChairs)
+        {
+            DestroyImmediate(guest.gameObject);
+        }
+        
+        AllCharactersInScene.RemoveAll(item => item == null);
+
+        foreach (var character in AllCharactersInScene)
+        {
+            character.Friends.RemoveAll(item => item == null);
+        }
+    }
     
     // BOTONES
     public void ButtonStartFeast()
     {
         currentState = UnionStates.Feasting;
         
-        // TODO: Hacer que los personajes que no están sentados en ninguna silla se sienten en una random
+        PlaceRemainingGuestsInRandomChairs();
+    }
+    public void ButtonEndUnion()
+    {
+        currentState = UnionStates.Ending;
     }
 
     private void OnDrawGizmos()
