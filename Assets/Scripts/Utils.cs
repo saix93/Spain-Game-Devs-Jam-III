@@ -4,6 +4,20 @@ using UnityEngine;
 
 public static class Utils
 {
+    public static SO_SadnessLevel CalculateSadness(List<SO_SadnessLevel> sadnessLevels, Character character)
+    {
+        SO_SadnessLevel sLevel = null;
+
+        foreach (var level in sadnessLevels)
+        {
+            if (character.NumberOfUnions >= level.Value)
+            {
+                sLevel = level;
+            }
+        }
+
+        return sLevel;
+    }
     public static List<string> GetAllAvailableNames()
     {
         var names = new List<string>
@@ -38,7 +52,6 @@ public static class Utils
 
         return names;
     }
-
     public static List<int> GetDifferentRandomNumbers(int from, int to, int iterations)
     {
         var arr = new List<int>();
@@ -50,7 +63,6 @@ public static class Utils
         
         return arr;
     }
-    
     public static T GetRandomValueExcept<T>(List<T> list, int min, int max)
     {
         T value;
@@ -62,7 +74,6 @@ public static class Utils
 
         return value;
     }
-    
     public static T GetRandomValue<T>(int min, int max)
     {
         object value = null;

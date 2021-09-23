@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     public List<Sprite> CharacterSprites;
+    public Sprite PriestSprite;
     public SO_TraitList AllTraits;
+    public SO_SadnessLevelList AllSadnessLevels;
     public float SpawnRadius = 6f;
     public int TraitsPerCharacter = 3;
     public int FriendsPerCharacter = 3;
@@ -166,8 +168,15 @@ public class GameManager : MonoBehaviour
 
         var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+        
+        // TODO: Animaciones en las que los personajes full tristones se convierten en curas
+        var extremelySadGuests = AllCharactersInScene.FindAll(c => Utils.CalculateSadness(AllSadnessLevels.List, c).SadnessLevel == SadnessLevel.Extreme);
+        foreach (var sadGuest in extremelySadGuests)
+        {
+            sadGuest.SwitchSprite(PriestSprite);
+        }
 
-        yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a que haya que continuara la siguiente boda
+        yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a que haya que continuar con la siguiente boda
         
         StartUnion(chosenGroup);
     }
