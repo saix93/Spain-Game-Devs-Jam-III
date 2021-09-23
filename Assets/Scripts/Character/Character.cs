@@ -12,19 +12,17 @@ public class Character : MonoBehaviour
     public bool IsMainCharacter;
     public string CharacterName;
     public List<SO_Trait> Traits;
-    public List<Character> Friends;
     public Chair AssignedChair;
     public int SadnessPoints;
     public bool PlacedRandomly;
 
-    public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
+    public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits)
     {
         IsMainCharacter = false;
         PlacedRandomly = false;
         CharacterName = newName;
         Visual.sprite = newSprite;
         Traits = newTraits;
-        Friends = newFriendsList;
 
         gameObject.name = "Character - " + CharacterName;
         

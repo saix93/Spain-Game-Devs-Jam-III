@@ -14,13 +14,13 @@ public class GameManager : MonoBehaviour
     public Transform MainCharacterChairs;
 
     [Header("Data")]
+    public int MaxGuests;
     public SO_CharacterSpriteList CharacterSprites;
     public Sprite PriestSprite;
     public SO_TraitList AllTraits;
     public SO_SadnessLevelList AllSadnessLevels;
     public float SpawnRadius = 6f;
     public int TraitsPerCharacter = 3;
-    public int FriendsPerCharacter = 3;
     public LayerMask CharacterLayerMask;
     public LayerMask ChairLayerMask;
     public int PointsToSubstractPerRandomGroup = 1;
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
             }
             
             // Cuando todos los invitados esten en posición: currentState = UnionStates.Feasting
-            // ¿Esperar X tiempo?
+            // ¿Esperar X tiempo? TODO: Koraen, haz el timer para comprobar aquí si se ha acabado el tiempo
         }
     }
 
@@ -117,20 +117,19 @@ public class GameManager : MonoBehaviour
 
         if (group.Characters.Count < 1)
         {
-            currentGroup.Characters.Add(GenerateCharacter(CharactersContainer));
-            currentGroup.Characters.Add(GenerateCharacter(CharactersContainer));
+            currentGroup.Characters.Add(GenerateCharacter());
+            currentGroup.Characters.Add(GenerateCharacter());
         }
         else if (group.Characters.Count < 2)
         {
-            currentGroup.Characters.Add(GenerateCharacter(CharactersContainer));
+            currentGroup.Characters.Add(GenerateCharacter());
         }
 
-        foreach (var cha in currentGroup.Characters)
+        // Genera los invitados
+        var guestNumber = Random.Range(AllCharactersInScene.Count - currentGroup.Characters.Count, MaxGuests) - AllCharactersInScene.Count;
+        for (var i = 0; i < guestNumber; i++)
         {
-            if (cha.Friends.Count == 0)
-            {
-                cha.Friends = GenerateCharacterFriends(cha, FriendsPerCharacter, CharactersContainer);
-            }
+            GenerateCharacter();
         }
 
         // Coloca a todos los personajes en una posición aleatoria
@@ -243,9 +242,9 @@ public class GameManager : MonoBehaviour
 
         return groups;
     }
-    private Character GenerateCharacter(Transform parent)
+    private Character GenerateCharacter()
     {
-        var ch = Instantiate(CharacterPrefab, parent);
+        var ch = Instantiate(CharacterPrefab, CharactersContainer);
         AllCharactersInScene.Add(ch);
         
         var newName = availableNames[Random.Range(0, availableNames.Count)];
@@ -255,9 +254,8 @@ public class GameManager : MonoBehaviour
         availableSprites.Remove(newSprite);
 
         var newTraits = GetRandomTraits(availableTraits, TraitsPerCharacter);
-        var newFriendsList = new List<Character>();
         
-        ch.Init(newName, newSprite, newTraits, newFriendsList);
+        ch.Init(newName, newSprite, newTraits);
 
         return ch;
     }
@@ -269,18 +267,6 @@ public class GameManager : MonoBehaviour
         foreach (var index in indices)
         {
             list.Add(traitList[index]);
-        }
-
-        return list;
-    }
-    private List<Character> GenerateCharacterFriends(Character originalCharacter, int itemNumber, Transform parent)
-    {
-        var list = new List<Character>();
-        
-        for (var i = 0; i < itemNumber; i++)
-        {
-            var ch = GenerateCharacter(parent);
-            list.Add(ch);
         }
 
         return list;
@@ -316,11 +302,6 @@ public class GameManager : MonoBehaviour
         }
         
         AllCharactersInScene.RemoveAll(item => item == null);
-
-        foreach (var character in AllCharactersInScene)
-        {
-            character.Friends.RemoveAll(item => item == null);
-        }
     }
     
     // BOTONES
