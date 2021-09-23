@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public Transform MainCharacterChairs;
 
     [Header("Data")]
-    public List<Sprite> CharacterSprites;
+    public SO_CharacterSpriteList CharacterSprites;
     public Sprite PriestSprite;
     public SO_TraitList AllTraits;
     public SO_SadnessLevelList AllSadnessLevels;
@@ -191,7 +191,7 @@ public class GameManager : MonoBehaviour
     private void Initialize()
     {
         availableNames = Utils.GetAllAvailableNames();
-        availableSprites = new List<Sprite>(CharacterSprites);
+        availableSprites = new List<Sprite>(CharacterSprites.List);
         availableTraits = new List<SO_Trait>(AllTraits.List);
 
         currentState = UnionStates.Starting;
