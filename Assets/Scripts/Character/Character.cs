@@ -13,11 +13,13 @@ public class Character : MonoBehaviour
     public List<SO_Trait> Traits;
     public List<Character> Friends;
     public Chair AssignedChair;
-    public int NumberOfUnions;
+    public int SadnessPoints;
+    public bool PlacedRandomly;
 
     public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits, List<Character> newFriendsList)
     {
         IsMainCharacter = false;
+        PlacedRandomly = false;
         CharacterName = newName;
         Visual.sprite = newSprite;
         Traits = newTraits;

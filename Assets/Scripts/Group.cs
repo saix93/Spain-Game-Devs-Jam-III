@@ -6,6 +6,7 @@ using UnityEngine;
 public class Group
 {
     public int Value;
+    public bool RandomlyGenerated;
     public List<Character> Characters;
 
     public Group()
@@ -17,6 +18,7 @@ public class Group
     public Group(List<Character> newCharacters)
     {
         Characters = new List<Character>(newCharacters);
+        RandomlyGenerated = Characters.Exists(c => c.PlacedRandomly);
         Value = EvaluateGroupValue();
     }
 
@@ -37,7 +39,7 @@ public class Group
         foreach (var t in traits.Distinct())
         {
             var n = traits.Count(x => x.ID == t.ID);
-            if (n > 1) finalValue += t.Value * n;
+            if (n > 1) finalValue += t.Value;
         }
 
         return finalValue;

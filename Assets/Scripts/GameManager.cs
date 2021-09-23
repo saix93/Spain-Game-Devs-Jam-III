@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public int FriendsPerCharacter = 3;
     public LayerMask CharacterLayerMask;
     public LayerMask ChairLayerMask;
+    public int PointsToSubstractPerRandomGroup = 1;
+    public int MaxValueToAddSaddness = 0;
 
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
@@ -131,7 +133,6 @@ public class GameManager : MonoBehaviour
         // Coloca a todos los personajes en una posición aleatoria
         foreach (var cha in AllCharactersInScene)
         {
-            cha.IsMainCharacter = false;
             cha.transform.position = GetRandomSpawnPosition();
         }
         
@@ -166,15 +167,21 @@ public class GameManager : MonoBehaviour
 
         chairGroups = chairGroups.OrderByDescending(x => x.Value).ToList();
 
+        // Elige un grupo de entre los que más puntos tienen
         var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+
+        // Resta puntos a los grupos por ser generados de forma aleatoria
+        var randomlyGeneratedGroups = chairGroups.FindAll(gp => gp.RandomlyGenerated);
+        randomlyGeneratedGroups.ForEach(gp => gp.Value -= PointsToSubstractPerRandomGroup);
+        
+        // Añade puntos de tristeza
+        var sadGroups = chairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
+        sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.SadnessPoints++));
         
         // TODO: Animaciones en las que los personajes full tristones se convierten en curas
         var extremelySadGuests = AllCharactersInScene.FindAll(c => Utils.CalculateSadness(AllSadnessLevels.List, c).SadnessLevel == SadnessLevel.Extreme);
-        foreach (var sadGuest in extremelySadGuests)
-        {
-            sadGuest.SwitchSprite(PriestSprite);
-        }
+        extremelySadGuests.ForEach(g => g.SwitchSprite(PriestSprite));
 
         yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a que haya que continuar con la siguiente boda
         
@@ -197,6 +204,8 @@ public class GameManager : MonoBehaviour
         foreach (var character in AllCharactersInScene)
         {
             character.AssignedChair = null;
+            character.IsMainCharacter = false;
+            character.PlacedRandomly = false;
         }
     }
     private List<Group> CreateChairGroups(List<Chair> allChairs)
@@ -286,6 +295,7 @@ public class GameManager : MonoBehaviour
         foreach (var guest in guestsWithoutChairs)
         {
             var emptyChairs = AllChairsInScene.FindAll(x => x.AssignedCharacter == null);
+            guest.PlacedRandomly = true;
 
             if (emptyChairs.Count == 0) break;
             

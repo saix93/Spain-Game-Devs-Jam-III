@@ -10,7 +10,7 @@ public static class Utils
 
         foreach (var level in sadnessLevels)
         {
-            if (character.NumberOfUnions >= level.Value)
+            if (character.SadnessPoints >= level.Value)
             {
                 sLevel = level;
             }
