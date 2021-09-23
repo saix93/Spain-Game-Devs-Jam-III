@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
 
     public void AssignChair(Chair chair)
     {
-        if (AssignedChair != null) AssignedChair.AssignedCharacter = null;
+        if (!(AssignedChair is null)) AssignedChair.AssignedCharacter = null;
         AssignedChair = chair;
         chair.AssignedCharacter = this;
         transform.position = chair.GetCharacterPosition();

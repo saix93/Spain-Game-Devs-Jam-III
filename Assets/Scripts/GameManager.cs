@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     public LayerMask ChairLayerMask;
     public int PointsToSubstractPerRandomGroup = 1;
     public int MaxValueToAddSaddness = 0;
+    public int MinFreeChairsToPlay = 4;
 
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
@@ -42,8 +44,6 @@ public class GameManager : MonoBehaviour
     private Character grabbedCharacter;
     private bool isGrabbingCharacter;
     private Group currentGroup;
-
-    private List<Group> chairGroups;
 
     public static GameManager _;
 
@@ -150,12 +150,12 @@ public class GameManager : MonoBehaviour
             GenerateCharacter();
         }
         
-        currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
-        priests = AllCharactersInScene.FindAll(c => c.IsPriest);
-        Debug.Log($"Generados {guestNumber} invitados. Para un total de {priests.Count} priests. {currentGuests - priests.Count} invitados \"normales\"");
+//        currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
+//        priests = AllCharactersInScene.FindAll(c => c.IsPriest);
+//        Debug.Log($"Generados {guestNumber} invitados. Para un total de {priests.Count} priests. {currentGuests - priests.Count} invitados \"normales\"");
 
         // Coloca a todos los personajes en una posición aleatoria
-        // TODO: Cambiar a una posición aleatoria de entre un preset
+        // TODO: Cambiar a una posición aleatoria de entre un preset de posiciones
         AllCharactersInScene.ForEach(c =>
         {
             if (c.IsPriest) return;
@@ -208,18 +208,18 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
 
         PlaceRemainingGuestsInRandomChairs();
-        chairGroups = CreateChairGroups(AllChairsInScene);
+        var allChairGroups = CreateChairGroups(AllChairsInScene);
         
         // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
         
         yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a se termine el festin
 
         // Resta puntos a los grupos por ser generados de forma aleatoria
-        var randomlyGeneratedGroups = chairGroups.FindAll(gp => gp.RandomlyGenerated);
+        var randomlyGeneratedGroups = allChairGroups.FindAll(gp => gp.RandomlyGenerated);
         randomlyGeneratedGroups.ForEach(gp => gp.Value -= PointsToSubstractPerRandomGroup);
         
         // Añade puntos de tristeza
-        var sadGroups = chairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
+        var sadGroups = allChairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
         sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.SadnessPoints++));
         
         // TODO: Animaciones en las que los personajes full tristones se convierten en curas
@@ -227,21 +227,33 @@ public class GameManager : MonoBehaviour
         extremelySadGuests.ForEach(g => g.TurnIntoPriest(PriestSprite));
         
         // Reevalua los grupos para evitar que salga ganador un grupo con priest
-        chairGroups.ForEach(g => g.ReEvaluateGroupValue());
+        allChairGroups.ForEach(g => g.ReEvaluateGroupValue());
 
         // Elige un grupo de entre los que más puntos tienen
-        chairGroups = chairGroups.OrderByDescending(x => x.Value).ToList();
-        var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
+        allChairGroups = allChairGroups.OrderByDescending(x => x.Value).ToList();
+        var winnerGroups = allChairGroups.FindAll(gp => gp.Value == allChairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
 
         yield return new WaitUntil(() => currentState == UnionStates.NextUnion); // TODO: Se espera a que haya que continuar con la siguiente boda
         
         currentGroup.Characters.ForEach(c => DestroyImmediate(c.gameObject));
         AllCharactersInScene.RemoveAll(item => item == null);
-        
-        // TODO: Añadir una pequeña probabilidad de que algún invitado sea eliminado de la lista
-        
-        StartUnion(chosenGroup);
+
+        // Losing conditions -> número total de sillas - priests <= minimo de sillas libres || todos los grupos tienen al menos un priest
+        var freeChairs = AllChairsInScene.Count - AllCharactersInScene.FindAll(c => c.IsPriest).Count;
+        if (freeChairs <= MinFreeChairsToPlay || allChairGroups.All(g => g.HasPriest))
+        {
+            EndGame();
+        }
+        else
+        {
+            StartUnion(chosenGroup);
+        }
+    }
+
+    private void EndGame()
+    {
+        // TODO: Fin del juego
     }
 
     private List<Group> CreateChairGroups(List<Chair> allChairs)
@@ -263,11 +275,11 @@ public class GameManager : MonoBehaviour
                 }
             }
             
-            if (ch.AssignedCharacter == null || exists) continue;
+            if (ch.AssignedCharacter is null || exists) continue;
             
             foreach (var lCh in ch.LinkedChairs)
             {
-                if (lCh.AssignedCharacter == null) continue;
+                if (lCh.AssignedCharacter is null) continue;
                 characters.Add(lCh.AssignedCharacter);
             }
             
@@ -341,6 +353,10 @@ public class GameManager : MonoBehaviour
     public void ButtonNextUnion()
     {
         currentState = UnionStates.NextUnion;
+    }
+    public void ButtonResetEverything()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void OnDrawGizmos()
