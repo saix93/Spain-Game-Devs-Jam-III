@@ -12,9 +12,11 @@ public class GameManager : MonoBehaviour
     public Transform CharactersContainer;
     public Transform SpawnSpace;
     public Transform MainCharacterChairs;
+    public Transform GuestChairs;
 
     [Header("Data")]
-    public int MaxGuests;
+    public int MinGuests = 4;
+    public int MaxGuests = 8;
     public SO_CharacterSpriteList CharacterSprites;
     public Sprite PriestSprite;
     public SO_TraitList AllTraits;
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
     
     private UnionStates currentState;
     private Camera mc;
+    private Vector3 grabbedCharacterOriginalPosition;
     private Character grabbedCharacter;
     private bool isGrabbingCharacter;
     private Group currentGroup;
@@ -48,15 +51,13 @@ public class GameManager : MonoBehaviour
     {
         _ = this;
         mc = Camera.main;
-        AllChairsInScene = FindObjectsOfType<Chair>().ToList();
+        AllChairsInScene = GuestChairs.GetComponentsInChildren<Chair>().ToList();
     }
-
     private void Start()
     {
         var gp = new Group();
         StartUnion(gp);
     }
-
     private void Update()
     {
         if (currentState == UnionStates.PreparingFeast)
@@ -72,8 +73,12 @@ public class GameManager : MonoBehaviour
                 if (hit.collider != null)
                 {
                     grabbedCharacter = hit.collider.GetComponent<Character>();
-                    
-                    if (!grabbedCharacter.IsMainCharacter) isGrabbingCharacter = true;
+
+                    if (!grabbedCharacter.IsMainCharacter && !grabbedCharacter.IsPriest)
+                    {
+                        grabbedCharacterOriginalPosition = grabbedCharacter.transform.position;
+                        isGrabbingCharacter = true;
+                    }
                 }
             }
 
@@ -91,9 +96,17 @@ public class GameManager : MonoBehaviour
                 {
                     var chair = hit.collider.GetComponent<Chair>();
 
-                    chair.AssignedCharacter = grabbedCharacter;
-                    grabbedCharacter.AssignedChair = chair;
-                    grabbedCharacter.transform.position = chair.GetCharacterPosition();
+                    if (chair.AssignedCharacter != null)
+                    {
+                        grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                        return;
+                    }
+
+                    grabbedCharacter.AssignChair(chair);
+                }
+                else
+                {
+                    grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
                 }
             }
 
@@ -122,32 +135,65 @@ public class GameManager : MonoBehaviour
         }
         else if (group.Characters.Count < 2)
         {
-            currentGroup.Characters.Add(GenerateCharacter());
+            currentGroup.Characters.Add(GenerateCharacter()); // Solo ocurre cuando solo hay un invitado, ya que es el unico grupo a seleccionar
         }
 
         // Genera los invitados
-        var guestNumber = Random.Range(AllCharactersInScene.Count - currentGroup.Characters.Count, MaxGuests) - AllCharactersInScene.Count;
+        var currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
+        var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
+        var min = Mathf.Max(0, MinGuests - currentGuests + priests.Count); // El minimo de guests se aplica sin contar los priests
+        var max = MaxGuests - currentGuests;
+        var guestNumber = Random.Range(min, max);
+        
         for (var i = 0; i < guestNumber; i++)
         {
             GenerateCharacter();
         }
+        
+        currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
+        priests = AllCharactersInScene.FindAll(c => c.IsPriest);
+        Debug.Log($"Generados {guestNumber} invitados. Para un total de {priests.Count} priests. {currentGuests - priests.Count} invitados \"normales\"");
 
         // Coloca a todos los personajes en una posición aleatoria
-        foreach (var cha in AllCharactersInScene)
+        // TODO: Cambiar a una posición aleatoria de entre un preset
+        AllCharactersInScene.ForEach(c =>
         {
-            cha.transform.position = GetRandomSpawnPosition();
-        }
+            if (c.IsPriest) return;
+            c.transform.position = GetRandomSpawnPosition();
+        });
         
         // Setea los personajes principales para evitar que se puedan mover
-        foreach (var cha in group.Characters)
-        {
-            cha.IsMainCharacter = true;
-        }
+        group.Characters.ForEach(c => c.IsMainCharacter = true);
 
-        StartCoroutine(StartFeast());
+        StartCoroutine(Feast());
     }
+    private void Initialize()
+    {
+        availableNames = Utils.GetAllAvailableNames();
+        availableSprites = new List<Sprite>(CharacterSprites.List);
+        availableTraits = new List<SO_Trait>(AllTraits.List);
 
-    private IEnumerator StartFeast()
+        currentState = UnionStates.Starting;
+
+        AllChairsInScene.ForEach(c => c.AssignedCharacter = null);
+
+        AllCharactersInScene.ForEach(c =>
+        {
+            c.AssignedChair = null;
+            c.IsMainCharacter = false;
+            c.PlacedRandomly = false;
+        });
+
+        // Asigna todos los priests a sus sillas
+        // TODO: Revisar qué tal funciona. También se puede hacer que los priests se queden en los sitios que tenían
+        // pero esto puede hacer más injusto el gameplay
+        var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
+        for (var i = 0; i < priests.Count; i++)
+        {
+            priests[i].AssignChair(AllChairsInScene[i]);
+        }
+    }
+    private IEnumerator Feast()
     {
         currentState = UnionStates.PreparingFeast;
 
@@ -161,17 +207,12 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
 
+        PlaceRemainingGuestsInRandomChairs();
         chairGroups = CreateChairGroups(AllChairsInScene);
         
         // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
         
-        yield return new WaitUntil(() => true); // TODO: Se espera a se termine el festin
-
-        chairGroups = chairGroups.OrderByDescending(x => x.Value).ToList();
-
-        // Elige un grupo de entre los que más puntos tienen
-        var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
-        var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+        yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a se termine el festin
 
         // Resta puntos a los grupos por ser generados de forma aleatoria
         var randomlyGeneratedGroups = chairGroups.FindAll(gp => gp.RandomlyGenerated);
@@ -183,33 +224,26 @@ public class GameManager : MonoBehaviour
         
         // TODO: Animaciones en las que los personajes full tristones se convierten en curas
         var extremelySadGuests = AllCharactersInScene.FindAll(c => Utils.CalculateSadness(c).SadnessLevel == SadnessLevel.Extreme);
-        extremelySadGuests.ForEach(g => g.SwitchSprite(PriestSprite));
+        extremelySadGuests.ForEach(g => g.TurnIntoPriest(PriestSprite));
+        
+        // Reevalua los grupos para evitar que salga ganador un grupo con priest
+        chairGroups.ForEach(g => g.ReEvaluateGroupValue());
 
-        yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a que haya que continuar con la siguiente boda
+        // Elige un grupo de entre los que más puntos tienen
+        chairGroups = chairGroups.OrderByDescending(x => x.Value).ToList();
+        var winnerGroups = chairGroups.FindAll(gp => gp.Value == chairGroups[0].Value);
+        var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+
+        yield return new WaitUntil(() => currentState == UnionStates.NextUnion); // TODO: Se espera a que haya que continuar con la siguiente boda
+        
+        currentGroup.Characters.ForEach(c => DestroyImmediate(c.gameObject));
+        AllCharactersInScene.RemoveAll(item => item == null);
+        
+        // TODO: Añadir una pequeña probabilidad de que algún invitado sea eliminado de la lista
         
         StartUnion(chosenGroup);
     }
 
-    private void Initialize()
-    {
-        availableNames = Utils.GetAllAvailableNames();
-        availableSprites = new List<Sprite>(CharacterSprites.List);
-        availableTraits = new List<SO_Trait>(AllTraits.List);
-
-        currentState = UnionStates.Starting;
-
-        foreach (var chair in AllChairsInScene)
-        {
-            chair.AssignedCharacter = null;
-        }
-
-        foreach (var character in AllCharactersInScene)
-        {
-            character.AssignedChair = null;
-            character.IsMainCharacter = false;
-            character.PlacedRandomly = false;
-        }
-    }
     private List<Group> CreateChairGroups(List<Chair> allChairs)
     {
         var groups = new List<Group>();
@@ -293,27 +327,20 @@ public class GameManager : MonoBehaviour
 
             guest.transform.position = chair.GetCharacterPosition();
         }
-
-        // TODO: Ver qué hacer con los invitados que no tienen silla cuando comienza el festin, por el momento se destruyen
-        guestsWithoutChairs = AllCharactersInScene.FindAll(x => x.AssignedChair == null && !x.IsMainCharacter);
-        foreach (var guest in guestsWithoutChairs)
-        {
-            DestroyImmediate(guest.gameObject);
-        }
-        
-        AllCharactersInScene.RemoveAll(item => item == null);
     }
     
     // BOTONES
     public void ButtonStartFeast()
     {
         currentState = UnionStates.Feasting;
-        
-        PlaceRemainingGuestsInRandomChairs();
     }
     public void ButtonEndUnion()
     {
         currentState = UnionStates.Ending;
+    }
+    public void ButtonNextUnion()
+    {
+        currentState = UnionStates.NextUnion;
     }
 
     private void OnDrawGizmos()
@@ -328,5 +355,6 @@ public enum UnionStates
     Starting,
     PreparingFeast,
     Feasting,
-    Ending
+    Ending,
+    NextUnion
 }

@@ -15,11 +15,13 @@ public class Character : MonoBehaviour
     public Chair AssignedChair;
     public int SadnessPoints;
     public bool PlacedRandomly;
+    public bool IsPriest;
 
     public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits)
     {
         IsMainCharacter = false;
         PlacedRandomly = false;
+        IsPriest = false;
         CharacterName = newName;
         Visual.sprite = newSprite;
         Traits = newTraits;
@@ -29,7 +31,21 @@ public class Character : MonoBehaviour
         UICharacter.Init(this);
     }
 
-    public void SwitchSprite(Sprite newSprite)
+    public void AssignChair(Chair chair)
+    {
+        if (AssignedChair != null) AssignedChair.AssignedCharacter = null;
+        AssignedChair = chair;
+        chair.AssignedCharacter = this;
+        transform.position = chair.GetCharacterPosition();
+    }
+
+    public void TurnIntoPriest(Sprite newSprite)
+    {
+        SwitchSprite(newSprite);
+        IsPriest = true;
+    }
+
+    private void SwitchSprite(Sprite newSprite)
     {
         Visual.sprite = newSprite;
     }

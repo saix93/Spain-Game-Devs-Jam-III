@@ -10,21 +10,23 @@ public class UI_Character : MonoBehaviour
     public UI_Trait UITraitPrefab;
     public Transform TraitContainer;
     public TextMeshProUGUI SadnessText;
+    public TextMeshProUGUI IsPriestText;
 
-    private Character currentCharacter;
+    private Character character;
 
     private void Update()
     {
-        var sadness = Utils.CalculateSadness(currentCharacter);
-        SadnessText.text = $"{sadness.SadnessLevel.ToString()} ({currentCharacter.SadnessPoints})";
+        var sadness = Utils.CalculateSadness(character);
+        SadnessText.text = $"{sadness.SadnessLevel.ToString()} ({character.SadnessPoints})";
+        IsPriestText.text = $"IsPriest: {character.IsPriest}";
     }
 
-    public void Init(Character character)
+    public void Init(Character newCharacter)
     {
-        currentCharacter = character;
+        character = newCharacter;
         
         Utils.DestroyChildren(TraitContainer);
-        currentCharacter.Traits.ForEach(t =>
+        character.Traits.ForEach(t =>
         {
             var i = Instantiate(UITraitPrefab, TraitContainer);
             i.Init(t);

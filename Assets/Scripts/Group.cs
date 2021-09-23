@@ -12,6 +12,7 @@ public class Group
     public Group()
     {
         Characters = new List<Character>();
+        RandomlyGenerated = false;
         Value = 0;
     }
 
@@ -19,6 +20,11 @@ public class Group
     {
         Characters = new List<Character>(newCharacters);
         RandomlyGenerated = Characters.Exists(c => c.PlacedRandomly);
+        Value = EvaluateGroupValue();
+    }
+
+    public void ReEvaluateGroupValue()
+    {
         Value = EvaluateGroupValue();
     }
 
@@ -31,10 +37,9 @@ public class Group
 
         foreach (var ch in Characters)
         {
+            if (ch.IsPriest) return -100; // TODO: Quizá se pueda hacer que si el número de traits en común es muy grande, el cura se case igualmente
             traits.AddRange(ch.Traits);
         }
-
-        // traits = traits.OrderBy(x => x.ID).ToList();
 
         foreach (var t in traits.Distinct())
         {
