@@ -42,8 +42,11 @@ public class GameManager : MonoBehaviour
 
     private List<Group> chairGroups;
 
+    public static GameManager _;
+
     private void Awake()
     {
+        _ = this;
         mc = Camera.main;
         AllChairsInScene = FindObjectsOfType<Chair>().ToList();
     }
@@ -180,7 +183,7 @@ public class GameManager : MonoBehaviour
         sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.SadnessPoints++));
         
         // TODO: Animaciones en las que los personajes full tristones se convierten en curas
-        var extremelySadGuests = AllCharactersInScene.FindAll(c => Utils.CalculateSadness(AllSadnessLevels.List, c).SadnessLevel == SadnessLevel.Extreme);
+        var extremelySadGuests = AllCharactersInScene.FindAll(c => Utils.CalculateSadness(c).SadnessLevel == SadnessLevel.Extreme);
         extremelySadGuests.ForEach(g => g.SwitchSprite(PriestSprite));
 
         yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a que haya que continuar con la siguiente boda
@@ -279,8 +282,6 @@ public class GameManager : MonoBehaviour
             var ch = GenerateCharacter(parent);
             list.Add(ch);
         }
-
-        parent.gameObject.name = "Friends of " + originalCharacter.CharacterName;
 
         return list;
     }

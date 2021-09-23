@@ -4,11 +4,11 @@ using UnityEngine;
 
 public static class Utils
 {
-    public static SO_SadnessLevel CalculateSadness(List<SO_SadnessLevel> sadnessLevels, Character character)
+    public static SO_SadnessLevel CalculateSadness(Character character)
     {
         SO_SadnessLevel sLevel = null;
 
-        foreach (var level in sadnessLevels)
+        foreach (var level in GameManager._.AllSadnessLevels.List)
         {
             if (character.SadnessPoints >= level.Value)
             {
@@ -84,5 +84,16 @@ public static class Utils
         }
 
         return (T) value;
+    }
+    /// <summary>
+    /// Destroys all children of the given transform
+    /// </summary>
+    /// <param name="transform"></param>
+    public static void DestroyChildren(Transform transform)
+    {
+        foreach (Transform child in transform)
+        {
+            Object.Destroy(child.gameObject);
+        }
     }
 }

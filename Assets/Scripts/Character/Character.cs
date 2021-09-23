@@ -6,7 +6,8 @@ public class Character : MonoBehaviour
 {
     [Header("References")]
     public SpriteRenderer Visual;
-    
+    public UI_Character UICharacter;
+
     [Header("Realtime data")]
     public bool IsMainCharacter;
     public string CharacterName;
@@ -26,6 +27,8 @@ public class Character : MonoBehaviour
         Friends = newFriendsList;
 
         gameObject.name = "Character - " + CharacterName;
+        
+        UICharacter.Init(this);
     }
 
     public void SwitchSprite(Sprite newSprite)
