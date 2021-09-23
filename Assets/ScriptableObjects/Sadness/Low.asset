@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a31988e1ee6c64884d62c622dce632, type: 3}
-  m_Name: LikesSwords
+  m_Script: {fileID: 11500000, guid: 1fa0c6e1123aacd428641bf48ea4ecf3, type: 3}
+  m_Name: Low
   m_EditorClassIdentifier: 
-  ID: 753189149
-  Name: Likes swords
   Value: 1
+  SadnessLevel: 1

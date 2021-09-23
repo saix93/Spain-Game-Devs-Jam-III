@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Trait")]
 public class SO_Trait : ScriptableObject
 {
+    [UniqueIdentifier]
+    public int ID;
     public string Name;
-    public float Value;
+    public int Value;
 }

@@ -46,9 +46,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Visual: {fileID: 6344378886606291884}
+  SadnessLevels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  IsMainCharacter: 0
   CharacterName: 
   Traits: []
   Friends: []
+  AssignedChair: {fileID: 0}
+  UnionNumber: 0
 --- !u!70 &1110949138
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
