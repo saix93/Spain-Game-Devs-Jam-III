@@ -358,6 +358,16 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    public void ButtonAdvancePhase()
+    {
+        currentState += 1;
+    }
+    
+    // EXTRA
+    public UnionStates GetCurrentState()
+    {
+        return currentState;
+    }
 
     private void OnDrawGizmos()
     {
