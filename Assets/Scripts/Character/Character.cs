@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,10 @@ public class Character : MonoBehaviour
     public SpriteRenderer Visual;
     public UI_Character UICharacter;
 
+    [Header("Data")]
+    public MinMaxInt OrderInLayer = new MinMaxInt(200, 2000);
+    public MinMaxInt PositionY = new MinMaxInt(-4, 18);
+
     [Header("Realtime data")]
     public bool IsMainCharacter;
     public string CharacterName;
@@ -16,6 +21,14 @@ public class Character : MonoBehaviour
     public int SadnessPoints;
     public bool PlacedRandomly;
     public bool IsPriest;
+
+    private void Update()
+    {
+        var factor = Mathf.InverseLerp(PositionY.Min, PositionY.Max, transform.position.y);
+        var order = (int)Mathf.Lerp(OrderInLayer.Max, OrderInLayer.Min, factor);
+
+        ChangeOrderInLayer(order);
+    }
 
     public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits)
     {
@@ -48,5 +61,10 @@ public class Character : MonoBehaviour
     private void SwitchSprite(Sprite newSprite)
     {
         Visual.sprite = newSprite;
+    }
+
+    private void ChangeOrderInLayer(int newOrder)
+    {
+        Visual.sortingOrder = newOrder;
     }
 }

@@ -35,8 +35,6 @@ public class Group
         var finalValue = 0;
         var traits = new List<SO_Trait>();
 
-        if (Characters.Count < 2) return 0;
-
         foreach (var ch in Characters)
         {
             if (ch.IsPriest) {
@@ -46,6 +44,8 @@ public class Group
             
             traits.AddRange(ch.Traits);
         }
+
+        if (Characters.Count < 2) return 0;
 
         foreach (var t in traits.Distinct())
         {

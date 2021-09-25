@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 public static class Utils
 {
@@ -95,5 +98,18 @@ public static class Utils
         {
             Object.Destroy(child.gameObject);
         }
+    }
+}
+
+[Serializable]
+public class MinMaxInt
+{
+    public int Min;
+    public int Max;
+    
+    public MinMaxInt(int min, int max)
+    {
+        Min = min;
+        Max = max;
     }
 }
