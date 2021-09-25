@@ -16,8 +16,7 @@ public class GameManager : MonoBehaviour
     public Transform GuestChairs;
 
     [Header("Data")]
-    public int MinGuests = 4;
-    public int MaxGuests = 8;
+    public MinMaxInt GuestsNumber = new MinMaxInt(4, 8);
     public bool AlwaysSpawnMaxGuests = false;
     public SO_CharacterSpriteList CharacterSprites;
     public Sprite PriestSprite;
@@ -32,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Animations")]
     public float TimeToMoveRandomCharacters = 1;
+    public MinMaxFloat RandomTimeBetweenReactions = new MinMaxFloat(.5f, 1.5f);
 
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
@@ -173,8 +173,8 @@ public class GameManager : MonoBehaviour
         // Genera los invitados
         var currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
         var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
-        var min = Mathf.Max(0, MinGuests - currentGuests + priests.Count); // El minimo de guests se aplica sin contar los priests
-        var max = MaxGuests - currentGuests;
+        var min = Mathf.Max(0, GuestsNumber.Min - currentGuests + priests.Count); // El minimo de guests se aplica sin contar los priests
+        var max = GuestsNumber.Max - currentGuests;
         var guestNumber = Random.Range(min, max);
         if (AlwaysSpawnMaxGuests) guestNumber = max;
         
@@ -269,13 +269,24 @@ public class GameManager : MonoBehaviour
 
             guest.AssignChair(chair);
         }
+        
+        // Crea los grupos de sillas, la posición de los invitados es final
+        var allChairGroups = CreateChairGroups(AllGuestChairs);
 
         // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
+        var guests = AllCharactersInScene.FindAll(c => !c.IsMainCharacter);
+        foreach (var guest in guests)
+        {
+            var reactionTime = Random.Range(RandomTimeBetweenReactions.Min, RandomTimeBetweenReactions.Max);
+
+            yield return new WaitForSeconds(reactionTime);
+
+            var guestGroup = allChairGroups.Find(g => g.Characters.Contains(guest));
+            guest.ShowEmote(guestGroup);
+        }
         
         yield return new WaitUntil(() => currentState == UnionStates.Ending);
 
-        var allChairGroups = CreateChairGroups(AllGuestChairs);
-        
         // Resta puntos a los grupos por ser generados de forma aleatoria
         var randomlyGeneratedGroups = allChairGroups.FindAll(gp => gp.RandomlyGenerated);
         randomlyGeneratedGroups.ForEach(gp => gp.Value -= PointsToSubstractPerRandomGroup);

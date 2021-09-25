@@ -9,4 +9,5 @@ public class SO_Trait : ScriptableObject
     public int ID;
     public string Name;
     public int Value;
+    public Sprite Icon;
 }

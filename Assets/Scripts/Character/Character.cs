@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Character : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class Character : MonoBehaviour
     [Header("Data")]
     public MinMaxInt OrderInLayer = new MinMaxInt(200, 2000);
     public MinMaxInt PositionY = new MinMaxInt(-4, 18);
+
+    [Header("Animations")]
+    public Sprite SadIcon;
 
     [Header("Realtime data")]
     public bool IsMainCharacter;
@@ -46,6 +50,22 @@ public class Character : MonoBehaviour
         UICharacter.Init(this);
     }
 
+    public void ShowEmote(Group group)
+    {
+        if (group.Characters.Count > 1)
+        {
+            var icon = Traits[Random.Range(0, Traits.Count)].Icon;
+
+            UICharacter.ShowEmote(icon);
+        }
+        else
+        {
+            UICharacter.ShowEmote(SadIcon);
+        }
+        
+        // TODO: Añadir más condiciones: Priest, niveles de tristón etc
+    }
+
     public void AssignSpawnPoint(SpawnPoint sp)
     {
         ClearAssignedChair();
@@ -54,7 +74,6 @@ public class Character : MonoBehaviour
         sp.AssignedCharacter = this;
         transform.position = sp.GetCharacterPosition();
     }
-
     public void AssignChair(Chair chair)
     {
         ClearAssignedSpawnPoint();
@@ -78,20 +97,20 @@ public class Character : MonoBehaviour
         AssignedSpawnPoint.AssignedCharacter = null;
         AssignedSpawnPoint = null;
     }
-
+    
     public void TurnIntoPriest(Sprite newSprite)
     {
         SwitchSprite(newSprite);
         IsPriest = true;
     }
-
     private void SwitchSprite(Sprite newSprite)
     {
         Visual.sprite = newSprite;
     }
-
+    
     private void ChangeOrderInLayer(int newOrder)
     {
         Visual.sortingOrder = newOrder;
+        UICharacter.ChangeOrderInLayer(newOrder);
     }
 }
