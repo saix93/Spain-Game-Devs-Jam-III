@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
     public Sprite PriestSprite;
     public SO_TraitList AllTraits;
     public SO_SadnessLevelList AllSadnessLevels;
-    public float SpawnRadius = 6f;
     public int TraitsPerCharacter = 3;
     public LayerMask CharacterLayerMask;
     public LayerMask ChairLayerMask;
@@ -34,11 +33,12 @@ public class GameManager : MonoBehaviour
     public List<Character> AllCharactersInScene;
     public List<Chair> AllMainCharacterChairs;
     public List<Chair> AllGuestChairs;
+    public List<SpawnPoint> AllSpawnPoints;
 
     private List<string> availableNames;
     private List<Sprite> availableSprites;
     private List<SO_Trait> availableTraits;
-    private List<Transform> availableSpawnPoints;
+    private List<SpawnPoint> availableSpawnPoints;
     
     private UnionStates currentState;
     private Camera mc;
@@ -55,6 +55,12 @@ public class GameManager : MonoBehaviour
         mc = Camera.main;
         AllGuestChairs = GuestChairs.GetComponentsInChildren<Chair>().ToList();
         AllMainCharacterChairs = MainCharacterChairs.GetComponentsInChildren<Chair>().ToList();
+        
+        AllSpawnPoints = new List<SpawnPoint>();
+        foreach (Transform child in SpawnZone)
+        {
+            AllSpawnPoints.Add(child.GetComponent<SpawnPoint>());
+        }
     }
     private void Start()
     {
@@ -65,7 +71,6 @@ public class GameManager : MonoBehaviour
     {
         if (currentState == UnionStates.PreparingFeast)
         {
-            // TODO: Se puede mover a los invitados de posición
             if (Input.GetMouseButtonDown(0)) // Left click
             {
                 var mPos = mc.ScreenToWorldPoint(Input.mousePosition);
@@ -100,14 +105,32 @@ public class GameManager : MonoBehaviour
                 if (hit.collider != null)
                 {
                     var chair = hit.collider.GetComponent<Chair>();
+                    var spawnPoint = hit.collider.GetComponent<SpawnPoint>();
 
-                    if (chair.AssignedCharacter != null)
+                    if (chair != null)
                     {
-                        grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
-                        return;
+                        if (chair.AssignedCharacter is null)
+                        {
+                            grabbedCharacter.AssignChair(chair);
+                        }
+                        else
+                        {
+                            grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                            return;
+                        }
                     }
-
-                    grabbedCharacter.AssignChair(chair);
+                    else if (spawnPoint != null)
+                    {
+                        if (spawnPoint.AssignedCharacter is null)
+                        {
+                            grabbedCharacter.AssignSpawnPoint(spawnPoint);
+                        }
+                        else
+                        {
+                            grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                            return;
+                        }
+                    }
                 }
                 else
                 {
@@ -164,7 +187,8 @@ public class GameManager : MonoBehaviour
         AllCharactersInScene.ForEach(c =>
         {
             if (c.IsPriest) return;
-            c.transform.position = GetRandomSpawnPosition();
+            var spawnPos = GetRandomSpawnPosition();
+            c.AssignSpawnPoint(spawnPos);
         });
         
         // Setea los personajes principales para evitar que se puedan mover
@@ -174,16 +198,10 @@ public class GameManager : MonoBehaviour
     }
     private void Initialize()
     {
-        // Setup de spawn points
-        availableSpawnPoints = new List<Transform>();
-        foreach (Transform child in SpawnZone)
-        {
-            availableSpawnPoints.Add(child);
-        }
-        
         availableNames = Utils.GetAllAvailableNames();
         availableSprites = new List<Sprite>(CharacterSprites.List);
         availableTraits = new List<SO_Trait>(AllTraits.List);
+        availableSpawnPoints = new List<SpawnPoint>(AllSpawnPoints);
 
         currentState = UnionStates.Starting;
 
@@ -262,7 +280,6 @@ public class GameManager : MonoBehaviour
             StartUnion(chosenGroup);
         }
     }
-
     private void EndGame()
     {
         // TODO: Fin del juego
@@ -329,12 +346,12 @@ public class GameManager : MonoBehaviour
 
         return list;
     }
-    private Vector3 GetRandomSpawnPosition()
+    private SpawnPoint GetRandomSpawnPosition()
     {
-        var spawnPos = availableSpawnPoints[Random.Range(0, availableSpawnPoints.Count)];
-        availableSpawnPoints.Remove(spawnPos);
+        var spawnPoint = availableSpawnPoints[Random.Range(0, availableSpawnPoints.Count)];
+        availableSpawnPoints.Remove(spawnPoint);
 
-        return spawnPos.position;
+        return spawnPoint;
     }
     private void PlaceRemainingGuestsInRandomChairs()
     {
@@ -349,10 +366,7 @@ public class GameManager : MonoBehaviour
             
             var chair = emptyChairs[Random.Range(0, emptyChairs.Count)];
 
-            chair.AssignedCharacter = guest;
-            guest.AssignedChair = chair;
-
-            guest.transform.position = chair.GetCharacterPosition();
+            guest.AssignChair(chair);
         }
     }
     

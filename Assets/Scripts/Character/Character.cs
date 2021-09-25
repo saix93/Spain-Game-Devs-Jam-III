@@ -18,6 +18,7 @@ public class Character : MonoBehaviour
     public string CharacterName;
     public List<SO_Trait> Traits;
     public Chair AssignedChair;
+    public SpawnPoint AssignedSpawnPoint;
     public bool IsBeingGrabbed;
     public int SadnessPoints;
     public bool PlacedRandomly;
@@ -45,12 +46,37 @@ public class Character : MonoBehaviour
         UICharacter.Init(this);
     }
 
+    public void AssignSpawnPoint(SpawnPoint sp)
+    {
+        ClearAssignedChair();
+        if (AssignedSpawnPoint) AssignedSpawnPoint.AssignedCharacter = null;
+        AssignedSpawnPoint = sp;
+        sp.AssignedCharacter = this;
+        transform.position = sp.GetCharacterPosition();
+    }
+
     public void AssignChair(Chair chair)
     {
-        if (!(AssignedChair is null)) AssignedChair.AssignedCharacter = null;
+        ClearAssignedSpawnPoint();
+        if (AssignedChair) AssignedChair.AssignedCharacter = null;
         AssignedChair = chair;
         chair.AssignedCharacter = this;
         transform.position = chair.GetCharacterPosition();
+    }
+
+    private void ClearAssignedChair()
+    {
+        if (!AssignedChair) return;
+        
+        AssignedChair.AssignedCharacter = null;
+        AssignedChair = null;
+    }
+    private void ClearAssignedSpawnPoint()
+    {
+        if (!AssignedSpawnPoint) return;
+        
+        AssignedSpawnPoint.AssignedCharacter = null;
+        AssignedSpawnPoint = null;
     }
 
     public void TurnIntoPriest(Sprite newSprite)
