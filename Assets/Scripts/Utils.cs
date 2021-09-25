@@ -113,3 +113,15 @@ public class MinMaxInt
         Max = max;
     }
 }
+[Serializable]
+public class MinMaxFloat
+{
+    public float Min;
+    public float Max;
+    
+    public MinMaxFloat(float min, float max)
+    {
+        Min = min;
+        Max = max;
+    }
+}
