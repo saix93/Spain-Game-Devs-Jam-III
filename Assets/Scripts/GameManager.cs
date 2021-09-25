@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [Header("Data")]
     public int MinGuests = 4;
     public int MaxGuests = 8;
+    public bool AlwaysSpawnMaxGuests = false;
     public SO_CharacterSpriteList CharacterSprites;
     public Sprite PriestSprite;
     public SO_TraitList AllTraits;
@@ -172,6 +173,7 @@ public class GameManager : MonoBehaviour
         var min = Mathf.Max(0, MinGuests - currentGuests + priests.Count); // El minimo de guests se aplica sin contar los priests
         var max = MaxGuests - currentGuests;
         var guestNumber = Random.Range(min, max);
+        if (AlwaysSpawnMaxGuests) guestNumber = max;
         
         for (var i = 0; i < guestNumber; i++)
         {
@@ -361,8 +363,6 @@ public class GameManager : MonoBehaviour
         {
             var emptyChairs = AllGuestChairs.FindAll(x => x.AssignedCharacter == null);
             guest.PlacedRandomly = true;
-
-            if (emptyChairs.Count == 0) break;
             
             var chair = emptyChairs[Random.Range(0, emptyChairs.Count)];
 
@@ -390,6 +390,7 @@ public class GameManager : MonoBehaviour
     public void ButtonAdvancePhase()
     {
         currentState += 1;
+        currentState = (UnionStates)Mathf.Min((int)currentState, (int) Enum.GetValues(typeof(UnionStates)).Cast<UnionStates>().Last());
     }
     
     // EXTRA
