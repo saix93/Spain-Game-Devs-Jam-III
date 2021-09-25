@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
         var factor = Mathf.InverseLerp(PositionY.Min, PositionY.Max, transform.position.y);
         var order = (int)Mathf.Lerp(OrderInLayer.Max, OrderInLayer.Min, factor);
 
-        ChangeOrderInLayer(IsBeingGrabbed ? 99999 : order);
+        ChangeOrderInLayer(IsBeingGrabbed ? 32767 : order);
     }
 
     public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits)

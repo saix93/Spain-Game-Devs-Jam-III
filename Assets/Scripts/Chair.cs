@@ -10,6 +10,7 @@ public class Chair : MonoBehaviour
     public List<Chair> LinkedChairs;
     public Vector2 CharacterSitPositionOffset;
     public Character AssignedCharacter;
+    public float GizmoRadius = .3f;
 
     public Vector3 GetCharacterPosition()
     {
@@ -20,14 +21,13 @@ public class Chair : MonoBehaviour
     {
         Gizmos.color = Color.green;
         var tPos = transform.position;
-        Gizmos.DrawWireSphere(tPos, .3f);
+        Gizmos.DrawWireSphere(tPos, GizmoRadius);
 
         foreach (var chair in LinkedChairs)
         {
             var chPos = chair.transform.position;
             
             Gizmos.DrawLine(tPos, chPos);
-            Gizmos.DrawWireSphere(chPos, .3f);
         }
     }
 }

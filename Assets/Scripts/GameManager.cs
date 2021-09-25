@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public Character CharacterPrefab;
     public Transform CharactersContainer;
-    public Transform SpawnSpace;
+    public Transform SpawnZone;
     public Transform MainCharacterChairs;
     public Transform GuestChairs;
 
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     private List<string> availableNames;
     private List<Sprite> availableSprites;
     private List<SO_Trait> availableTraits;
+    private List<Transform> availableSpawnPoints;
     
     private UnionStates currentState;
     private Camera mc;
@@ -173,6 +174,13 @@ public class GameManager : MonoBehaviour
     }
     private void Initialize()
     {
+        // Setup de spawn points
+        availableSpawnPoints = new List<Transform>();
+        foreach (Transform child in SpawnZone)
+        {
+            availableSpawnPoints.Add(child);
+        }
+        
         availableNames = Utils.GetAllAvailableNames();
         availableSprites = new List<Sprite>(CharacterSprites.List);
         availableTraits = new List<SO_Trait>(AllTraits.List);
@@ -323,7 +331,10 @@ public class GameManager : MonoBehaviour
     }
     private Vector3 GetRandomSpawnPosition()
     {
-        return SpawnSpace.position + (Vector3)Random.insideUnitCircle * SpawnRadius;
+        var spawnPos = availableSpawnPoints[Random.Range(0, availableSpawnPoints.Count)];
+        availableSpawnPoints.Remove(spawnPos);
+
+        return spawnPos.position;
     }
     private void PlaceRemainingGuestsInRandomChairs()
     {
@@ -371,12 +382,6 @@ public class GameManager : MonoBehaviour
     public UnionStates GetCurrentState()
     {
         return currentState;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(SpawnSpace.position, SpawnRadius);
     }
 }
 
