@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
                     {
                         grabbedCharacterOriginalPosition = grabbedCharacter.transform.position;
                         isGrabbingCharacter = true;
+                        grabbedCharacter.IsBeingGrabbed = true;
                     }
                 }
             }
@@ -88,6 +89,7 @@ public class GameManager : MonoBehaviour
             {
                 if (!isGrabbingCharacter) return;
                 isGrabbingCharacter = false;
+                grabbedCharacter.IsBeingGrabbed = false;
                 
                 var mPos = mc.ScreenToWorldPoint(Input.mousePosition);
                 mPos.z = 0;

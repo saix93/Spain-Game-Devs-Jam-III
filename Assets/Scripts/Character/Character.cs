@@ -18,6 +18,7 @@ public class Character : MonoBehaviour
     public string CharacterName;
     public List<SO_Trait> Traits;
     public Chair AssignedChair;
+    public bool IsBeingGrabbed;
     public int SadnessPoints;
     public bool PlacedRandomly;
     public bool IsPriest;
@@ -27,7 +28,7 @@ public class Character : MonoBehaviour
         var factor = Mathf.InverseLerp(PositionY.Min, PositionY.Max, transform.position.y);
         var order = (int)Mathf.Lerp(OrderInLayer.Max, OrderInLayer.Min, factor);
 
-        ChangeOrderInLayer(order);
+        ChangeOrderInLayer(IsBeingGrabbed ? 99999 : order);
     }
 
     public void Init(string newName, Sprite newSprite, List<SO_Trait> newTraits)
