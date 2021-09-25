@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public int MaxValueToAddSaddness = 0;
     public int MinFreeChairsToPlay = 4;
 
+    [Header("Animations")]
+    public float TimeToMoveRandomCharacters = 1;
+
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
     public List<Chair> AllMainCharacterChairs;
@@ -238,14 +241,41 @@ public class GameManager : MonoBehaviour
         }
         
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
-
-        PlaceRemainingGuestsInRandomChairs();
-        var allChairGroups = CreateChairGroups(AllGuestChairs);
         
+        // Se coloca a los invitados restantes en sillas aleatorias
+        var guestsWithoutChairs = AllCharactersInScene.FindAll(x => x.AssignedChair == null && !x.IsMainCharacter);
+        var emptyChairs = AllGuestChairs.FindAll(x => x.AssignedCharacter == null);
+        
+        foreach (var guest in guestsWithoutChairs)
+        {
+            guest.PlacedRandomly = true;
+            
+            var chair = emptyChairs[Random.Range(0, emptyChairs.Count)];
+            emptyChairs.Remove(chair);
+
+            var initialPos = guest.transform.position;
+            var finalPos = chair.GetCharacterPosition();
+            var factor = 0f;
+
+            do
+            {
+                var currentPos = Vector3.Lerp(initialPos, finalPos, factor);
+                factor += Time.deltaTime / TimeToMoveRandomCharacters;
+
+                guest.transform.position = currentPos;
+                
+                yield return null;
+            } while (Vector3.Distance(guest.transform.position, finalPos) > .1f);
+
+            guest.AssignChair(chair);
+        }
+
         // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
         
-        yield return new WaitUntil(() => currentState == UnionStates.Ending); // TODO: Se espera a se termine el festin
+        yield return new WaitUntil(() => currentState == UnionStates.Ending);
 
+        var allChairGroups = CreateChairGroups(AllGuestChairs);
+        
         // Resta puntos a los grupos por ser generados de forma aleatoria
         var randomlyGeneratedGroups = allChairGroups.FindAll(gp => gp.RandomlyGenerated);
         randomlyGeneratedGroups.ForEach(gp => gp.Value -= PointsToSubstractPerRandomGroup);
@@ -354,20 +384,6 @@ public class GameManager : MonoBehaviour
         availableSpawnPoints.Remove(spawnPoint);
 
         return spawnPoint;
-    }
-    private void PlaceRemainingGuestsInRandomChairs()
-    {
-        var guestsWithoutChairs = AllCharactersInScene.FindAll(x => x.AssignedChair == null && !x.IsMainCharacter);
-        
-        foreach (var guest in guestsWithoutChairs)
-        {
-            var emptyChairs = AllGuestChairs.FindAll(x => x.AssignedCharacter == null);
-            guest.PlacedRandomly = true;
-            
-            var chair = emptyChairs[Random.Range(0, emptyChairs.Count)];
-
-            guest.AssignChair(chair);
-        }
     }
     
     // BOTONES
