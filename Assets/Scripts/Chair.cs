@@ -20,12 +20,12 @@ public class Chair : MonoBehaviour
     {
         Gizmos.color = Color.green;
         var tPos = transform.position;
+        Gizmos.DrawWireSphere(tPos, .3f);
 
         foreach (var chair in LinkedChairs)
         {
             var chPos = chair.transform.position;
             
-            Gizmos.DrawWireSphere(tPos, .3f);
             Gizmos.DrawLine(tPos, chPos);
             Gizmos.DrawWireSphere(chPos, .3f);
         }
