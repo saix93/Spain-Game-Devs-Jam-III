@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
-    public List<Chair> AllChairsInScene;
+    public List<Chair> AllMainCharacterChairs;
+    public List<Chair> AllGuestChairs;
 
     private List<string> availableNames;
     private List<Sprite> availableSprites;
@@ -51,7 +52,8 @@ public class GameManager : MonoBehaviour
     {
         _ = this;
         mc = Camera.main;
-        AllChairsInScene = GuestChairs.GetComponentsInChildren<Chair>().ToList();
+        AllGuestChairs = GuestChairs.GetComponentsInChildren<Chair>().ToList();
+        AllMainCharacterChairs = MainCharacterChairs.GetComponentsInChildren<Chair>().ToList();
     }
     private void Start()
     {
@@ -175,7 +177,7 @@ public class GameManager : MonoBehaviour
 
         currentState = UnionStates.Starting;
 
-        AllChairsInScene.ForEach(c => c.AssignedCharacter = null);
+        AllGuestChairs.ForEach(c => c.AssignedCharacter = null);
 
         AllCharactersInScene.ForEach(c =>
         {
@@ -190,7 +192,7 @@ public class GameManager : MonoBehaviour
         var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
         for (var i = 0; i < priests.Count; i++)
         {
-            priests[i].AssignChair(AllChairsInScene[i]);
+            priests[i].AssignChair(AllGuestChairs[i]);
         }
     }
     private IEnumerator Feast()
@@ -201,14 +203,14 @@ public class GameManager : MonoBehaviour
         for (var i = 0; i < currentGroup.Characters.Count; i++)
         {
             var cha = currentGroup.Characters[i];
-
-            cha.transform.position = MainCharacterChairs.GetChild(i).position;
+            
+            cha.AssignChair(AllMainCharacterChairs[i]);
         }
         
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
 
         PlaceRemainingGuestsInRandomChairs();
-        var allChairGroups = CreateChairGroups(AllChairsInScene);
+        var allChairGroups = CreateChairGroups(AllGuestChairs);
         
         // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
         
@@ -240,7 +242,7 @@ public class GameManager : MonoBehaviour
         AllCharactersInScene.RemoveAll(item => item == null);
 
         // Losing conditions -> número total de sillas - priests <= minimo de sillas libres || todos los grupos tienen al menos un priest
-        var freeChairs = AllChairsInScene.Count - AllCharactersInScene.FindAll(c => c.IsPriest).Count;
+        var freeChairs = AllGuestChairs.Count - AllCharactersInScene.FindAll(c => c.IsPriest).Count;
         if (freeChairs <= MinFreeChairsToPlay || allChairGroups.All(g => g.HasPriest))
         {
             EndGame();
@@ -327,7 +329,7 @@ public class GameManager : MonoBehaviour
         
         foreach (var guest in guestsWithoutChairs)
         {
-            var emptyChairs = AllChairsInScene.FindAll(x => x.AssignedCharacter == null);
+            var emptyChairs = AllGuestChairs.FindAll(x => x.AssignedCharacter == null);
             guest.PlacedRandomly = true;
 
             if (emptyChairs.Count == 0) break;
