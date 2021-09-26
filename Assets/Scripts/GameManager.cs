@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public Transform SpawnZone;
     public Transform MainCharacterChairs;
     public Transform GuestChairs;
+    public Camera MainCamera;
+    public Camera FeastCamera;
 
     [Header("Data")]
     public MinMaxInt GuestsNumber = new MinMaxInt(4, 8);
@@ -204,6 +206,10 @@ public class GameManager : MonoBehaviour
     }
     private void Initialize()
     {
+        // Reinicia las cámaras
+        MainCamera.gameObject.SetActive(true);
+        FeastCamera.gameObject.SetActive(false);
+        
         availableNames = Utils.GetAllAvailableNames();
         availableSprites = new List<Sprite>(CharacterSprites.List);
         availableTraits = new List<SO_Trait>(AllTraits.List);
@@ -244,6 +250,9 @@ public class GameManager : MonoBehaviour
         }
         
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
+        
+        MainCamera.gameObject.SetActive(false);
+        FeastCamera.gameObject.SetActive(true);
         
         // Se coloca a los invitados restantes en sillas aleatorias
         var guestsWithoutChairs = AllCharactersInScene.FindAll(x => x.AssignedChair == null && !x.IsMainCharacter);
