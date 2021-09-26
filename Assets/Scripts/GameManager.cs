@@ -206,6 +206,7 @@ public class GameManager : MonoBehaviour
         availableNames = Utils.GetAllAvailableNames();
         availableSprites = new List<Sprite>(CharacterSprites.List);
         availableTraits = new List<SO_Trait>(AllTraits.List);
+        SpawnZone.gameObject.SetActive(true);
         availableSpawnPoints = new List<SpawnPoint>(AllSpawnPoints);
 
         currentState = UnionStates.Starting;
@@ -270,10 +271,12 @@ public class GameManager : MonoBehaviour
             guest.AssignChair(chair);
         }
         
+        // Se ocultan los SpawnPoints
+        SpawnZone.gameObject.SetActive(false);
+        
         // Crea los grupos de sillas, la posición de los invitados es final
         var allChairGroups = CreateChairGroups(AllGuestChairs);
 
-        // TODO: Se desarrolla el festin (Animaciones, efectos, etc)
         var guests = AllCharactersInScene.FindAll(c => !c.IsMainCharacter);
         foreach (var guest in guests)
         {

@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
 
     [Header("Animations")]
     public Sprite SadIcon;
+    public Sprite PriestIcon;
 
     [Header("Realtime data")]
     public bool IsMainCharacter;
@@ -54,16 +55,28 @@ public class Character : MonoBehaviour
     {
         if (group.Characters.Count > 1)
         {
-            var icon = Traits[Random.Range(0, Traits.Count)].Icon;
+            // REVISAR: Esto tiene un problema, si tienen 2 o más traits en común y los traits no están ordenados de la misma forma
+            // puede ocurrir que uno de los personajes del grupo muestre un trait y el otro personaje muestre otro
+            var other = group.Characters.Find(c => c != this);
+            var icon = GetRandomCommonTrait(other).Icon;
+            
+            if (!icon) icon = Traits[Random.Range(0, Traits.Count)].Icon;
 
-            UICharacter.ShowEmote(icon);
+            UICharacter.ShowEmote(IsPriest ? PriestIcon : icon);
         }
         else
         {
-            UICharacter.ShowEmote(SadIcon);
+            UICharacter.ShowEmote(IsPriest ? PriestIcon : SadIcon);
         }
-        
-        // TODO: Añadir más condiciones: Priest, niveles de tristón etc
+    }
+    private SO_Trait GetRandomCommonTrait(Character other)
+    {
+        foreach (var t in Traits)
+        {
+            if (other.Traits.Contains(t)) return t;
+        }
+
+        return null;
     }
 
     public void AssignSpawnPoint(SpawnPoint sp)

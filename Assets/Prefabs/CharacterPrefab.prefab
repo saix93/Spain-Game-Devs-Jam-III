@@ -399,6 +399,7 @@ MonoBehaviour:
     Min: -4
     Max: 18
   SadIcon: {fileID: -4685695568804013704, guid: 9b4d1deb17f5ff64ebfccdbc02cc196b, type: 3}
+  PriestIcon: {fileID: -3517508088033381398, guid: 9b4d1deb17f5ff64ebfccdbc02cc196b, type: 3}
   IsMainCharacter: 0
   CharacterName: 
   Traits: []
