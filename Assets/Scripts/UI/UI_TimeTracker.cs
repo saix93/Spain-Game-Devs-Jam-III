@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 /**
@@ -8,25 +10,29 @@ using UnityEngine.UI;
 */
 public class UI_TimeTracker : MonoBehaviour
 {
+    [Header("References")]
+    public TextMeshProUGUI TimerText;
     
-    private float timeValue = 45;
-    public Text timerText;
+    [Header("Data")]
+    public float TimeValue = 45;
+    public Color GoodColor = Color.white;
+    public float MediumTime = 15;
+    public Color MediumColor = Color.yellow;
+    public float BadTime = 10;
+    public Color BadColor = Color.red;
 
+    private float timer;
 
-    public UI_TimeTracker () {}
-
-    public UI_TimeTracker (float newTimeValue)
+    private void Start()
     {
-        timeValue = newTimeValue;
+        ResetTimer();
     }
-
-    
 
     void Update()
     {
-        timeValue = (timeValue > 0) ? timeValue -= Time.deltaTime : 0;
-        DisplayTimeFormat(timeValue);
-        DisplayTimeColor(timeValue);
+        timer = (timer > 0) ? timer -= Time.deltaTime : 0;
+        DisplayTimeFormat(timer);
+        DisplayTimeColor(timer);
     }
 
     void DisplayTimeFormat(float timeToDisplay)
@@ -36,22 +42,26 @@ public class UI_TimeTracker : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timerText.text = string.Format("{00}:{1:00}", minutes, seconds);
+        TimerText.text = string.Format("{00}:{1:00}", minutes, seconds);
     }
 
     void DisplayTimeColor(float timeToDisplay)
     {
-        if (timeToDisplay >= 30)
-            timerText.color = Color.white;
-        if (timeToDisplay < 30)
-            timerText.color = Color.yellow;
-        if (timeToDisplay < 15)
-            timerText.color = Color.red;
+        TimerText.color = GoodColor;
+        
+        if (timeToDisplay < MediumTime)
+            TimerText.color = MediumColor;
+        if (timeToDisplay < BadTime)
+            TimerText.color = BadColor;
     }
 
-    public float getTimeLeft ()
+    public float GetTimeLeft()
     {
-        return this.timeValue;
+        return timer;
     }
 
+    public void ResetTimer()
+    {
+        timer = TimeValue;
+    }
 }

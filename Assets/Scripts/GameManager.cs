@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("References")]
     public UI_MainCanvas UIMainCanvas;
+    public UI_TimeTracker UITimeTracker;
     public SoundManager SMG;
     public Character CharacterPrefab;
     public Transform CharactersContainer;
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     public MinMaxInt GuestsNumber = new MinMaxInt(4, 8);
-    public bool AlwaysSpawnMaxGuests = false;
+    public bool AlwaysSpawnMaxGuests;
     public SO_CharacterSpriteList CharacterSprites;
     public Sprite PriestSprite;
     public SO_TraitList AllTraits;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
     public LayerMask CharacterLayerMask;
     public LayerMask ChairLayerMask;
     public int PointsToSubstractPerRandomGroup = 1;
-    public int MaxValueToAddSaddness = 0;
+    public int MaxValueToAddSaddness;
     public int MinFreeChairsToPlay = 4;
     public float TimeToEndUnion = 2f;
     public float TimeBetweenUnions = 2f;
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
     {
         if (currentState == UnionStates.PreparingFeast)
         {
-            if (Input.GetMouseButtonDown(0)) // Left click
+            if (Input.GetMouseButtonDown(0)) // Left click DOWN
             {
                 var mPos = mc.ScreenToWorldPoint(Input.mousePosition);
                 mPos.z = 0;
@@ -109,7 +110,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0)) // Left click UP
             {
                 if (!isGrabbingCharacter) return;
                 isGrabbingCharacter = false;
@@ -164,8 +165,11 @@ public class GameManager : MonoBehaviour
                 grabbedCharacter.transform.position = mPos;
             }
             
-            // Cuando todos los invitados esten en posición: currentState = UnionStates.Feasting
-            // ¿Esperar X tiempo? TODO: Koraen, haz el timer para comprobar aquí si se ha acabado el tiempo
+            // Si se acaba el tiempo en el timer, se avanza de fase
+            if (UITimeTracker.GetTimeLeft() <= 0)
+            {
+                currentState = UnionStates.Feasting;
+            }
         }
     }
 
@@ -196,13 +200,8 @@ public class GameManager : MonoBehaviour
         {
             GenerateCharacter();
         }
-        
-//        currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
-//        priests = AllCharactersInScene.FindAll(c => c.IsPriest);
-//        Debug.Log($"Generados {guestNumber} invitados. Para un total de {priests.Count} priests. {currentGuests - priests.Count} invitados \"normales\"");
 
         // Coloca a todos los personajes en una posición aleatoria
-        // TODO: Cambiar a una posición aleatoria de entre un preset de posiciones
         AllCharactersInScene.ForEach(c =>
         {
             if (c.IsPriest) return;
@@ -217,6 +216,9 @@ public class GameManager : MonoBehaviour
     }
     private void Initialize()
     {
+        // Reinicia el timer
+        UITimeTracker.ResetTimer();
+        
         // Reinicia las cámaras
         MainCamera.gameObject.SetActive(true);
         FeastCamera.gameObject.SetActive(false);
@@ -241,7 +243,7 @@ public class GameManager : MonoBehaviour
 
         // Asigna todos los priests a sus sillas
         // TODO: Revisar qué tal funciona. También se puede hacer que los priests se queden en los sitios que tenían
-        // pero esto puede hacer más injusto el gameplay
+        // o sitios aleatorios, pero esto puede hacer más injusto el gameplay
         var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
         for (var i = 0; i < priests.Count; i++)
         {
@@ -365,8 +367,7 @@ public class GameManager : MonoBehaviour
         
         // Esperamos a empezar la siguiente boda
         yield return new WaitForSeconds(TimeBetweenUnions);
-        
-        
+
         StartUnion(chosenGroup);
     }
     private IEnumerator FadeAnimation(Vector3 targetPosition, int direction)
