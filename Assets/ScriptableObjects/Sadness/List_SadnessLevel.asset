@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: List_SadnessLevel
   m_EditorClassIdentifier: 
   List:
-  - {fileID: 11400000, guid: 4090fd9af6dacef4b8f43edfe714f85e, type: 2}
   - {fileID: 11400000, guid: 8803c3515c7ba0b44b4a3190c870bd47, type: 2}
   - {fileID: 11400000, guid: 6be019ab379877645a760773e28f4a00, type: 2}
   - {fileID: 11400000, guid: 40ecff877857eea448082749f812edf0, type: 2}

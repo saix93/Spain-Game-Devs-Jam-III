@@ -11,6 +11,8 @@ public class UI_Character : MonoBehaviour
     public UI_Trait UITraitPrefab;
     public GameObject TraitsElement;
     public Transform TraitContainer;
+    public GameObject SadnessLevelContainer;
+    public List<GameObject> SadnessLevelBars;
     public Image Bubble;
     public Image BubbleIcon;
 
@@ -28,7 +30,10 @@ public class UI_Character : MonoBehaviour
 
     private void Update()
     {
-        TraitsElement.SetActive(!character.IsMainCharacter);
+        var conditions = !character.IsMainCharacter && !character.IsPriest;
+        TraitsElement.SetActive(conditions);
+        SadnessLevelContainer.SetActive(conditions);
+        UpdateSadnessInfo(conditions);
     }
 
     public void Init(Character newCharacter)
@@ -44,6 +49,19 @@ public class UI_Character : MonoBehaviour
         
         UpdateAlpha(Bubble, 0);
         UpdateAlpha(BubbleIcon, 0);
+    }
+
+    private void UpdateSadnessInfo(bool conditions)
+    {
+        if (!conditions) return;
+        
+        var level = Mathf.Min(character.SadnessPoints, SadnessLevelBars.Count - 1);
+
+        for (var i = 0; i < SadnessLevelBars.Count; i++)
+        {
+            var bar = SadnessLevelBars[i];
+            bar.SetActive(i == level);
+        }
     }
 
     public void ChangeOrderInLayer(int newOrder)

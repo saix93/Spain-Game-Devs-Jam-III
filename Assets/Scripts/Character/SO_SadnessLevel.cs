@@ -11,7 +11,6 @@ public class SO_SadnessLevel : ScriptableObject
 
 public enum SadnessLevel
 {
-    None,
     Low,
     Medium,
     High,

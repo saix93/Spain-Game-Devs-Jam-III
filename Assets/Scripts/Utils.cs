@@ -7,20 +7,6 @@ using Random = UnityEngine.Random;
 
 public static class Utils
 {
-    public static SO_SadnessLevel CalculateSadness(Character character)
-    {
-        SO_SadnessLevel sLevel = null;
-
-        foreach (var level in GameManager._.AllSadnessLevels.List)
-        {
-            if (character.SadnessPoints >= level.Value)
-            {
-                sLevel = level;
-            }
-        }
-
-        return sLevel;
-    }
     public static List<string> GetAllAvailableNames()
     {
         var names = new List<string>

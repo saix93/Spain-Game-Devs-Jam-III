@@ -26,6 +26,7 @@ public class Character : MonoBehaviour
     public SpawnPoint AssignedSpawnPoint;
     public bool IsBeingGrabbed;
     public int SadnessPoints;
+    public SadnessLevel SadnessLevel;
     public bool PlacedRandomly;
     public bool IsPriest;
     public bool EmoteShown;
@@ -51,6 +52,26 @@ public class Character : MonoBehaviour
         gameObject.name = "Character - " + CharacterName;
         
         UICharacter.Init(this);
+    }
+
+    public void AddSadnessPoints(int amount)
+    {
+        SadnessPoints += amount;
+        SadnessLevel = CalculateSadness().SadnessLevel;
+    }
+    private SO_SadnessLevel CalculateSadness()
+    {
+        SO_SadnessLevel sLevel = null;
+
+        foreach (var level in GameManager._.AllSadnessLevels.List)
+        {
+            if (SadnessPoints >= level.Value)
+            {
+                sLevel = level;
+            }
+        }
+
+        return sLevel;
     }
     
     public void ShowEmote(Group group)

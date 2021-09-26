@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa0c6e1123aacd428641bf48ea4ecf3, type: 3}
   m_Name: Medium
   m_EditorClassIdentifier: 
-  Value: 2
-  SadnessLevel: 2
+  Value: 1
+  SadnessLevel: 1

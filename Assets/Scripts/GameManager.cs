@@ -320,9 +320,9 @@ public class GameManager : MonoBehaviour
         
         // Añade puntos de tristeza
         var sadGroups = allChairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
-        sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.SadnessPoints++));
+        sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.AddSadnessPoints(1)));
         
-        var extremelySadGuests = AllCharactersInScene.FindAll(c => Utils.CalculateSadness(c).SadnessLevel == SadnessLevel.Extreme);
+        var extremelySadGuests = AllCharactersInScene.FindAll(c => c.SadnessLevel == SadnessLevel.Extreme);
         foreach (var guest in extremelySadGuests)
         {
             yield return StartCoroutine(PriestAnimation(guest));
