@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public Transform GuestChairs;
     public Camera MainCamera;
     public Camera FeastCamera;
+    public GameObject FadeCircle;
+    public Transform FadeMask;
 
     [Header("Data")]
     public MinMaxInt GuestsNumber = new MinMaxInt(4, 8);
@@ -30,9 +32,12 @@ public class GameManager : MonoBehaviour
     public int PointsToSubstractPerRandomGroup = 1;
     public int MaxValueToAddSaddness = 0;
     public int MinFreeChairsToPlay = 4;
+    public float TimeBetweenUnions = 2f;
 
     [Header("Animations")]
     public float TimeToMoveRandomCharacters = 1;
+    public float FadeScaleTime = 1;
+    public float FadeAnimationWaitTime = 1;
     public MinMaxFloat RandomTimeBetweenReactions = new MinMaxFloat(.5f, 1.5f);
     public Sprite HeartIcon;
 
@@ -239,8 +244,6 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator Feast()
     {
-        currentState = UnionStates.PreparingFeast;
-
         // Coloca los personajes principales en sus sillas
         for (var i = 0; i < currentGroup.Characters.Count; i++)
         {
@@ -248,9 +251,15 @@ public class GameManager : MonoBehaviour
             
             cha.AssignChair(AllMainCharacterChairs[i]);
         }
+
+        yield return StartCoroutine(FadeAnimation(currentGroup.GetMiddlePosition(), 1));
+        FadeCircle.SetActive(false);
+        
+        currentState = UnionStates.PreparingFeast;
         
         yield return new WaitUntil(() => currentState == UnionStates.Feasting); // Se espera a que empiece el festin
         
+        // Cambia la cámara a la del festin
         MainCamera.gameObject.SetActive(false);
         FeastCamera.gameObject.SetActive(true);
         
@@ -323,12 +332,15 @@ public class GameManager : MonoBehaviour
         var winnerGroups = allChairGroups.FindAll(gp => gp.Value == allChairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
         
+        // Muestra el emote del corazón en la nueva pareja
         chosenGroup.Characters.ForEach(c => c.ShowSpecificEmote(HeartIcon));
-
-        yield return new WaitUntil(() => currentState == UnionStates.NextUnion); // TODO: Se espera a que haya que continuar con la siguiente boda
+        yield return StartCoroutine(FadeAnimation(chosenGroup.GetMiddlePosition(), -1));
         
         currentGroup.Characters.ForEach(c => DestroyImmediate(c.gameObject));
         AllCharactersInScene.RemoveAll(item => item == null);
+        
+        // Esperamos a empezar la siguiente boda
+        yield return new WaitForSeconds(TimeBetweenUnions);
 
         // Losing conditions -> número total de sillas - priests <= minimo de sillas libres || todos los grupos tienen al menos un priest
         var freeChairs = AllGuestChairs.Count - AllCharactersInScene.FindAll(c => c.IsPriest).Count;
@@ -341,6 +353,32 @@ public class GameManager : MonoBehaviour
             StartUnion(chosenGroup);
         }
     }
+    private IEnumerator FadeAnimation(Vector3 targetPosition, int direction)
+    {
+        FadeCircle.SetActive(true);
+        FadeMask.position = targetPosition;
+        var targetScale = direction > 0 ? Vector3.one : Vector3.zero;
+        
+        FadeMask.localScale = direction > 0 ? Vector3.zero : Vector3.one;
+        var scaleFactor = FadeMask.localScale.normalized.magnitude;
+        bool haveToWaitForAnimation = true;
+        do
+        {
+            scaleFactor += (Time.deltaTime / FadeScaleTime) * direction;
+            FadeMask.localScale = Vector3.one * scaleFactor;
+            
+            if (haveToWaitForAnimation && Vector3.Distance(Vector3.one * .1f, FadeMask.localScale) < .01f)
+            {
+                haveToWaitForAnimation = false;
+                yield return new WaitForSeconds(FadeAnimationWaitTime);
+            }
+
+            yield return null;
+        } while (Vector3.Distance(targetScale, FadeMask.localScale) > .01f);
+
+        FadeMask.localScale = targetScale;
+    }
+    
     private void EndGame()
     {
         // TODO: Fin del juego
@@ -424,10 +462,6 @@ public class GameManager : MonoBehaviour
     {
         currentState = UnionStates.Ending;
     }
-    public void ButtonNextUnion()
-    {
-        currentState = UnionStates.NextUnion;
-    }
     public void ButtonResetEverything()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -450,6 +484,5 @@ public enum UnionStates
     Starting,
     PreparingFeast,
     Feasting,
-    Ending,
-    NextUnion
+    Ending
 }

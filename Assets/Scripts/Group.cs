@@ -25,11 +25,19 @@ public class Group
         Value = EvaluateGroupValue();
     }
 
+    public Vector3 GetMiddlePosition()
+    {
+        var chairs = new List<Chair>();
+        chairs.Add(Characters[0].AssignedChair);
+        chairs.AddRange(Characters[0].AssignedChair.LinkedChairs);
+        
+        return Vector3.Lerp(chairs[0].GetCharacterPosition(), chairs[1].GetCharacterPosition(), .5f);
+    }
+
     public void ReEvaluateGroupValue()
     {
         Value = EvaluateGroupValue();
     }
-
     private int EvaluateGroupValue()
     {
         var finalValue = 0;
