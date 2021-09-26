@@ -299,6 +299,14 @@ public class GameManager : MonoBehaviour
         // Crea los grupos de sillas, la posición de los invitados es final
         var allChairGroups = CreateChairGroups(AllGuestChairs);
 
+        // Resta puntos a los grupos por ser generados de forma aleatoria
+        var randomlyGeneratedGroups = allChairGroups.FindAll(gp => gp.RandomlyGenerated);
+        randomlyGeneratedGroups.ForEach(gp => gp.Value -= PointsToSubstractPerRandomGroup);
+        
+        // Añade puntos de tristeza
+        var sadGroups = allChairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
+        //sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.AddSadnessPoints(1)));
+
         var guests = AllCharactersInScene.FindAll(c => !c.IsMainCharacter);
         foreach (var guest in guests)
         {
@@ -310,19 +318,16 @@ public class GameManager : MonoBehaviour
 
             var guestGroup = allChairGroups.Find(g => g.Characters.Contains(guest));
             guest.ShowEmote(guestGroup);
+
+            if (sadGroups.Contains(guestGroup))
+            {
+                guestGroup.Characters.ForEach(c => c.AddSadnessPoints(1));
+            }
         }
         
         yield return new WaitForSeconds(TimeToEndUnion); // Termina la fase de banquete y comienza la fase final, que termina la boda
-
-        // Resta puntos a los grupos por ser generados de forma aleatoria
-        var randomlyGeneratedGroups = allChairGroups.FindAll(gp => gp.RandomlyGenerated);
-        randomlyGeneratedGroups.ForEach(gp => gp.Value -= PointsToSubstractPerRandomGroup);
         
-        // Añade puntos de tristeza
-        var sadGroups = allChairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
-        sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.AddSadnessPoints(1)));
-        
-        var extremelySadGuests = AllCharactersInScene.FindAll(c => c.SadnessLevel == SadnessLevel.Extreme);
+        var extremelySadGuests = AllCharactersInScene.FindAll(c => c.SadnessLevel == SadnessLevel.Extreme && !c.IsPriest);
         foreach (var guest in extremelySadGuests)
         {
             yield return StartCoroutine(PriestAnimation(guest));

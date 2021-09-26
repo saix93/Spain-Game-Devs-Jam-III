@@ -478,7 +478,6 @@ GameObject:
   - component: {fileID: 3045644760996026810}
   - component: {fileID: 7034055351678607248}
   - component: {fileID: 1125698473161650124}
-  - component: {fileID: 2201403307143113082}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -543,19 +542,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2201403307143113082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092173296509841673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!1 &4515045820575215586
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +590,6 @@ GameObject:
   - component: {fileID: 6398689061035584811}
   - component: {fileID: 7261676834737564096}
   - component: {fileID: 5613896227055444284}
-  - component: {fileID: 1893536495208242590}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -669,19 +654,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1893536495208242590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023721168002101419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!1 &5326514908120313238
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +867,7 @@ MonoBehaviour:
   AssignedSpawnPoint: {fileID: 0}
   IsBeingGrabbed: 0
   SadnessPoints: 0
+  SadnessLevel: 0
   PlacedRandomly: 0
   IsPriest: 0
   EmoteShown: 0
