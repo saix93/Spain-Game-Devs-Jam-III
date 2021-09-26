@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     public MinMaxInt GuestsNumber = new MinMaxInt(4, 8);
+    public bool AlwaysSpawnOddNumberOfGuests;
     public bool AlwaysSpawnMaxGuests;
     public SO_CharacterSpriteList CharacterSprites;
     public Sprite PriestSprite;
@@ -195,6 +196,11 @@ public class GameManager : MonoBehaviour
         var max = GuestsNumber.Max - currentGuests;
         var guestNumber = Random.Range(min, max);
         if (AlwaysSpawnMaxGuests) guestNumber = max;
+        if (AlwaysSpawnOddNumberOfGuests && (currentGuests + guestNumber) % 2 == 0)
+        {
+            guestNumber = Mathf.Min(guestNumber + 1, max);
+            if ((currentGuests + guestNumber) % 2 == 0) guestNumber -= 1;
+        }
         
         for (var i = 0; i < guestNumber; i++)
         {
