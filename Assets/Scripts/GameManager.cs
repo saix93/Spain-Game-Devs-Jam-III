@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     [Header("References")]
+    public UI_MainCanvas UIMainCanvas;
     public Character CharacterPrefab;
     public Transform CharactersContainer;
     public Transform SpawnZone;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     public float FadeAnimationWaitTime = 1;
     public MinMaxFloat RandomTimeBetweenReactions = new MinMaxFloat(.5f, 1.5f);
     public Sprite HeartIcon;
+    public float EndGameAnimationTime = 1f;
 
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
@@ -322,17 +324,24 @@ public class GameManager : MonoBehaviour
             if (sadGroups.Contains(guestGroup))
             {
                 guestGroup.Characters.ForEach(c => c.AddSadnessPoints(1));
+                
+                var extremelySadGuests = guestGroup.Characters.FindAll(c => c.SadnessLevel == SadnessLevel.Extreme && !c.IsPriest);
+                foreach (var sadGuest in extremelySadGuests)
+                {
+                    yield return StartCoroutine(PriestAnimation(sadGuest));
+                }
             }
         }
         
         yield return new WaitForSeconds(TimeToEndUnion); // Termina la fase de banquete y comienza la fase final, que termina la boda
         
-        var extremelySadGuests = AllCharactersInScene.FindAll(c => c.SadnessLevel == SadnessLevel.Extreme && !c.IsPriest);
-        foreach (var guest in extremelySadGuests)
+        // Evalúa las Lose Conditions. En caso de que alguna se cumpla, se termina la partida
+        if (EvaluateLoseConditions(allChairGroups).Any(b => b))
         {
-            yield return StartCoroutine(PriestAnimation(guest));
+            EndGame(EndGameAnimationTime);
+            yield break;
         }
-        
+
         // Reevalua los grupos para evitar que salga ganador un grupo con priest
         allChairGroups.ForEach(g => g.ReEvaluateGroupValue());
 
@@ -351,14 +360,8 @@ public class GameManager : MonoBehaviour
         // Esperamos a empezar la siguiente boda
         yield return new WaitForSeconds(TimeBetweenUnions);
         
-        if (EvaluateLoseConditions(allChairGroups).Any(b => b))
-        {
-            EndGame();
-        }
-        else
-        {
-            StartUnion(chosenGroup);
-        }
+        
+        StartUnion(chosenGroup);
     }
     private IEnumerator FadeAnimation(Vector3 targetPosition, int direction)
     {
@@ -419,12 +422,13 @@ public class GameManager : MonoBehaviour
         
         list.Add(freeChairs <= MinFreeChairsToPlay); // número total de sillas - priests <= minimo de sillas libres
         list.Add(allGroups.All(g => g.HasPriest)); // todos los grupos tienen al menos un priest
+        list.Add(allGroups.All(g => g.Characters.Count < 2)); // no hay ningún grupo con más de 1 integrante
 
         return list;
     }
-    private void EndGame()
+    private void EndGame(float animationTime)
     {
-        // TODO: Fin del juego
+        UIMainCanvas.EndGame(animationTime);
     }
 
     private List<Group> CreateChairGroups(List<Chair> allChairs)
@@ -500,6 +504,10 @@ public class GameManager : MonoBehaviour
     public void ButtonComenceFeast()
     {
         currentState = UnionStates.Feasting;
+    }
+    public void ButtonFullReset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
     // EXTRA
