@@ -1,15 +1,26 @@
 # Save the date!
 
-A game where you have to organize the guests in consecutive weddings.
+<span>🇪🇸</span> Un juego en el que tienes que organizar a los invitados en bodas consecutivas.
+
+<span>🇬🇧</span> A game where you have to organize the guests in consecutive weddings.
 
 ## Description
 
+<span>🇪🇸</span>
+
+En este juego tienes que organizar a los invitados de un banquete de una boda medieval. ¡Intenta unir a los invitados por sus rasgos y quizá tengas suerte!
+
+Si no prestas atención a las necesidades de tus invitados, puede que se pongan tristones y acaben siendo convertidos por los sacerdotes cultistas...
+
+<span>🇬🇧</span>
+
 In this game, you have to organize the guests in a medieval wedding feast. Try to match the guest's traits and you might be in luck!
+
 If you don't pay attention to your guests needs they may become more and more sad and be converted by the cultist priests...
 
 ## Authors
 
-Contributors names and contact info
+Contact info
 
 Raúl Torres  
 * Twitter: [@Luar_Serrot](https://twitter.com/Luar_Serrot)
