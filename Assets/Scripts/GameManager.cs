@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Animations")]
     public float TimeToMoveRandomCharacters = 1;
+    public float TimeToTurnCharacterIntoPriest = 1;
     public float FadeScaleTime = 1;
     public float FadeAnimationWaitTime = 1;
     public MinMaxFloat RandomTimeBetweenReactions = new MinMaxFloat(.5f, 1.5f);
@@ -321,9 +322,11 @@ public class GameManager : MonoBehaviour
         var sadGroups = allChairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
         sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.SadnessPoints++));
         
-        // TODO: Animaciones en las que los personajes full tristones se convierten en curas
         var extremelySadGuests = AllCharactersInScene.FindAll(c => Utils.CalculateSadness(c).SadnessLevel == SadnessLevel.Extreme);
-        extremelySadGuests.ForEach(g => g.TurnIntoPriest(PriestSprite));
+        foreach (var guest in extremelySadGuests)
+        {
+            yield return StartCoroutine(PriestAnimation(guest));
+        }
         
         // Reevalua los grupos para evitar que salga ganador un grupo con priest
         allChairGroups.ForEach(g => g.ReEvaluateGroupValue());
@@ -342,10 +345,8 @@ public class GameManager : MonoBehaviour
         
         // Esperamos a empezar la siguiente boda
         yield return new WaitForSeconds(TimeBetweenUnions);
-
-        // Losing conditions -> número total de sillas - priests <= minimo de sillas libres || todos los grupos tienen al menos un priest
-        var freeChairs = AllGuestChairs.Count - AllCharactersInScene.FindAll(c => c.IsPriest).Count;
-        if (freeChairs <= MinFreeChairsToPlay || allChairGroups.All(g => g.HasPriest))
+        
+        if (EvaluateLoseConditions(allChairGroups).Any(b => b))
         {
             EndGame();
         }
@@ -379,7 +380,43 @@ public class GameManager : MonoBehaviour
 
         FadeMask.localScale = targetScale;
     }
-    
+    private IEnumerator PriestAnimation(Character character)
+    {
+        // TODO: Mejorar. Tremenda chapuza
+        character.Visual.material = new Material(character.Visual.material);
+        var factor = 0f;
+
+        do
+        {
+            factor -= Time.deltaTime * TimeToTurnCharacterIntoPriest;
+            character.UpdateAlpha(factor);
+
+            yield return null;
+        } while (character.Visual.material.GetVector("_HSVAAdjust").w > -1f);
+        
+        character.TurnIntoPriest(PriestSprite);
+
+        factor = -1f;
+
+        do
+        {
+            factor += Time.deltaTime * TimeToTurnCharacterIntoPriest;
+            character.UpdateAlpha(factor);
+
+            yield return null;
+        } while (character.Visual.material.GetVector("_HSVAAdjust").w < 0f);
+    }
+
+    private List<bool> EvaluateLoseConditions(List<Group> allGroups)
+    {
+        var list = new List<bool>();
+        var freeChairs = AllGuestChairs.Count - AllCharactersInScene.FindAll(c => c.IsPriest).Count;
+        
+        list.Add(freeChairs <= MinFreeChairsToPlay); // número total de sillas - priests <= minimo de sillas libres
+        list.Add(allGroups.All(g => g.HasPriest)); // todos los grupos tienen al menos un priest
+
+        return list;
+    }
     private void EndGame()
     {
         // TODO: Fin del juego

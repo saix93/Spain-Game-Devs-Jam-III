@@ -409,6 +409,7 @@ MonoBehaviour:
   SadnessPoints: 0
   PlacedRandomly: 0
   IsPriest: 0
+  EmoteShown: 0
 --- !u!70 &1110949138
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

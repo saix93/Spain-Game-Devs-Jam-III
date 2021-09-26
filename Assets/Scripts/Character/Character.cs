@@ -125,6 +125,12 @@ public class Character : MonoBehaviour
         AssignedSpawnPoint = null;
     }
     
+    public void UpdateAlpha(float alpha)
+    {
+        var hsva = Visual.material.GetVector("_HSVAAdjust");
+        hsva.w = alpha;
+        Visual.material.SetVector("_HSVAAdjust", hsva);
+    }
     public void TurnIntoPriest(Sprite newSprite)
     {
         SwitchSprite(newSprite);
