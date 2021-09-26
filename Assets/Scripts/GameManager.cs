@@ -193,10 +193,6 @@ public class GameManager : MonoBehaviour
             currentGroup.Characters.Add(GenerateCharacter());
             currentGroup.Characters.Add(GenerateCharacter());
         }
-        else if (group.Characters.Count < 2)
-        {
-            currentGroup.Characters.Add(GenerateCharacter()); // Solo ocurre cuando solo hay un invitado, ya que es el unico grupo a seleccionar
-        }
 
         // Genera los invitados
         var currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
@@ -258,7 +254,7 @@ public class GameManager : MonoBehaviour
 
         // Asigna todos los priests a sus sillas
         // TODO: Revisar qué tal funciona. También se puede hacer que los priests se queden en los sitios que tenían
-        // o sitios aleatorios, pero esto puede hacer más injusto el gameplay
+        // TODO: o sitios aleatorios, pero esto puede hacer más injusto el gameplay
         var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
         for (var i = 0; i < priests.Count; i++)
         {
@@ -341,7 +337,7 @@ public class GameManager : MonoBehaviour
             var guestGroup = allChairGroups.Find(g => g.Characters.Contains(guest));
             guest.ShowEmote(guestGroup);
 
-            if (sadGroups.Contains(guestGroup))
+            if (sadGroups.Contains(guestGroup) && !guestGroup.Characters.Exists(c => c != guest && c.EmoteShown))
             {
                 guestGroup.Characters.ForEach(c => c.AddSadnessPoints(1));
                 
@@ -444,7 +440,7 @@ public class GameManager : MonoBehaviour
         
         list.Add(freeChairs <= MinFreeChairsToPlay); // número total de sillas - priests <= minimo de sillas libres
         list.Add(allGroups.All(g => g.HasPriest)); // todos los grupos tienen al menos un priest
-        list.Add(allGroups.All(g => g.Characters.Count < 2)); // no hay ningún grupo con más de 1 integrante
+        list.Add(allGroups.FindAll(g => !g.HasPriest).All(g => g.Characters.Count < 2)); // no hay ningún grupo con más de 1 integrante (sin contar priests)
 
         return list;
     }
