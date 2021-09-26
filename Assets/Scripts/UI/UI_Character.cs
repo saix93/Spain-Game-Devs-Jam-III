@@ -9,6 +9,7 @@ public class UI_Character : MonoBehaviour
 {
     [Header("References")]
     public UI_Trait UITraitPrefab;
+    public GameObject TraitsElement;
     public Transform TraitContainer;
     public Image Bubble;
     public Image BubbleIcon;
@@ -23,6 +24,11 @@ public class UI_Character : MonoBehaviour
     private void Awake()
     {
         canvas = GetComponent<Canvas>();
+    }
+
+    private void Update()
+    {
+        TraitsElement.SetActive(!character.IsMainCharacter);
     }
 
     public void Init(Character newCharacter)
