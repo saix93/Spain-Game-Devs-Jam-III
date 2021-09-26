@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     public float EndGameAnimationTime = 1f;
 
     [Header("Realtime data")]
+    public int CurrentConsecutiveUnions;
     public List<Character> AllCharactersInScene;
     public List<Chair> AllMainCharacterChairs;
     public List<Chair> AllGuestChairs;
@@ -177,6 +178,14 @@ public class GameManager : MonoBehaviour
     private void StartUnion(Group group)
     {
         Initialize();
+        CurrentConsecutiveUnions++;
+        if (CurrentConsecutiveUnions % 2 == 0) // Cada 2 bodas consecutivas sube 1 el número máximo de guests a spawnear
+        {
+            var freeChairs = AllGuestChairs.FindAll(c => c.AssignedCharacter == null).Count;
+            GuestsNumber.Max = Mathf.Min(GuestsNumber.Max + 1, freeChairs);
+            GuestsNumber.Min = Mathf.Min(GuestsNumber.Min + 1, GuestsNumber.Max);
+        }
+        
         currentGroup = group;
 
         if (group.Characters.Count < 1)
