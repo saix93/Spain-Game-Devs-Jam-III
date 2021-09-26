@@ -81,7 +81,14 @@ public class Character : MonoBehaviour
         if (group.Characters.Count > 1)
         {
             var other = group.Characters.Find(c => c != this);
-            var icon = GetRandomCommonTrait(other).Icon;
+
+            var commonTrait = GetRandomCommonTrait(other);
+            Sprite icon = null;
+
+            if (commonTrait)
+            {
+                icon = commonTrait.Icon;
+            }
 
             if (icon)
             {
