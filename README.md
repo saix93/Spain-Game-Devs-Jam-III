@@ -31,3 +31,11 @@ This includes the following packs:
 Aside from the assets from HumbleBundle we also use the following free assets:
 
 * [Kenney's Emotes Pack](https://www.kenney.nl/assets/emotes-pack)
+
+For ambient music, the game uses the following:
+
+* Fantasia in D minor, K. 397
+* Nocturne in E flat major, Op. 9 no. 2
+* Salut d'amour, Op. 12
+
+All taken from [Musopen](https://musopen.org/es/music/) and using this [license](https://creativecommons.org/licenses/by/3.0/)

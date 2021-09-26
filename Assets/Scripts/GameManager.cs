@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("References")]
     public UI_MainCanvas UIMainCanvas;
+    public SoundManager SMG;
     public Character CharacterPrefab;
     public Transform CharactersContainer;
     public Transform SpawnZone;
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        SMG.PlayRandomAmbientTrack();
         var gp = new Group();
         StartUnion(gp);
     }
@@ -309,6 +311,7 @@ public class GameManager : MonoBehaviour
         var sadGroups = allChairGroups.FindAll(gp => gp.Value <= MaxValueToAddSaddness);
         //sadGroups.ForEach(gp => gp.Characters.ForEach(c => c.AddSadnessPoints(1)));
 
+        // Se muestran los emotes de los personajes
         var guests = AllCharactersInScene.FindAll(c => !c.IsMainCharacter);
         foreach (var guest in guests)
         {
@@ -350,10 +353,13 @@ public class GameManager : MonoBehaviour
         var winnerGroups = allChairGroups.FindAll(gp => gp.Value == allChairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
         
+        // Reproduce un nuevo track
+        SMG.PlayRandomAmbientTrack();
+        
         // Muestra el emote del corazón en la nueva pareja
         chosenGroup.Characters.ForEach(c => c.ShowSpecificEmote(HeartIcon));
         yield return StartCoroutine(FadeAnimation(chosenGroup.GetMiddlePosition(), -1));
-        
+
         currentGroup.Characters.ForEach(c => DestroyImmediate(c.gameObject));
         AllCharactersInScene.RemoveAll(item => item == null);
         
