@@ -218,6 +218,7 @@ public class GameManager : MonoBehaviour
             c.AssignedChair = null;
             c.IsMainCharacter = false;
             c.PlacedRandomly = false;
+            c.EmoteShown = false;
         });
 
         // Asigna todos los priests a sus sillas
@@ -280,6 +281,8 @@ public class GameManager : MonoBehaviour
         var guests = AllCharactersInScene.FindAll(c => !c.IsMainCharacter);
         foreach (var guest in guests)
         {
+            if (guest.EmoteShown) continue;
+            
             var reactionTime = Random.Range(RandomTimeBetweenReactions.Min, RandomTimeBetweenReactions.Max);
 
             yield return new WaitForSeconds(reactionTime);

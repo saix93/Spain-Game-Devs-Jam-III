@@ -28,6 +28,7 @@ public class Character : MonoBehaviour
     public int SadnessPoints;
     public bool PlacedRandomly;
     public bool IsPriest;
+    public bool EmoteShown;
 
     private void Update()
     {
@@ -42,6 +43,7 @@ public class Character : MonoBehaviour
         IsMainCharacter = false;
         PlacedRandomly = false;
         IsPriest = false;
+        EmoteShown = false;
         CharacterName = newName;
         Visual.sprite = newSprite;
         Traits = newTraits;
@@ -50,17 +52,24 @@ public class Character : MonoBehaviour
         
         UICharacter.Init(this);
     }
-
+    
     public void ShowEmote(Group group)
     {
+        EmoteShown = true;
+        
         if (group.Characters.Count > 1)
         {
-            // REVISAR: Esto tiene un problema, si tienen 2 o más traits en común y los traits no están ordenados de la misma forma
-            // puede ocurrir que uno de los personajes del grupo muestre un trait y el otro personaje muestre otro
             var other = group.Characters.Find(c => c != this);
             var icon = GetRandomCommonTrait(other).Icon;
-            
-            if (!icon) icon = Traits[Random.Range(0, Traits.Count)].Icon;
+
+            if (icon)
+            {
+                other.ShowSpecificEmote(icon);
+            }
+            else
+            {
+                icon = Traits[Random.Range(0, Traits.Count)].Icon;
+            }
 
             UICharacter.ShowEmote(IsPriest ? PriestIcon : icon);
         }
@@ -77,6 +86,11 @@ public class Character : MonoBehaviour
         }
 
         return null;
+    }
+    public void ShowSpecificEmote(Sprite icon)
+    {
+        EmoteShown = true;
+        UICharacter.ShowEmote(IsPriest ? PriestIcon : icon);
     }
 
     public void AssignSpawnPoint(SpawnPoint sp)
