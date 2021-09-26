@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [Header("Animations")]
     public float TimeToMoveRandomCharacters = 1;
     public MinMaxFloat RandomTimeBetweenReactions = new MinMaxFloat(.5f, 1.5f);
+    public Sprite HeartIcon;
 
     [Header("Realtime data")]
     public List<Character> AllCharactersInScene;
@@ -312,6 +313,8 @@ public class GameManager : MonoBehaviour
         allChairGroups = allChairGroups.OrderByDescending(x => x.Value).ToList();
         var winnerGroups = allChairGroups.FindAll(gp => gp.Value == allChairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+        
+        chosenGroup.Characters.ForEach(c => c.ShowSpecificEmote(HeartIcon));
 
         yield return new WaitUntil(() => currentState == UnionStates.NextUnion); // TODO: Se espera a que haya que continuar con la siguiente boda
         
