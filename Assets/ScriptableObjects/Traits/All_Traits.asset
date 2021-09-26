@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24026f5b33a24c44591cf56b547c6c8e, type: 3}
-  m_Name: List_Traits
+  m_Name: All_Traits
   m_EditorClassIdentifier: 
   List:
   - {fileID: 11400000, guid: 1abefcff49817de40af0584e77fe835c, type: 2}
   - {fileID: 11400000, guid: 4bca2c0ab1f0f9146941b1e2ea624815, type: 2}
   - {fileID: 11400000, guid: 7290c2bd652a7784f88888c7e3bce96c, type: 2}
+  - {fileID: 11400000, guid: 462cb44fb5a97ec48ac4f751cb711d7e, type: 2}
+  - {fileID: 11400000, guid: 844518da948eec4419e55ccbc57faf94, type: 2}
+  - {fileID: 11400000, guid: fab36dac9be4b86428087b62d1319dc0, type: 2}

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: -1936418759
   Name: Likes armor
-  Value: 2
+  Value: 1
   Icon: {fileID: 2825633715523115289, guid: 8191cbd66122d714b8566588618bf1e2, type: 3}
