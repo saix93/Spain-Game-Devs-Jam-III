@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public int PointsToSubstractPerRandomGroup = 1;
     public int MaxValueToAddSaddness = 0;
     public int MinFreeChairsToPlay = 4;
+    public float TimeToEndUnion = 2f;
     public float TimeBetweenUnions = 2f;
 
     [Header("Animations")]
@@ -310,7 +311,7 @@ public class GameManager : MonoBehaviour
             guest.ShowEmote(guestGroup);
         }
         
-        yield return new WaitUntil(() => currentState == UnionStates.Ending);
+        yield return new WaitForSeconds(TimeToEndUnion); // Termina la fase de banquete y comienza la fase final, que termina la boda
 
         // Resta puntos a los grupos por ser generados de forma aleatoria
         var randomlyGeneratedGroups = allChairGroups.FindAll(gp => gp.RandomlyGenerated);
@@ -454,22 +455,9 @@ public class GameManager : MonoBehaviour
     }
     
     // BOTONES
-    public void ButtonStartFeast()
+    public void ButtonComenceFeast()
     {
         currentState = UnionStates.Feasting;
-    }
-    public void ButtonEndUnion()
-    {
-        currentState = UnionStates.Ending;
-    }
-    public void ButtonResetEverything()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-    public void ButtonAdvancePhase()
-    {
-        currentState += 1;
-        currentState = (UnionStates)Mathf.Min((int)currentState, (int) Enum.GetValues(typeof(UnionStates)).Cast<UnionStates>().Last());
     }
     
     // EXTRA
@@ -483,6 +471,5 @@ public enum UnionStates
 {
     Starting,
     PreparingFeast,
-    Feasting,
-    Ending
+    Feasting
 }

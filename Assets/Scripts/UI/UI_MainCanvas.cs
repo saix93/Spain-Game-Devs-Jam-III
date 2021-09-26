@@ -7,15 +7,10 @@ using UnityEngine;
 public class UI_MainCanvas : MonoBehaviour
 {
     [Header("References")]
-    public List<TextMeshProUGUI> States;
+    public GameObject ButtonComenceFeast;
 
     private void Update()
     {
-        var currentState = GameManager._.GetCurrentState();
-        
-        // TODO: States en blanco y en rojo el actual
-        States.ForEach(s => s.color = Color.white);
-
-        States[(int)currentState].color = Color.red;
+        ButtonComenceFeast.SetActive(GameManager._.GetCurrentState() == UnionStates.PreparingFeast);
     }
 }
