@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class UI_MainCanvas : MonoBehaviour
 {
     [Header("References")]
+    public UI_TimeTracker UITimeTracker;
     public GameObject ButtonComenceFeast;
     public GameObject EndGameElement;
 
@@ -26,6 +27,8 @@ public class UI_MainCanvas : MonoBehaviour
     private void Update()
     {
         ButtonComenceFeast.SetActive(GameManager._.GetCurrentState() == UnionStates.PreparingFeast);
+        UITimeTracker.gameObject.SetActive(GameManager._.GetCurrentState() == UnionStates.PreparingFeast);
+        UITimeTracker.SetTimer(GameManager._.GetCurrentState() == UnionStates.PreparingFeast);
     }
 
     public void EndGame(float animationTime)

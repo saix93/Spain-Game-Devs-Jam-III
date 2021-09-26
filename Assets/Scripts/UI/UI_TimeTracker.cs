@@ -22,6 +22,7 @@ public class UI_TimeTracker : MonoBehaviour
     public Color BadColor = Color.red;
 
     private float timer;
+    private bool working;
 
     private void Start()
     {
@@ -30,6 +31,8 @@ public class UI_TimeTracker : MonoBehaviour
 
     void Update()
     {
+        if (!working) return;
+        
         timer = (timer > 0) ? timer -= Time.deltaTime : 0;
         DisplayTimeFormat(timer);
         DisplayTimeColor(timer);
@@ -63,5 +66,10 @@ public class UI_TimeTracker : MonoBehaviour
     public void ResetTimer()
     {
         timer = TimeValue;
+    }
+
+    public void SetTimer(bool value)
+    {
+        working = value;
     }
 }
