@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     public int MinFreeChairsToPlay = 4;
     public float TimeToEndUnion = 2f;
     public float TimeBetweenUnions = 2f;
+    public int NUnionsToReductTime = 5;
+    public float TimeReductionEveryNUnions = 5;
 
     [Header("Animations")]
     public float TimeToMoveRandomCharacters = 1;
@@ -217,6 +219,14 @@ public class GameManager : MonoBehaviour
             GuestsNumber.Max = Mathf.Min(GuestsNumber.Max + 1, freeChairs);
             GuestsNumber.Min = Mathf.Min(GuestsNumber.Min + 1, GuestsNumber.Max);
         }
+
+        if (CurrentConsecutiveUnions % NUnionsToReductTime == 0) // Cada N bodas consecutivas se baja X segundos el tiempo máximo
+        {
+            UITimeTracker.MaxTime -= TimeReductionEveryNUnions;
+        }
+        
+        // Reinicia el timer
+        UITimeTracker.ResetTimer();
         
         currentGroup = group;
 
@@ -258,9 +268,6 @@ public class GameManager : MonoBehaviour
     }
     private void Initialize()
     {
-        // Reinicia el timer
-        UITimeTracker.ResetTimer();
-        
         // Reinicia las cámaras
         MainCamera.gameObject.SetActive(true);
         FeastCamera.gameObject.SetActive(false);

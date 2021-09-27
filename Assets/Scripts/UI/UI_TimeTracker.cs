@@ -14,7 +14,7 @@ public class UI_TimeTracker : MonoBehaviour
     public TextMeshProUGUI TimerText;
     
     [Header("Data")]
-    public float TimeValue = 45;
+    public float MaxTime = 30f;
     public Color GoodColor = Color.white;
     public float MediumTime = 15;
     public Color MediumColor = Color.yellow;
@@ -65,7 +65,7 @@ public class UI_TimeTracker : MonoBehaviour
 
     public void ResetTimer()
     {
-        timer = TimeValue;
+        timer = MaxTime;
     }
 
     public void SetTimer(bool value)
