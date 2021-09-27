@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public Transform FadeMask;
 
     [Header("Data")]
+    public float TimeToStartScene = 1f;
     public MinMaxInt GuestsNumber = new MinMaxInt(4, 8);
     public bool AlwaysSpawnOddNumberOfGuests;
     public bool AlwaysSpawnMaxGuests;
@@ -82,9 +83,14 @@ public class GameManager : MonoBehaviour
             AllSpawnPoints.Add(child.GetComponent<SpawnPoint>());
         }
     }
-    private void Start()
+    private IEnumerator Start()
     {
         SMG.PlayRandomAmbientTrack();
+        
+        FadeCircle.SetActive(true);
+        FadeMask.localScale = Vector3.zero;
+        
+        yield return new WaitForSeconds(TimeToStartScene);
         var gp = new Group();
         StartUnion(gp);
     }
