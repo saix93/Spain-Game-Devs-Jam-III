@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public SO_TraitList AllTraits;
     public SO_SadnessLevelList AllSadnessLevels;
     public int TraitsPerCharacter = 3;
+    public float ProcOnlyOneTrait = .1f;
     public LayerMask CharacterLayerMask;
     public LayerMask ChairLayerMask;
     public int PointsToSubstractPerRandomGroup = 1;
@@ -315,12 +316,13 @@ public class GameManager : MonoBehaviour
         });
 
         // Asigna todos los priests a sus sillas
-        // TODO: Revisar qué tal funciona. También se puede hacer que los priests se queden en los sitios que tenían
-        // TODO: o sitios aleatorios, pero esto puede hacer más injusto el gameplay
         var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
         for (var i = 0; i < priests.Count; i++)
         {
-            priests[i].AssignChair(AllGuestChairs[i]);
+            // priests[i].AssignChair(AllGuestChairs[i]);
+            var emptyChairs = AllGuestChairs.FindAll(c => c.AssignedCharacter == null);
+            var randomChair = emptyChairs[Random.Range(0, emptyChairs.Count)];
+            priests[i].AssignChair(randomChair);
         }
     }
     private IEnumerator Feast()
@@ -401,7 +403,7 @@ public class GameManager : MonoBehaviour
 
             if (sadGroups.Contains(guestGroup) && !guestGroup.SadnessAddedThisRound) // && !guestGroup.Characters.Exists(c => c != guest && c.EmoteShown)
             {
-                guestGroup.Characters.ForEach(c => c.AddSadnessPoints(1));
+                guestGroup.Characters.ForEach(c => c.AddSadnessPoints(guestGroup.Characters.Any(ch => ch.IsPriest) ? 2 : 1));
                 guestGroup.SadnessAddedThisRound = true;
                 
                 var extremelySadGuests = guestGroup.Characters.FindAll(c => c.SadnessLevel == SadnessLevel.Extreme && !c.IsPriest);
@@ -566,6 +568,11 @@ public class GameManager : MonoBehaviour
     private List<SO_Trait> GetRandomTraits(List<SO_Trait> traitList, int num)
     {
         var list = new List<SO_Trait>();
+        var rng = Random.value;
+        if (rng < ProcOnlyOneTrait)
+        {
+            num = 1;
+        }
 
         var indices = Utils.GetDifferentRandomNumbers(0, traitList.Count, num);
         foreach (var index in indices)
