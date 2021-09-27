@@ -8,12 +8,14 @@ public class Group
     public int Value;
     public bool HasPriest;
     public bool RandomlyGenerated;
+    public bool SadnessAddedThisRound;
     public List<Character> Characters;
 
     public Group()
     {
         Characters = new List<Character>();
         RandomlyGenerated = false;
+        SadnessAddedThisRound = false;
         Value = 0;
     }
 

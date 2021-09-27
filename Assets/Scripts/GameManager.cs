@@ -344,9 +344,10 @@ public class GameManager : MonoBehaviour
             var guestGroup = allChairGroups.Find(g => g.Characters.Contains(guest));
             guest.ShowEmote(guestGroup);
 
-            if (sadGroups.Contains(guestGroup) && !guestGroup.Characters.Exists(c => c != guest && c.EmoteShown))
+            if (sadGroups.Contains(guestGroup) && !guestGroup.SadnessAddedThisRound) // && !guestGroup.Characters.Exists(c => c != guest && c.EmoteShown)
             {
                 guestGroup.Characters.ForEach(c => c.AddSadnessPoints(1));
+                guestGroup.SadnessAddedThisRound = true;
                 
                 var extremelySadGuests = guestGroup.Characters.FindAll(c => c.SadnessLevel == SadnessLevel.Extreme && !c.IsPriest);
                 foreach (var sadGuest in extremelySadGuests)
@@ -357,21 +358,21 @@ public class GameManager : MonoBehaviour
         }
         
         yield return new WaitForSeconds(TimeToEndUnion); // Termina la fase de banquete y comienza la fase final, que termina la boda
-        
-        // Evalúa las Lose Conditions. En caso de que alguna se cumpla, se termina la partida
-        if (EvaluateLoseConditions(allChairGroups).Any(b => b))
-        {
-            EndGame(EndGameAnimationTime);
-            yield break;
-        }
 
         // Reevalua los grupos para evitar que salga ganador un grupo con priest
         allChairGroups.ForEach(g => g.ReEvaluateGroupValue());
 
         // Elige un grupo de entre los que más puntos tienen
-        allChairGroups = allChairGroups.OrderByDescending(x => x.Value).ToList();
+        allChairGroups = allChairGroups.FindAll(gp => gp.Characters.Count > 1).OrderByDescending(x => x.Value).ToList();
         var winnerGroups = allChairGroups.FindAll(gp => gp.Value == allChairGroups[0].Value);
         var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+        
+        // Evalúa las Lose Conditions. En caso de que alguna se cumpla, se termina la partida
+        if (EvaluateLoseConditions(allChairGroups, chosenGroup).Any(b => b))
+        {
+            EndGame(EndGameAnimationTime);
+            yield break;
+        }
         
         // Reproduce un nuevo track
         SMG.PlayRandomAmbientTrack();
@@ -440,7 +441,7 @@ public class GameManager : MonoBehaviour
         } while (character.Visual.material.GetVector("_HSVAAdjust").w < 0f);
     }
 
-    private List<bool> EvaluateLoseConditions(List<Group> allGroups)
+    private List<bool> EvaluateLoseConditions(List<Group> allGroups, Group chosenGroup)
     {
         var list = new List<bool>();
         var freeChairs = AllGuestChairs.Count - AllCharactersInScene.FindAll(c => c.IsPriest).Count;
@@ -448,6 +449,7 @@ public class GameManager : MonoBehaviour
         list.Add(freeChairs <= MinFreeChairsToPlay); // número total de sillas - priests <= minimo de sillas libres
         list.Add(allGroups.All(g => g.HasPriest)); // todos los grupos tienen al menos un priest
         list.Add(allGroups.FindAll(g => !g.HasPriest).All(g => g.Characters.Count < 2)); // no hay ningún grupo con más de 1 integrante (sin contar priests)
+        list.Add(chosenGroup.Characters.Count < 2); // El grupo elegido tiene menos de 2 personajes
 
         return list;
     }
