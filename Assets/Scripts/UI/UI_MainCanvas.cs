@@ -13,7 +13,7 @@ public class UI_MainCanvas : MonoBehaviour
     public UI_TimeTracker UITimeTracker;
     public GameObject ButtonComenceFeast;
     public GameObject EndGameElement;
-    public TextMeshProUGUI ConsecutiveUnionsValue;
+    public List<TextMeshProUGUI> ConsecutiveUnionsValue;
 
     private List<Image> AllEndGameImages;
     private List<TextMeshProUGUI> AllEndGameTexts;
@@ -31,7 +31,7 @@ public class UI_MainCanvas : MonoBehaviour
         UITimeTracker.gameObject.SetActive(GameManager._.GetCurrentState() == UnionStates.PreparingFeast);
         UITimeTracker.SetTimer(GameManager._.GetCurrentState() == UnionStates.PreparingFeast);
 
-        ConsecutiveUnionsValue.text = GameManager._.CurrentConsecutiveUnions.ToString();
+        ConsecutiveUnionsValue.ForEach(v => v.text = GameManager._.CurrentConsecutiveUnions.ToString());
     }
 
     public void EndGame(float animationTime)

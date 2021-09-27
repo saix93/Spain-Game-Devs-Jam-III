@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public float TimeBetweenUnions = 2f;
     public int NUnionsToReductTime = 5;
     public float TimeReductionEveryNUnions = 5;
+    public float MinTimePerUnion = 20f;
 
     [Header("Animations")]
     public float TimeToMoveRandomCharacters = 1;
@@ -207,6 +208,11 @@ public class GameManager : MonoBehaviour
                 currentState = UnionStates.Feasting;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            EndGame();
+        }
     }
 
     private void StartUnion(Group group)
@@ -236,7 +242,7 @@ public class GameManager : MonoBehaviour
 
         if (CurrentConsecutiveUnions % NUnionsToReductTime == 0) // Cada N bodas consecutivas se baja X segundos el tiempo máximo
         {
-            UITimeTracker.MaxTime -= TimeReductionEveryNUnions;
+            UITimeTracker.MaxTime = Mathf.Max(UITimeTracker.MaxTime - TimeReductionEveryNUnions, MinTimePerUnion);
         }
         
         // Reinicia el timer
@@ -404,7 +410,7 @@ public class GameManager : MonoBehaviour
         // Evalúa las Lose Conditions. En caso de que alguna se cumpla, se termina la partida
         if (EvaluateLoseConditions(allChairGroups, chosenGroup).Any(b => b))
         {
-            EndGame(EndGameAnimationTime);
+            EndGame();
             yield break;
         }
         
@@ -487,9 +493,10 @@ public class GameManager : MonoBehaviour
 
         return list;
     }
-    private void EndGame(float animationTime)
+    private void EndGame()
     {
-        UIMainCanvas.EndGame(animationTime);
+        StopAllCoroutines();
+        UIMainCanvas.EndGame(EndGameAnimationTime);
     }
 
     private List<Group> CreateChairGroups(List<Chair> allChairs)
