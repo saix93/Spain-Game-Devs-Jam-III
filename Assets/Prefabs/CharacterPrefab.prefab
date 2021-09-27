@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6465369720499763330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -958,7 +958,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: -7781421827392551784, guid: b6b9b03f924e90a428eb5cefbdd43874, type: 3}
+  m_Sprite: {fileID: 4326335289255806755, guid: b6b9b03f924e90a428eb5cefbdd43874, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1472,7 +1472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7643471805274982167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1686,6 +1686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trait (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3786236128642019103, guid: 6f1a3e78d75014f47a43b23573623057, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4874839670442558238, guid: 8191cbd66122d714b8566588618bf1e2, type: 3}
     - target: {fileID: 5861211727734858517, guid: 6f1a3e78d75014f47a43b23573623057, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

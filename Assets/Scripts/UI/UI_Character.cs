@@ -30,6 +30,8 @@ public class UI_Character : MonoBehaviour
 
     private void Update()
     {
+        if (!character) return;
+        
         var conditions = !character.IsMainCharacter && !character.IsPriest;
         TraitsElement.SetActive(conditions);
         SadnessLevelContainer.SetActive(conditions);
