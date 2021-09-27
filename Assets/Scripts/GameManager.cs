@@ -160,6 +160,12 @@ public class GameManager : MonoBehaviour
                         }
                         else
                         {
+                            if (chair.AssignedCharacter.IsPriest || chair.AssignedCharacter.IsMainCharacter)
+                            {
+                                grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                                return;
+                            }
+                            
                             // SWAP
                             if (grabbedCharacter.AssignedChair)
                             {
@@ -182,6 +188,12 @@ public class GameManager : MonoBehaviour
                         }
                         else
                         {
+                            if (spawnPoint.AssignedCharacter.IsPriest || spawnPoint.AssignedCharacter.IsMainCharacter)
+                            {
+                                grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                                return;
+                            }
+                            
                             // SWAP
                             if (grabbedCharacter.AssignedChair)
                             {
