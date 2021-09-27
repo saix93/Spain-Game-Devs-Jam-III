@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: All_Traits
   m_EditorClassIdentifier: 
   List:
-  - {fileID: 11400000, guid: 1abefcff49817de40af0584e77fe835c, type: 2}
   - {fileID: 11400000, guid: 4bca2c0ab1f0f9146941b1e2ea624815, type: 2}
   - {fileID: 11400000, guid: 7290c2bd652a7784f88888c7e3bce96c, type: 2}
   - {fileID: 11400000, guid: 462cb44fb5a97ec48ac4f751cb711d7e, type: 2}
   - {fileID: 11400000, guid: 844518da948eec4419e55ccbc57faf94, type: 2}
   - {fileID: 11400000, guid: fab36dac9be4b86428087b62d1319dc0, type: 2}
   - {fileID: 11400000, guid: bb38535d2ea709941b7603e6f0514ed5, type: 2}
+  - {fileID: 11400000, guid: dd5b55208b7b9ad4f888e61b757f4d2c, type: 2}
