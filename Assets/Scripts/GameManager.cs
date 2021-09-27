@@ -117,7 +117,6 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-
             if (Input.GetMouseButtonUp(0)) // Left click UP
             {
                 if (!isGrabbingCharacter) return;
@@ -136,25 +135,45 @@ public class GameManager : MonoBehaviour
 
                     if (chair != null)
                     {
-                        if (chair.AssignedCharacter is null)
+                        if (!chair.AssignedCharacter)
                         {
                             grabbedCharacter.AssignChair(chair);
                         }
                         else
                         {
-                            grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                            // SWAP
+                            if (grabbedCharacter.AssignedChair)
+                            {
+                                chair.AssignedCharacter.AssignChair(grabbedCharacter.AssignedChair, true);
+                            }
+                            else
+                            {
+                                chair.AssignedCharacter.AssignSpawnPoint(grabbedCharacter.AssignedSpawnPoint, true);
+                            }
+
+                            grabbedCharacter.AssignChair(chair, true);
                             return;
                         }
                     }
                     else if (spawnPoint != null)
                     {
-                        if (spawnPoint.AssignedCharacter is null)
+                        if (!spawnPoint.AssignedCharacter)
                         {
                             grabbedCharacter.AssignSpawnPoint(spawnPoint);
                         }
                         else
                         {
-                            grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                            // SWAP
+                            if (grabbedCharacter.AssignedChair)
+                            {
+                                spawnPoint.AssignedCharacter.AssignChair(grabbedCharacter.AssignedChair, true);
+                            }
+                            else
+                            {
+                                spawnPoint.AssignedCharacter.AssignSpawnPoint(grabbedCharacter.AssignedSpawnPoint, true);
+                            }
+
+                            grabbedCharacter.AssignSpawnPoint(spawnPoint, true);
                             return;
                         }
                     }
@@ -176,15 +195,14 @@ public class GameManager : MonoBehaviour
             // Si se acaba el tiempo en el timer, se avanza de fase
             if (UITimeTracker.GetTimeLeft() <= 0)
             {
+                if (isGrabbingCharacter)
+                {
+                    isGrabbingCharacter = false;
+                    grabbedCharacter.IsBeingGrabbed = false;
+                    grabbedCharacter.transform.position = grabbedCharacterOriginalPosition;
+                }
+                
                 currentState = UnionStates.Feasting;
-            }
-        }
-        else
-        {
-            if (grabbedCharacter)
-            {
-                isGrabbingCharacter = false;
-                grabbedCharacter.IsBeingGrabbed = false;
             }
         }
     }

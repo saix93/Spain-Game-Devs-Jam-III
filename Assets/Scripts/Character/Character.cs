@@ -121,35 +121,37 @@ public class Character : MonoBehaviour
         UICharacter.ShowEmote(IsPriest ? PriestIcon : icon);
     }
 
-    public void AssignSpawnPoint(SpawnPoint sp)
+    public void AssignSpawnPoint(SpawnPoint sp, bool swap = false)
     {
-        ClearAssignedChair();
-        if (AssignedSpawnPoint) AssignedSpawnPoint.AssignedCharacter = null;
+        ClearAssignedChair(swap);
+        ClearAssignedSpawnPoint(swap);
+        
         AssignedSpawnPoint = sp;
         sp.AssignedCharacter = this;
         transform.position = sp.GetCharacterPosition();
     }
-    public void AssignChair(Chair chair)
+    public void AssignChair(Chair chair, bool swap = false)
     {
-        ClearAssignedSpawnPoint();
-        if (AssignedChair) AssignedChair.AssignedCharacter = null;
+        ClearAssignedChair(swap);
+        ClearAssignedSpawnPoint(swap);
+        
         AssignedChair = chair;
         chair.AssignedCharacter = this;
         transform.position = chair.GetCharacterPosition();
     }
 
-    private void ClearAssignedChair()
+    private void ClearAssignedChair(bool swap)
     {
         if (!AssignedChair) return;
-        
-        AssignedChair.AssignedCharacter = null;
+
+        if (!swap) AssignedChair.AssignedCharacter = null;
         AssignedChair = null;
     }
-    private void ClearAssignedSpawnPoint()
+    private void ClearAssignedSpawnPoint(bool swap)
     {
         if (!AssignedSpawnPoint) return;
         
-        AssignedSpawnPoint.AssignedCharacter = null;
+        if (!swap) AssignedSpawnPoint.AssignedCharacter = null;
         AssignedSpawnPoint = null;
     }
     
