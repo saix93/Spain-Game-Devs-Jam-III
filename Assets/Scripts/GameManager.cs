@@ -196,16 +196,18 @@ public class GameManager : MonoBehaviour
         
         currentGroup = group;
 
-        if (group.Characters.Count < 1)
+        if (currentGroup.Characters.Count < 1)
         {
             currentGroup.Characters.Add(GenerateCharacter());
             currentGroup.Characters.Add(GenerateCharacter());
         }
+        
+        // Setea los personajes principales para evitar que se puedan mover
+        currentGroup.Characters.ForEach(c => c.IsMainCharacter = true);
 
         // Genera los invitados
-        var currentGuests = AllCharactersInScene.Count - currentGroup.Characters.Count;
-        var priests = AllCharactersInScene.FindAll(c => c.IsPriest);
-        var min = Mathf.Max(0, GuestsNumber.Min - currentGuests + priests.Count); // El minimo de guests se aplica sin contar los priests
+        var currentGuests = AllCharactersInScene.FindAll(c => !c.IsPriest && !c.IsMainCharacter).Count;
+        var min = Mathf.Max(0, GuestsNumber.Min - currentGuests); // El minimo de guests se aplica sin contar los priests
         var max = GuestsNumber.Max - currentGuests;
         var guestNumber = Random.Range(min, max);
         if (AlwaysSpawnMaxGuests) guestNumber = max;
@@ -227,9 +229,6 @@ public class GameManager : MonoBehaviour
             var spawnPos = GetRandomSpawnPosition();
             c.AssignSpawnPoint(spawnPos);
         });
-        
-        // Setea los personajes principales para evitar que se puedan mover
-        group.Characters.ForEach(c => c.IsMainCharacter = true);
 
         StartCoroutine(Feast());
     }
