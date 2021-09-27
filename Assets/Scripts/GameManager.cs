@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -92,6 +93,16 @@ public class GameManager : MonoBehaviour
         
         FadeCircle.SetActive(true);
         FadeMask.localScale = Vector3.zero;
+
+        var mainMenuMusic = GameObject.FindGameObjectWithTag("MainMenuMusic").GetComponent<AudioSource>();
+
+        do
+        {
+            mainMenuMusic.volume -= Time.deltaTime / 2;
+            yield return null;
+        } while (mainMenuMusic.volume > 0);
+        
+        Destroy(mainMenuMusic.gameObject);
         
         yield return new WaitForSeconds(TimeToStartScene);
         var gp = new Group();
