@@ -213,20 +213,6 @@ public class GameManager : MonoBehaviour
     {
         Initialize();
         CurrentConsecutiveUnions++;
-        if (CurrentConsecutiveUnions % 2 == 0) // Cada 2 bodas consecutivas sube 1 el número máximo de guests a spawnear
-        {
-            var freeChairs = AllGuestChairs.FindAll(c => c.AssignedCharacter == null).Count;
-            GuestsNumber.Max = Mathf.Min(GuestsNumber.Max + 1, freeChairs);
-            GuestsNumber.Min = Mathf.Min(GuestsNumber.Min + 1, GuestsNumber.Max);
-        }
-
-        if (CurrentConsecutiveUnions % NUnionsToReductTime == 0) // Cada N bodas consecutivas se baja X segundos el tiempo máximo
-        {
-            UITimeTracker.MaxTime -= TimeReductionEveryNUnions;
-        }
-        
-        // Reinicia el timer
-        UITimeTracker.ResetTimer();
         
         currentGroup = group;
 
@@ -238,6 +224,23 @@ public class GameManager : MonoBehaviour
         
         // Setea los personajes principales para evitar que se puedan mover
         currentGroup.Characters.ForEach(c => c.IsMainCharacter = true);
+        
+        // Ajustes cada X bodas consecutivas
+        var freeChairs = AllGuestChairs.FindAll(c => c.AssignedCharacter == null).Count;
+        GuestsNumber.Max = Mathf.Min(GuestsNumber.Max, freeChairs);
+        if (CurrentConsecutiveUnions % 2 == 0) // Cada 2 bodas consecutivas sube 1 el número máximo de guests a spawnear
+        {
+            if (GuestsNumber.Max < freeChairs) GuestsNumber.Max++;
+            GuestsNumber.Min = Mathf.Min(GuestsNumber.Min + 1, GuestsNumber.Max);
+        }
+
+        if (CurrentConsecutiveUnions % NUnionsToReductTime == 0) // Cada N bodas consecutivas se baja X segundos el tiempo máximo
+        {
+            UITimeTracker.MaxTime -= TimeReductionEveryNUnions;
+        }
+        
+        // Reinicia el timer
+        UITimeTracker.ResetTimer();
 
         // Genera los invitados
         var currentGuests = AllCharactersInScene.FindAll(c => !c.IsPriest && !c.IsMainCharacter).Count;
@@ -396,7 +399,7 @@ public class GameManager : MonoBehaviour
         // Elige un grupo de entre los que más puntos tienen
         allChairGroups = allChairGroups.FindAll(gp => gp.Characters.Count > 1).OrderByDescending(x => x.Value).ToList();
         var winnerGroups = allChairGroups.FindAll(gp => gp.Value == allChairGroups[0].Value);
-        var chosenGroup = winnerGroups[Random.Range(0, winnerGroups.Count)];
+        var chosenGroup = winnerGroups.Count > 0 ? winnerGroups[Random.Range(0, winnerGroups.Count)] : null;
         
         // Evalúa las Lose Conditions. En caso de que alguna se cumpla, se termina la partida
         if (EvaluateLoseConditions(allChairGroups, chosenGroup).Any(b => b))
@@ -480,7 +483,7 @@ public class GameManager : MonoBehaviour
         list.Add(freeChairs <= MinFreeChairsToPlay); // número total de sillas - priests <= minimo de sillas libres
         list.Add(allGroups.All(g => g.HasPriest)); // todos los grupos tienen al menos un priest
         list.Add(allGroups.FindAll(g => !g.HasPriest).All(g => g.Characters.Count < 2)); // no hay ningún grupo con más de 1 integrante (sin contar priests)
-        list.Add(chosenGroup.Characters.Count < 2); // El grupo elegido tiene menos de 2 personajes
+        if (chosenGroup != null) list.Add(chosenGroup.Characters.Count < 2); // El grupo elegido tiene menos de 2 personajes
 
         return list;
     }
