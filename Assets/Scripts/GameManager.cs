@@ -94,15 +94,19 @@ public class GameManager : MonoBehaviour
         FadeCircle.SetActive(true);
         FadeMask.localScale = Vector3.zero;
 
-        var mainMenuMusic = GameObject.FindGameObjectWithTag("MainMenuMusic").GetComponent<AudioSource>();
+        var mainMenuMusic = GameObject.FindGameObjectWithTag("MainMenuMusic");
 
-        do
+        if (mainMenuMusic)
         {
-            mainMenuMusic.volume -= Time.deltaTime / 2;
-            yield return null;
-        } while (mainMenuMusic.volume > 0);
+            var audioSource = mainMenuMusic.GetComponent<AudioSource>();
+            do
+            {
+                audioSource.volume -= Time.deltaTime / 2;
+                yield return null;
+            } while (audioSource.volume > 0);
         
-        Destroy(mainMenuMusic.gameObject);
+            Destroy(mainMenuMusic);
+        }
         
         yield return new WaitForSeconds(TimeToStartScene);
         var gp = new Group();
