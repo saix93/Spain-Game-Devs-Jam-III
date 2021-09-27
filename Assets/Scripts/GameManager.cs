@@ -173,6 +173,14 @@ public class GameManager : MonoBehaviour
                 currentState = UnionStates.Feasting;
             }
         }
+        else
+        {
+            if (grabbedCharacter)
+            {
+                isGrabbingCharacter = false;
+                grabbedCharacter.IsBeingGrabbed = false;
+            }
+        }
     }
 
     private void StartUnion(Group group)
