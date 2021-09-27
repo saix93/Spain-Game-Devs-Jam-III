@@ -1,18 +1,23 @@
 # Save the date!
 
-<span>🇪🇸</span> Un juego en el que tienes que organizar a los invitados en bodas consecutivas.
 
-<span>🇬🇧</span> A game where you have to organize the guests in consecutive weddings.
+<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/flag-spain_1f1ea-1f1f8.png" alt="drawing" width="40"/>
+
+Un juego en el que tienes que organizar a los invitados en bodas consecutivas.
+
+<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/flag-united-kingdom_1f1ec-1f1e7.png" alt="drawing" width="40"/>
+
+A game where you have to organize the guests in consecutive weddings.
 
 ## Description
 
-<span>🇪🇸</span>
+<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/flag-spain_1f1ea-1f1f8.png" alt="drawing" width="40"/>
 
 En este juego tienes que organizar a los invitados de un banquete de una boda medieval. ¡Intenta unir a los invitados por sus rasgos y quizá tengas suerte!
 
 Si no prestas atención a las necesidades de tus invitados, puede que se pongan tristones y acaben siendo convertidos por los sacerdotes cultistas...
 
-<span>🇬🇧</span>
+<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/flag-united-kingdom_1f1ec-1f1e7.png" alt="drawing" width="40"/>
 
 In this game, you have to organize the guests in a medieval wedding feast. Try to match the guest's traits and you might be in luck!
 
